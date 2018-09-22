@@ -1,6 +1,6 @@
 styleSheet.css
 
-gradient1 {
+#gradient1 {
 	height: 200 px;
 	background-color: blue;
 	background-image: linear-gradient(blue, green);
