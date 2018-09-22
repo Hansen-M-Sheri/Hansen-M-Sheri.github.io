@@ -1,7 +1,7 @@
 #gradient1 {
 	height: 200 px;
-	background-color: blue;
-	background-image: linear-gradient(blue, green);
+	background-color: #1fc8db;
+	background-image: linear-gradient(to right, ##1e84a0, #318e58 );
 }
 
 h1{
