@@ -2,8 +2,14 @@
 	height: 200 px;
 	background-color: #1fc8db;
 	background-image: linear-gradient(to right, ##1e84a0, #318e58 );
+
 }
 
 h1{
 	color: white;
+}
+.weeklyTopic {
+	background-color: black;
+	color: white;
+	padding: 10px;
 }
