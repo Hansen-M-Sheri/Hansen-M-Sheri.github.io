@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Objects</h1>
+
+<p id="demo"></p>
+
+<script>
+	var group0 = {
+		“meetingTime”           : “8:30 am MST”,
+		“numOfMtgsPerWeek” : 2       //ints do not require “” 
+		“groupMembers”         : [’Sheri’, ‘Heather’, ‘Jimmy’, ‘Cody’, ’Felicia’, ‘Bryce’]  //No comma on last property
+}	
+	
+	// Display some data from the object:
+	document.getElementById("demo").innerHTML =
+	"Our group will meet " + group0.numOfMtgsPerWeek + " times per week at " 
+		+ group0.meetingTime + ".";
+</script>
+
+</body>
+</html>
