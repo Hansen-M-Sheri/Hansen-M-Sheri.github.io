@@ -7,12 +7,17 @@
 
 <h1>Magic 8 Ball</h1>
 
+<select id="selectQuestion" onchange="magicAnswers()">
+	<option value="default">"What question do you want the magic 8 ball to answer?"</option>
+	<option value="win">Will I win $100?</option>
+	<option value="goodGrades">Will I get an A in this class?</option>
+	<option value="failClass">Will I fail this class?</option>
+</select>
+	
 
-<p>JavaScript can change the content of an HTML element (using: onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"):</p>
+<button type="button" onclick="magicAnswers()">The magic 8 ball says</button>
 
-<button type="button" onclick="myFunction()">The magic 8 ball says</button>
-
-<p id="demo">Use an object to get a random answer each time. How would I do that?  </p>
+<p id="demo"></p>
 
 <script>
 
