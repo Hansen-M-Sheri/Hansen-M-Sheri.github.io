@@ -20,11 +20,14 @@ function magicAnswers() {
 		"Reply hazy", 
 		"Don't count on it"
 	];
+
 	var max = answers.length - 1 ;
 	//get random item from array
 	var x = Math.floor((Math.random() * max));
 	var randomString = answers[x]; 
-    document.getElementById("demo").innerHTML = randomString;
+
+    document.getElementById("answer").innerHTML = randomString;
+    
     
 }
 
