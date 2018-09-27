@@ -1,20 +1,31 @@
 
-
+/*
+ * Magic Answers: form array of possible answers
+ * generate a random number and use it as the
+ * index of the answerArray. 
+*/
 function magicAnswers() {
-	var answers = ["Yes", "No", "Definitely!", "Absolutely Not!", "In your dreams", "You wish!", 
-	"It is certain", "You may rely on it", "Cannot predict now", "Concentrate and ask again", "Very doubtful",
-	"Reply hazy, try again", "Don't count on it"];
-	var max = answers.length;
+	var answers = [
+		"Yes", 
+		"No", 
+		"Definitely!", 
+		"Absolutely Not!", 
+		"In your dreams", 
+		"You wish!", 
+		"It is certain", 
+		"You may rely on it", 
+		"Cannot predict now", 
+		"Concentrate and ask again", 
+		"Very doubtful",
+		"Reply hazy", 
+		"Don't count on it"
+	];
+	var max = answers.length - 1 ;
 	//get random item from array
-	var randomString = answers[getRandomInt(0,(max - 1)]; //max is length of array take 0 into account
+	var x = Math.floor((Math.random() * max));
+	var randomString = answers[x]; 
     document.getElementById("demo").innerHTML = randomString;
     
-}
-
-function getRandomInt(min, max) {
-	min = Math.ceil(min);
-	max = Math.floor(max);
-	return Math.floor(Math.random() * (max - min)) + min; //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 }
 
 function tryAgain(){
