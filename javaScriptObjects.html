@@ -8,7 +8,7 @@
 <h1>Magic 8 Ball</h1>
 
 <select id="selectQuestion" onchange="magicAnswers()">
-	<option value="default">"What question do you want the magic 8 ball to answer?"</option>
+	<option value="default" selected="selected">"What question do you want the magic 8 ball to answer?"</option>
 	<option value="win">Will I win $100?</option>
 	<option value="goodGrades">Will I get an A in this class?</option>
 	<option value="failClass">Will I fail this class?</option>
@@ -16,10 +16,10 @@
 
 <p id="demo"></p>
 
-<div id="anotherTry" >
+<div id="anotherTry" style="display:none">
 	<p >Don't like the answer?</p>
 
-	<button type="button" onclick="magicAnswers()">Get another answer</button>;
+	<button type="button" onclick="tryAgain()">Get another answer</button>;
 </div>
 </body>
 </html>

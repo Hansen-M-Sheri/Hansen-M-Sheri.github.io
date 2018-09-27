@@ -11,7 +11,7 @@ function magicAnswers() {
 	//get random item from array
 	var randomString = answers[getRandomInt(0,answers.length())];
     document.getElementById("demo").innerHTML = randomString;
-    // document.getElementByID("anotherTry").style.visibility = "block";
+    
 }
 
 function getRandomInt(min, max) {
@@ -20,4 +20,8 @@ function getRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min)) + min; //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 }
 
+function tryAgain(){
+	document.getElementByID("anotherTry").style.visibility = "block";
+	magicAnswers();
+}
 //end hiding script from old browsers (is this really necessary?) --> 
