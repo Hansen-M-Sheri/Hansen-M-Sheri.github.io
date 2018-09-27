@@ -6,11 +6,11 @@ function myFunction(randomString) {
 
 function magicAnswers() {
 	var answers = ["Yes", "No", "Definitely!", "Absolutely Not!", "In your dreams"];
-    document.getElementById("demo1").innerHTML = "test";
 	//get random item from array
 	var i = getRandomInt(0,4);
 	var randomString = answers[i];
     document.getElementById("demo").innerHTML = randomString;
+    document.getElementByID("anotherTry").style.visibility = "block";
 }
 
 function getRandomInt(min, max) {
