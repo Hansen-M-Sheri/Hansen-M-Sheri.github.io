@@ -2,22 +2,21 @@
 <html>
 <body>
 
-<h1>JavaScript Objects</h1>
+<h1>Magic 8 Ball</h1>
 
-<p id="demo"></p>
+
+<p>JavaScript can change the content of an HTML element (using: onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"):</p>
+
+<button type="button" onclick="myFunction()">The magic 8 ball says</button>
+
+<p id="demo">Use an object to get a random answer each time. How would I do that?  </p>
 
 <script>
-	var group0 = {
-		“meetingTime”           : “8:30 am MST”,
-		“numOfMtgsPerWeek” : 2       //ints do not require “” 
-		“groupMembers”         : [’Sheri’, ‘Heather’, ‘Jimmy’, ‘Cody’, ’Felicia’, ‘Bryce’]  //No comma on last property
-}	
-	
-	// Display some data from the object:
-	document.getElementById("demo").innerHTML =
-	"Our group will meet " + group0.numOfMtgsPerWeek + " times per week at " 
-		+ group0.meetingTime + ".";
+function myFunction() { 
+    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+}
 </script>
 
 </body>
 </html>
+
