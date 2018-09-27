@@ -16,10 +16,26 @@
 		}
 	</script>
 	<h1>JavaScript can change source attributes of an image</h1>
-	<button onclick="document.getElementById('myImage').src='confident.png'">How you look on the first day of class</button>
+	<button type="button" onclick="document.getElementById('myImage').src='confident.png'">How you look on the first day of class</button>
 
 	<img id="myImage" src="confident.png" style="width:200px">
 
-	<button onclick="document.getElementById('myImage').src='stressed.png'">How you look on the last day of class</button>
+	<button type="button" onclick="document.getElementById('myImage').src='stressed.png'">How you look on the last day of class</button>
+	<h1 id="sectionHeader">JavaScript can CHANGE, HIDE or SHOW HTML elements</h1>
+
+	<button type="button" onclick="document.getElementById('sectionHeader').style.fontSize = '12px'">Change Font Size!</button>
+	<button type="button" onclick="document.getElementById('sectionHeader').style.fontSize = '32px'">Change it back</button>
+
+	<!-- Hide -->
+	<div id="hideAndShow">
+		<div>
+			<h3>It can hide elements, or show them</h3>
+			<p id="sensitiveInfo">I am 42 years old.</p>
+		</div>
+
+		<button type="button" onclick="getElementById('sensitiveInfo').style.display='none'">Hide my age...PLEASE!!!</button>
+
+		<button type="button" onclick="getElementById('sensitiveInfo').style.display='block'">Reveal my age again</button>
+	</div>
 </body>
 </html>
