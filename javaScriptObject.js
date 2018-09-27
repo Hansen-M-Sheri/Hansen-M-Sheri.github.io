@@ -11,7 +11,7 @@ function magicAnswers() {
 	//get random item from array
 	var randomString = answers[getRandomInt(0,answers.length())];
     document.getElementById("demo").innerHTML = randomString;
-    document.getElementByID("anotherTry").style.visibility = "block";
+    // document.getElementByID("anotherTry").style.visibility = "block";
 }
 
 function getRandomInt(min, max) {
