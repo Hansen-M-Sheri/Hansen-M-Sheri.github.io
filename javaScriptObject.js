@@ -6,7 +6,7 @@ function magicAnswers() {
 	"Reply hazy, try again", "Don't count on it"];
 	var max = answers.length;
 	//get random item from array
-	var randomString = answers[getRandomInt(0,max)];
+	var randomString = answers[getRandomInt(0,(max - 1)]; //max is length of array take 0 into account
     document.getElementById("demo").innerHTML = randomString;
     
 }
