@@ -5,10 +5,11 @@ function myFunction(randomString) {
 }
 
 function magicAnswers() {
-	var answers = ["Yes", "No", "Definitely!", "Absolutely Not!", "In your dreams"];
+	var answers = ["Yes", "No", "Definitely!", "Absolutely Not!", "In your dreams", "You wish!", 
+	"It is certain", "You may rely on it", "Cannot predict now", "Concentrate and ask again", "Very doubtful",
+	"Reply hazy, try again", "Don't count on it"];
 	//get random item from array
-	var i = getRandomInt(0,4);
-	var randomString = answers[i];
+	var randomString = answers[getRandomInt(0,answers.length())];
     document.getElementById("demo").innerHTML = randomString;
     document.getElementByID("anotherTry").style.visibility = "block";
 }
