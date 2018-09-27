@@ -2,19 +2,24 @@
 <html>
 <body>
 
-<h1>Basic JavaScript</h1>
+	<h1>Basic JavaScript</h1>
 
-<p>JavaScript can change the content of an HTML element:</p>
+	<p>JavaScript can change the content of an HTML element (using: onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"):</p>
 
-<button type="button" onclick="myFunction()">Click Here!</button>
+	<button type="button" onclick="myFunction()">See What Happens!</button>
 
-<p id="demo">This is a demonstration.</p>
+	<p id="demo">This is a demonstration.</p>
 
-<script>
-function myFunction() { 
-    document.getElementById("demo").innerHTML = "Hello JavaScript!";
-}
-</script>
+	<script>
+		function myFunction() { 
+    	document.getElementById("demo").innerHTML = "Hello JavaScript!";
+		}
+	</script>
+	<h1>JavaScript can change source attributes of an image</h1>
+	<button onclick="document.getElementById('myImage').src='confident.png'">How you look on the first day of class</button>
 
+	<img id="myImage" src="confident.png" style="width:200px">
+
+	<button onclick="document.getElementById('myImage').src="stressed.png'">How you look on the last day of class</button>
 </body>
 </html>
