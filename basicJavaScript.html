@@ -7,6 +7,8 @@
 
 	<h1>Basic JavaScript</h1>
 
+	<hr>
+
 	<p>JavaScript can change the content of an HTML element (using: onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"):</p>
 
 	<button type="button" onclick="myFunction()">See What Happens!</button>
@@ -18,12 +20,18 @@
     	document.getElementById("demo").innerHTML = "Hello JavaScript!";
 		}
 	</script>
+
+	<hr>
+
 	<h1>JavaScript can change source attributes of an image</h1>
 	<button type="button" onclick="document.getElementById('myImage').src='confident.png'">How you look on the first day of class</button>
 
 	<img id="myImage" src="confident.png" style="width:200px">
 
 	<button type="button" onclick="document.getElementById('myImage').src='stressed.png'">How you look on the last day of class</button>
+
+	<hr>
+
 	<h1 id="sectionHeader">JavaScript can CHANGE, HIDE or SHOW HTML elements</h1>
 
 	<button type="button" onclick="document.getElementById('sectionHeader').style.fontSize = '12px'">Change Font Size!</button>
@@ -40,7 +48,9 @@
 
 		<button type="button" onclick="getElementById('sensitiveInfo').style.display='block'">Reveal my age again</button>
 	</div>
+
 	<hr>
+	
 	<h1>Magic 8 Ball</h1>
 
 <select id="selectQuestion" onchange="magicAnswers()">
