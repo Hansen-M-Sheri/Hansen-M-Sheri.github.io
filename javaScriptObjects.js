@@ -33,6 +33,9 @@ function Admin(...args) { //this takes all parameters and puts then in an array
   this.role = 'super admin';
 }
 
+//But how do we inherit the prototype items from User? Because admin will have it's own prototype
+Admin.prototype = Object.create(User.prototype);
+
 //Every time this constructor is used, it will have access to login function
 
 var userOne = new User ('user1@email.com', 'Sheri');
