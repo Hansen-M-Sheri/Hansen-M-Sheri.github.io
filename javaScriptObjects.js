@@ -28,6 +28,9 @@ function Admin(...args) { //this takes all parameters and puts then in an array
 	//pass in the new Admin we created on line 36 by passing in "this"
   User.apply(this, [args]); //apply will run the function called, which in this case is User 
   							//(the 2nd param requires an array)
+
+  //can add properties or methods ONLY accessible to admin here:
+  this.role = 'super admin';
 }
 
 //Every time this constructor is used, it will have access to login function
