@@ -16,3 +16,4 @@ var userOne = new User ('user1@email.com', 'Sheri');
 var userTwo = new User ('user2@email.com', 'User2');
 
 console.log(userOne);
+userTwo.login();
