@@ -1,43 +1,18 @@
-//create an object
-var o = {
-	age: 7,
-	getAgeInTen() {
-		return this.a + 10;
-	},
-	set age(x) { this.a = x};
-	displayO();
-}
 
-function Car(make, model, year, owner) {
-	this.make = make;
-	this.model = model;
-	this.year = year;
-	this.owner = owner;
-	this.displayCar = displayCar;
-}
-
-function displayCar() {
-	var result = "A Beautiful " + this.year + ' ' + this.make 
-	   + ' ' + this.model;
-	   pretty_print(result);
-}
-
-function pretty_print(string) {
-	document.getElementById("demo").innerHTML = string;
-}
-
-var person = {
-	name: "Sheri",
-	eyeColor: "Blue",
-	age: 27, 
-	updateAge: function() {
-		return ++person.Age;
+//Object constructor with method attached
+function User(email, name) {
+	this.email = email;
+	this.name = name;
+	this.online = false;
+	this.login = function() {
+		this.online = true;
+		console.log(this.email, 'has logged in');
 	}
 }
 
-//Objects are capitalized
-function Person(name, eyeColor, age) {
-	this.name = name;
-	this.eyeColor = eyeColor;
-	this.age = 
-}
+//Every time this constructor is used, it will have access to login function
+
+var userOne = new User ('user1@email.com', 'Sheri');
+var userTwo = new User ('user2@email.com', 'User2');
+
+console.log(userOne);
