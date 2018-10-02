@@ -1,5 +1,5 @@
 
-var form = document.getElementById("form");
+var form = document.getElementById("formInput");
 console.log(form);
 //put UL in variable
 var itemList = document.getElementById("items");
