@@ -38,8 +38,14 @@
 }
 
 function removeItem(e) {
+	//only continue if the target clicked on is in class //deleteButton
 	if(e.target.classList.contains('deleteButton')) {
-		console.log(1);
+		if(confirm('Are you sure?')) {
+			//get the parentElement (li)
+			var li = e.target.parentElement;
+			//remove the ul from itemlist
+			itemList.removeChild('li');
+		}
 	}
 }
 </script>
