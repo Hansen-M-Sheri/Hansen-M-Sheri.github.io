@@ -1,11 +1,11 @@
 
-var form = document.getElementById("formInput");
+var form = document.getElementById("form");
 console.log(form);
 //put UL in variable
 var itemList = document.getElementById("items");
 
 //form submit event
-//form.addEventListener('onclick', addItem());
+form.addEventListener('submit', addItem());
 
 function addItem(e) { //pass in event object
 	e.preventDefault();
