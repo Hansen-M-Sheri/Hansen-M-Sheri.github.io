@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>LIST MAKER</title>
-		
+	<script src="dom.js"></script>
 	<style>
 		body {
 			background-color: #e5e7ea
@@ -29,7 +29,7 @@
 		}
 	</style>
 </head>
-<body>
+<body onload="createListElements()">
 	<div id="header">
 		<header><h1>Create a Grocery List</h1></header>
 	</div>
@@ -50,6 +50,6 @@
 			<!-- Empty till we add items to list -->
 		</ul>
 	</div>
-<script src="dom.js"></script>
+
 </body>
 </html>
