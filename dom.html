@@ -4,14 +4,18 @@
 	<title>LIST MAKER</title>
 	<script>
 	function createListItems() {
-	var form = document.getElementById("form");
-	//put UL in variable
-	var itemList = document.getElementById("items");
+		var form = document.getElementById("form");
+		//put UL in variable
+		var itemList = document.getElementById("items");
 
-	//delete event
-	itemList.addEventListener('click', removeItem);
+		//delete event
+		itemList.addEventListener('click', removeItem);
+	    //form submit event
+		form.addEventListener('submit', addItem());
+	}
 
-
+	function addItem(e) { //pass in event object
+		
 	var newItem = document.getElementById("newItem").value;
 
 	//create a new li element
@@ -33,23 +37,24 @@
 	li.appendChild(deleteButton);
 
 	itemList.appendChild(li);
-
+	}
 	
-}
 
-function removeItem(e) {
-	//only continue if the target clicked on is in class //deleteButton
-	if(e.target.classList.contains('deleteButton')) {
-		if(confirm('Are you sure?')) {
-			//get the parentElement (li)
-			var li = e.target.parentElement;
-			//remove the ul from itemlist
-			var itemList = document.getElementById("items");
-			itemList.removeChild(li);
 
+	function removeItem(e) {
+		//only continue if the target clicked on is in class //deleteButton
+		if(e.target.classList.contains('deleteButton')) {
+			if(confirm('Are you sure?')) {
+				//get the parentElement (li)
+				var li = e.target.parentElement;
+				//remove the ul from itemlist
+				var itemList = document.getElementById("items");
+				itemList.removeChild(li);
+
+			}
 		}
 	}
-}
+
 </script>
 	<style>
 		body {
@@ -77,7 +82,7 @@ function removeItem(e) {
 		}
 	</style>
 </head>
-<body >
+<body>
 	<div id="header">
 		<header><h1>Create a Grocery List</h1></header>
 	</div>
