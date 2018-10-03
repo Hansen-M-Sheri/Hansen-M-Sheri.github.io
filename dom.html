@@ -2,7 +2,47 @@
 <html>
 <head>
 	<title>LIST MAKER</title>
-	<script src="dom.js"></script>
+	<script>
+	function createListItems() {
+	var form = document.getElementById("form");
+	//put UL in variable
+	var itemList = document.getElementById("items");
+
+	//delete event
+	itemList.addEventListener('click', removeItem);
+
+
+	var newItem = document.getElementById("newItem").value;
+
+	//create a new li element
+	var li = document.createElement('li');
+
+	//append the text from the form to the new list item
+	li.appendChild(document.createTextNode(newItem));
+
+	//create a delete button element
+	var deleteButton = document.createElement('button');
+
+	//add class to button
+	deleteButton.className = 'deleteButton';
+
+	//append text node
+	deleteButton.appendChild(document.createTextNode('X'));
+
+	//append button to li
+	li.appendChild(deleteButton);
+
+	itemList.appendChild(li);
+
+	
+}
+
+function removeItem(e) {
+	if(e.target.classList.contains('deleteButton')) {
+		console.log(1);
+	}
+}
+</script>
 	<style>
 		body {
 			background-color: #e5e7ea
@@ -29,7 +69,7 @@
 		}
 	</style>
 </head>
-<body onload="createListElements()">
+<body >
 	<div id="header">
 		<header><h1>Create a Grocery List</h1></header>
 	</div>
@@ -37,17 +77,15 @@
 		<p><h3>ADD ITEMS</h3></p>
 		<form id="form">
 			<input type="text" name="item" id="newItem">
-			<input type="submit" value="Submit" >
+			<!--<input type="submit" value="Submit" > -->
+			<button type="button" onclick="createListItems()">Add item</button>
 		</form>
 	</div>
 	<div id="list">
 		<p><h3>LIST</h3></p>
 		<ul id="items">
-			<li>Item 1 <button class="deleteButton">X</button></li>
-			<li>Item 2<button class="deleteButton">X</button></li>
-			<li>Item 3<button class="deleteButton">X</button></li>
-			<li>Item 4<button class="deleteButton">X</button></li>
-			<!-- Empty till we add items to list -->
+			
+			<!-- Empty till we add items to list thru DOM-->
 		</ul>
 	</div>
 
