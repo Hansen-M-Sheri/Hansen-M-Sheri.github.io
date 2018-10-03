@@ -45,7 +45,8 @@ function removeItem(e) {
 			var li = e.target.parentElement;
 			//remove the ul from itemlist
 			var itemList = document.getElementById("items");
-			itemList.removeChild('li');
+			itemList.removeChild(li);
+
 		}
 	}
 }
