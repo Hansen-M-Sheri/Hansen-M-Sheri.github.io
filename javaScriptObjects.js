@@ -51,13 +51,13 @@ function appendFunctionLogin() {
 
 	userOne.login();
 		var str = " ";
-		str += "User " + userOne.name "is logged in";
+		str += "User " + userOne.name + "is logged in";
 		document.getElementById("login").innerHTML = str;
 }
 function appendFunctionLogout() {
 	userOne.logout();
 		var str = " ";
-		str += "User " + userOne.name "is logged out";
+		str += "User " + userOne.name + "is logged out";
 		document.getElementById("logout").innerHTML = str;
 }
 
