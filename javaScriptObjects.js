@@ -48,7 +48,7 @@ console.log(admin);
 function demoObjectCreation() {
 	var userOne = new User ('user1@email.com', 'Sheri');
 	var str = " ";
-	str += "User: <br>" + "name: " + this.name + "<br>" + "email: " + this.email;
+	str += "User: <br>" + "name: " + userOne.name + "<br>" + "email: " + userOne.email;
 	document.getElementById("object").innerHTML = str;	
 }
 
