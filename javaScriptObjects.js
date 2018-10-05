@@ -5,18 +5,14 @@ function User(email, name) {
 	this.name = name;
 	this.online = false;
 	
-	this.login = function() {
-		this.online = true;
-		
-	}
+	
 	
 }
 
 //Add a method to the prototype
-// User.prototype.login = function() {
-// 	this.online = true;
-// 		console.log(this.email, 'has logged in');
-// }
+User.prototype.login = function() {
+	this.online = true;
+}
 
 User.prototype.logout = function() {
 	this.online = false;
@@ -51,6 +47,18 @@ function demoObjectCreation() {
 	document.getElementById("object").innerHTML = str;	
 }
 
-function appendLogout() {
+function appendFunctionLogin() {
+
+	userOne.login();
+		var str = " ";
+		str += "User " + userOne.name "is logged in";
+		document.getElementById("login").innerHTML = str;
+}
+function appendFunctionLogout() {
+	userOne.logout();
+		var str = " ";
+		str += "User " + userOne.name "is logged out";
+		document.getElementById("logout").innerHTML = str;
+}
 
 }

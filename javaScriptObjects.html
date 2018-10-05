@@ -8,15 +8,19 @@
 	<h1>JavaScript Objects</h1>
 
 	<h3>Create a user:</h3>
-	<p>User is an object with properties of name, email, online</p>
+	<p>User is an object with properties of name, email, and if they are logged in or not. There are no methods associated with the user object at this point.</p>
 	<button onclick="demoObjectCreation()">Reveal our user info</button>
 	<p id="object"></p>
 <hr>
-<h3>Add method to User.prototype</h3>
-	<p>User can now be logged out. Try it</p>
-	<button onclick="appendLogout()">Log out the user</button>
-	<p id="logout"></p>
+	<h3>Add methods to User.prototype to log the user in and out</h3>
+	<p>User can now be logged in. Try it</p>
+	<button onclick="appendFunctionLogin()">Log out the user</button>
+	<p id="login"></p>
 
+	<h3>Add methods to User.prototype to log the user in and out</h3>
+	<p>User can now be logged in. Try it</p>
+	<button onclick="appendFunctionLogout()">Log out the user</button>
+	<p id="logout"></p>
 
 </body>
 </html>
