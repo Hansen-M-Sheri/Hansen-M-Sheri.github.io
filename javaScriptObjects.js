@@ -61,4 +61,4 @@ function appendFunctionLogout() {
 		document.getElementById("logout").innerHTML = str;
 }
 
-}
+
