@@ -7,7 +7,7 @@ function User(email, name) {
 	
 	this.login = function() {
 		this.online = true;
-		document.getElementById("demo".innerHTML = (this.email, 'has logged in');
+		
 	}
 	
 }
@@ -20,7 +20,7 @@ function User(email, name) {
 
 User.prototype.logout = function() {
 	this.online = false;
-	console.log(this.email, 'has logged out');
+	document.getElementById("demoAppend").innerHTML = (this.email, 'has logged out');
 }
 
 //Admin is a User - requires inheritance
@@ -47,6 +47,11 @@ console.log(admin);
 
 function demoObjectCreation() {
 	var userOne = new User ('user1@email.com', 'Sheri');
-	var userTwo = new User ('user2@email.com', 'Jacob');
+	var str = " ";
+	str += "User: <br>" + "name: " + this.name + "<br>" + "email: " + this.email;
+	document.getElementById("object").innerHTML = str;	
 }
 
+function appendLogout() {
+
+}
