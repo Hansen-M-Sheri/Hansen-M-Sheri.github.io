@@ -48,13 +48,14 @@ function demoObjectCreation() {
 }
 
 function appendFunctionLogin() {
-
+	var userOne = new User ('user1@email.com', 'Sheri');
 	userOne.login();
 		var str = " ";
 		str += "User " + userOne.name + "is logged in";
 		document.getElementById("login").innerHTML = str;
 }
 function appendFunctionLogout() {
+	var userOne = new User ('user1@email.com', 'Sheri');
 	userOne.logout();
 		var str = " ";
 		str += "User " + userOne.name + "is logged out";
