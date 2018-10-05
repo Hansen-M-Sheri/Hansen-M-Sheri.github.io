@@ -20,7 +20,6 @@ function User(email, name) {
 
 User.prototype.logout = function() {
 	this.online = false;
-	document.getElementById("demoAppend").innerHTML = (this.email, 'has logged out');
 }
 
 //Admin is a User - requires inheritance
@@ -48,7 +47,7 @@ console.log(admin);
 function demoObjectCreation() {
 	var userOne = new User ('user1@email.com', 'Sheri');
 	var str = " ";
-	str += "User: <br>" + "name: " + userOne.name + "<br>" + "email: " + userOne.email;
+	str += "User: <br>" + "name: " + userOne.name + "<br>" + "email: " + userOne.email +"<br>" + "Logged in: " + userOne.online ;
 	document.getElementById("object").innerHTML = str;	
 }
 
