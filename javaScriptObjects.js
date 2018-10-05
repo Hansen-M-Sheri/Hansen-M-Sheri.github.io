@@ -4,19 +4,19 @@ function User(email, name) {
 	this.email = email;
 	this.name = name;
 	this.online = false;
-	/*
+	
 	this.login = function() {
 		this.online = true;
-		console.log(this.email, 'has logged in');
+		document.getElementById("demo".innerHTML = (this.email, 'has logged in');
 	}
-	*/
+	
 }
 
 //Add a method to the prototype
-User.prototype.login = function() {
-	this.online = true;
-		console.log(this.email, 'has logged in');
-}
+// User.prototype.login = function() {
+// 	this.online = true;
+// 		console.log(this.email, 'has logged in');
+// }
 
 User.prototype.logout = function() {
 	this.online = false;
@@ -39,10 +39,14 @@ Admin.prototype = Object.create(User.prototype);
 
 //Every time this constructor is used, it will have access to login function
 
-var userOne = new User ('user1@email.com', 'Sheri');
-var userTwo = new User ('user2@email.com', 'User2');
+
+var userTwo = new User ('user2@email.com', 'Jacob');
 var admin = new Admin ('admin@email', 'Jacob');
 
 console.log(admin);
 
+function demoObjectCreation() {
+	var userOne = new User ('user1@email.com', 'Sheri');
+	var userTwo = new User ('user2@email.com', 'Jacob');
+}
 
