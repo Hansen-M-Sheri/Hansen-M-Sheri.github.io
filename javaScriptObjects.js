@@ -65,7 +65,7 @@ function appendFunctionLogout() {
 
 function viewAdminInfo(){
 	var admin = new Admin ('admin@email', 'Jacob');
-	var str = "Admin: <br>" + admin.name + ":<br>role: " + admin.role + "<br>email: " + 
+	var str = "Admin: <br>" + admin.name + "<br>role: " + admin.role + "<br>email: " + 
 	admin.email + "<br> logged in: " + admin.online;
 	document.getElementById("adminInfo").innerHTML = str;
 
@@ -75,7 +75,7 @@ function adminLogin(){
 	var admin = new Admin ('admin@email', 'Jacob');
 	admin.login();
 	var str = " ";
-		str += "User " + admin.name + " is logged in";
+		str += admin.name + " is logged in";
 		document.getElementById("adminLogin").innerHTML = str;
 }
 
@@ -83,6 +83,6 @@ function adminLogout(){
 	var admin = new Admin ('admin@email', 'Jacob');
 	admin.logout();
 	var str = " ";
-		str += "User " + admin.name + " is logged out";
+		str += admin.name + " is logged out";
 		document.getElementById("adminLogout").innerHTML = str;
 }
