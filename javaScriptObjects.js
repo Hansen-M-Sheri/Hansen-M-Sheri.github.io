@@ -43,7 +43,7 @@ console.log(admin);
 function demoObjectCreation() {
 	var userOne = new User ('user1@email.com', 'Sheri');
 	var str = " ";
-	str += "User: <br>" + "name: " + userOne.name + "<br>" + "email: " + 
+	str += "User: <br>" + "Name: " + userOne.name + "<br>Email: " + 
 	userOne.email +"<br>" + "Logged in: " + userOne.online ;
 	document.getElementById("object").innerHTML = str;	
 }
@@ -65,8 +65,8 @@ function appendFunctionLogout() {
 
 function viewAdminInfo(){
 	var admin = new Admin ('admin@email', 'Jacob');
-	var str = "Admin: <br>" + admin.name + "<br>role: " + admin.role + "<br>email: " + 
-	admin.email + "<br> logged in: " + admin.online;
+	var str = "Admin: <br>" + "Name: " + admin.name  + "<br>Email: " + 
+	admin.email + "<br>Logged in: " + admin.online + "<br>Role: " + admin.role;
 	document.getElementById("adminInfo").innerHTML = str;
 
 }
