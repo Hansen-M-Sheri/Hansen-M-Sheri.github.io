@@ -36,20 +36,32 @@
 
 	<button type="button" onclick="document.getElementById('sectionHeader').style.fontSize = '12px'">Change Font Size!</button>
 	<button type="button" onclick="document.getElementById('sectionHeader').style.fontSize = '32px'">Change it back</button>
-
-	<!-- Hide -->
-	<!--
-	<div id="hideAndShow">
+	<hr>
+	<!-- Loop & Associative Array -->
+	
+	<div id="loopArray">
 		<div>
-			<h3>It can hide elements, or show them</h3>
-			<p id="sensitiveInfo">I am 42 years old.</p>
+			<h3>JavaScript does not support Associative Arrays. All array indexes must be numbered index. But, you can use an object(which allows you to store name:value pair) with a string for the "key" or index</h3>
+			<pre>
+				Object: User
+				var user {
+					"fName": 	"John",
+					"lName": 	"Doe", 
+					"age": 		"25",
+					"email": 	"john@email.com",
+					"location": "USA"
+				}
+			</pre>
+			<p>Loop through this object (using For/In loop)</p>
+			<button type="button" onclick="loop()">Get all info about user</button>
+			<p id="loop"></p>
 		</div>
 
 		<button type="button" onclick="getElementById('sensitiveInfo').style.display='none'">Hide my age...PLEASE!!!</button>
 
 		<button type="button" onclick="getElementById('sensitiveInfo').style.display='block'">Reveal my age again</button>
 	</div>
--->
+
 	<hr>
 
 	<h1>Magic 8 Ball</h1>
@@ -65,11 +77,7 @@
 	</select>
 
 	<p id="answer"></p>
-<!--
-<p id="anotherTry" style="display:none">Don't like the answer?</p>
 
-<button type="button" onclick="tryAgain()">Get another answer</button>
--->
 	<hr>
 </div>
 </body>

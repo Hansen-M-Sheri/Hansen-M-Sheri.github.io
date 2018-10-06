@@ -31,7 +31,18 @@ function magicAnswers() {
     
 }
 
-function tryAgain(){
-	document.getElementByID("anotherTry").style.visibility = "block";
-	magicAnswers();
+var user {
+	"fName": 	"John",
+	"lName": 	"Doe", 
+	"age": 		"25",
+	"email": 	"john@email.com",
+	"location": "USA"
+}
+
+function loop() {
+	var str = " ";
+	for (item in user){
+		str += user[item] + " ";
+	}
+	document.getElementById("loop").innerHTML = str;
 }
