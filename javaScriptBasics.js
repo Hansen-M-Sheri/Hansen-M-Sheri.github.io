@@ -31,15 +31,16 @@ function magicAnswers() {
     
 }
 
-var user {
+
+
+function loopThrough() {
+	var user {
 	"fName": 	"John",
 	"lName": 	"Doe", 
 	"age": 		"25",
 	"email": 	"john@email.com",
 	"location": "USA"
-}
-
-function loop() {
+	}
 	var str = " ";
 	for (item in user){
 		str += user[item] + " ";

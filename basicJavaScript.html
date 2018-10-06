@@ -5,6 +5,8 @@
 </head>
 <body>
 <div id="page" style="overflow-y: scroll;">
+
+	<a href="https://hansen-m-sheri.github.io/"> Return to index</a>
 	<h1>Basic JavaScript</h1>
 
 	<hr>
@@ -40,26 +42,21 @@
 	<!-- Loop & Associative Array -->
 	
 	<div id="loopArray">
-		<div>
-			<h3>JavaScript does not support Associative Arrays. All array indexes must be numbered index. But, you can use an object(which allows you to store name:value pair) with a string for the "key" or index</h3>
-			<pre>
-				Object: User
-				var user {
-					"fName": 	"John",
-					"lName": 	"Doe", 
-					"age": 		"25",
-					"email": 	"john@email.com",
-					"location": "USA"
-				}
-			</pre>
-			<p>Loop through this object (using For/In loop)</p>
-			<button type="button" onclick="loop()">Get all info about user</button>
-			<p id="loop"></p>
-		</div>
+		<h3>JavaScript does not support Associative Arrays. All array indexes must be numbered index. But, you can use an object(which allows you to store name:value pair) with a string for the "key" or index</h3>
+		<pre>
+			Object: User
+			var user {
+				"fName": 	"John",
+				"lName": 	"Doe", 
+				"age": 		"25",
+				"email": 	"john@email.com",
+				"location": "USA"
+			}
+		</pre>
+		<p>Loop through this object (using For/In loop)</p>
+		<button type="button" onclick="loopThrough()">Get all info about user</button>
+		<p id="loop"></p>
 
-		<button type="button" onclick="getElementById('sensitiveInfo').style.display='none'">Hide my age...PLEASE!!!</button>
-
-		<button type="button" onclick="getElementById('sensitiveInfo').style.display='block'">Reveal my age again</button>
 	</div>
 
 	<hr>
