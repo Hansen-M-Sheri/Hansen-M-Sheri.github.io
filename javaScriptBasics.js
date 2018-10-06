@@ -34,7 +34,7 @@ function magicAnswers() {
 
 
 function loopThrough() {
-	var user {
+	var user = {
 	"fName": 	"John",
 	"lName": 	"Doe", 
 	"age": 		"25",
