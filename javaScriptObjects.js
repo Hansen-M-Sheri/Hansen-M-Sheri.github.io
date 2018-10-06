@@ -20,7 +20,7 @@ User.prototype.logout = function() {
 
 //Admin is a User - requires inheritance
 function Admin(...args) { //this takes all parameters and puts then in an array
-	console.log(args);
+	//console.log(args);
 	//pass in the new Admin we created on line 36 by passing in "this"
   User.apply(this, args); //apply will run the function called, which in this case is User 
   							//(the 2nd param requires an array)
@@ -43,7 +43,8 @@ console.log(admin);
 function demoObjectCreation() {
 	var userOne = new User ('user1@email.com', 'Sheri');
 	var str = " ";
-	str += "User: <br>" + "name: " + userOne.name + "<br>" + "email: " + userOne.email +"<br>" + "Logged in: " + userOne.online ;
+	str += "User: <br>" + "name: " + userOne.name + "<br>" + "email: " + 
+	userOne.email +"<br>" + "Logged in: " + userOne.online ;
 	document.getElementById("object").innerHTML = str;	
 }
 
@@ -51,15 +52,37 @@ function appendFunctionLogin() {
 	var userOne = new User ('user1@email.com', 'Sheri');
 	userOne.login();
 		var str = " ";
-		str += "User " + userOne.name + "is logged in";
+		str += "User " + userOne.name + " is logged in";
 		document.getElementById("login").innerHTML = str;
 }
 function appendFunctionLogout() {
 	var userOne = new User ('user1@email.com', 'Sheri');
 	userOne.logout();
 		var str = " ";
-		str += "User " + userOne.name + "is logged out";
+		str += "User " + userOne.name + " is logged out";
 		document.getElementById("logout").innerHTML = str;
 }
 
+function viewAdminInfo(){
+	var admin = new Admin('sherih84015@gmail.com', Sheri);
+	var str = admin.name + ":<br>role: " + admin.role + "<br>email: " + 
+	admin.email + "<br> logged in: " + admin.online;
+	document.getElementById("adminInfo").innerHTML = str;
 
+}
+
+function adminLogin(){
+	var admin = new Admin('sherih84015@gmail.com', Sheri);
+	admin.login();
+	var str = " ";
+		str += "User " + admin.name + " is logged in";
+		document.getElementById("adminLogin").innerHTML = str;
+}
+
+function adminLogout(){
+	var admin = new Admin('sherih84015@gmail.com', Sheri);
+	admin.logout();
+	var str = " ";
+		str += "User " + admin.name + " is logged out";
+		document.getElementById("adminLogout").innerHTML = str;
+}
