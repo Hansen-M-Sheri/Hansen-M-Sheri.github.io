@@ -49,7 +49,7 @@ function createUser(){
 		localStorage.setItem("timesClickedBlue", newUser.timesClickedBlue.value);
 		localStorage.setItem("timesClickedRed", newUser.timesClickedRed.value);
 		localStorage.setItem("stepsCompleted", newUser.stepsCompleted.value);
-		localStorage.setItem("stepsCompleted", JSON.stringify(newUser.steps.value));
+		localStorage.setItem("stepsCompleted", JSON.stringify(newUser.steps));
 		
 		var str = "User: <br> fName: "+ fName + "<br>lName: "+ lName +"<br>Email: " + email;
 		document.getElementById("demoUserData").innerHTML = str;
