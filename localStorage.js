@@ -37,7 +37,7 @@ function createUser(){
 	var fName = document.getElementById("form").fName;
 	var lName = document.getElementById("form").lName;
 	var email = document.getElementById("form").email;
-	User newUser = User(fName, lName, email);
+	User newUser = new User(fName, lName, email);
 	var str = "User: <br> fName: "+ fName + "<br>lName: "+ lName +"<br>Email: " + email;
 	document.getElementById("demoUserData").innerHTML = str;
 }
