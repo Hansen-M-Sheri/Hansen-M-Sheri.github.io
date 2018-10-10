@@ -52,9 +52,9 @@ function createUser(){
 		localStorage.setItem("stepsCompleted", JSON.stringify(newUser.steps));
 		
 		var str = "User: <br> fName: "+ fName + "<br>lName: "+ lName +"<br>Email: " + email + 
-		"<br> Times Blue Button Clicked: " + int(localStorage.timesClickedBlue) + 
-		"<br> Times Red Button Clicked: " + int(localStorage.timesClickedRed) +
-		"<br> Steps Completed: " + int(localStorage.stepsCompleted) + 
+		"<br> Times Blue Button Clicked: " + localStorage.timesClickedBlue + 
+		"<br> Times Red Button Clicked: " + localStorage.timesClickedRed +
+		"<br> Steps Completed: " + localStorage.stepsCompleted + 
 		"<br> List of steps completed: " + JSON.parse(localStorage.steps);
 		document.getElementById("demoUserData").innerHTML = str;
 	// }
