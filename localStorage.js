@@ -55,7 +55,7 @@ function createUser(){
 		"<br> Times Blue Button Clicked: " + localStorage.timesClickedBlue + 
 		"<br> Times Red Button Clicked: " + localStorage.timesClickedRed +
 		"<br> Steps Completed: " + localStorage.stepsCompleted + 
-		"<br> List of steps completed: " + JSON.parse(localStorage.getItem(steps);
+		"<br> List of steps completed: " + JSON.parse(localStorage.getItem(steps));
 		document.getElementById("demoUserData").innerHTML = str;
 	// }
 	// else {
