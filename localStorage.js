@@ -36,17 +36,17 @@ function clickRedButton(){
 
 function createUser(){
 	var form = document.getElementById("form");
-	var fName = document.getElementById("form").fName;
-	var lName = document.getElementById("form").lName;
-	var email = document.getElementById("form").email;
+	var fName = document.getElementById("form").fName.value;
+	var lName = document.getElementById("form").lName.value;
+	var email = document.getElementById("form").email.value;
 	var newUser = new User(fName, lName, email);
 	//set the data in local storage
 	// if(typeof(storage) !== "undefined") {
 		//store user info
-		localStorage.setItem("fName", newUser.fName.value);
-		localStorage.setItem("lName", newUser.lName.value);
-		localStorage.setItem("email", newUser.email.value);
-		localStorage.setItem("timesClickedBlue", newUser.timesClickedBlue.value);
+		localStorage.setItem("fName", fName);
+		localStorage.setItem("lName", lName);
+		localStorage.setItem("email", email);
+		localStorage.setItem("timesClickedBlue", String(newUser.timesClickedBlue.value);
 		localStorage.setItem("timesClickedRed", newUser.timesClickedRed.value);
 		localStorage.setItem("stepsCompleted", newUser.stepsCompleted.value);
 		localStorage.setItem("stepsCompleted", JSON.stringify(newUser.steps));
