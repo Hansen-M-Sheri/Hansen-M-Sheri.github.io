@@ -41,7 +41,7 @@ function createUser(){
 	var email = document.getElementById("form").email;
 	var newUser = new User(fName, lName, email);
 	//set the data in local storage
-	if(typeof(storage)) !== "undefined") {
+	if(typeof(storage) !== "undefined") {
 		//store user info
 		localStorage.setItem("fName", JSON.stringify(newUser.fName));
 		localStorage.setItem("lName", JSON.stringify(newUser.lName));
