@@ -46,7 +46,7 @@ function createUser(){
 		localStorage.setItem("fName", fName);
 		localStorage.setItem("lName", lName);
 		localStorage.setItem("email", email);
-		localStorage.setItem("timesClickedBlue", String(newUser.timesClickedBlue.value);
+		localStorage.setItem("timesClickedBlue", String(newUser.timesClickedBlue.value));
 		localStorage.setItem("timesClickedRed", newUser.timesClickedRed.value);
 		localStorage.setItem("stepsCompleted", newUser.stepsCompleted.value);
 		localStorage.setItem("stepsCompleted", JSON.stringify(newUser.steps));
