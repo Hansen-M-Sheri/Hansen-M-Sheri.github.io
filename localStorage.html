@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title>Sheri Hansen Local Storage Demo</title>
+</head>
 <body>
+	<p>Local Storage is used similarly as session storage, BUT it will continue to reside on the computer even after the browser is closed.  It gives the web STATE!</p>
+	<p> For example, we can track how many times a person clicks on the red button vs the blue button. And return that after closing and opening the web browser.</p>
 
-<h1>Local Storage</h1>
+	<p><button onclick="clickBlueButton()" type="button" style="background-color: blue; color: white">Click me!</button></p>
 
+	<p><button onclick="clickRedButton()" type="button" style="background-color: red; color: white">Click me!</button></p>
 
+	<hr>
+	<h1>Simulate the trigger to store local storage</h1>
+	<p>You could store data any time in live code, but for our example, push the button and it will start the process of storing your User data to local storage</p>
 
+	<div id="input">
+		<p><h3>INPUT USER DATA</h3></p>
+		<form id="form">
+			First Name: <input type="text" name="fName" id="fName">
+			Last Name: <input type="text" name="lName" id="lName">
+			Email: <input type="text" name="email" id="email">
+			<!--<input type="submit" value="Submit" > -->
+			<button type="button" onclick="createUser()">Add User Info</button>
+		</form>
+	</div>
+	<p id="demoUserData">User Info</p>
+	<hr>
+	<button onclick="storeUserData()" type="button" style="background-color: black; color: white">Click here to store the user data</button>
 </body>
 </html>
