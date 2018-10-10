@@ -46,17 +46,19 @@ function createUser(){
 		localStorage.setItem("fName", fName);
 		localStorage.setItem("lName", lName);
 		localStorage.setItem("email", email);
-		localStorage.setItem("timesClickedBlue", String(newUser.timesClickedBlue.value));
-		localStorage.setItem("timesClickedRed", newUser.timesClickedRed.value);
-		localStorage.setItem("stepsCompleted", newUser.stepsCompleted.value);
+		// localStorage.setItem("timesClickedBlue", String(newUser.timesClickedBlue.value));
+		// localStorage.setItem("timesClickedRed", newUser.timesClickedRed.value);
+		// localStorage.setItem("stepsCompleted", newUser.stepsCompleted.value);
 		localStorage.setItem("stepsCompleted", JSON.stringify(newUser.steps));
-		
+		localStorage.setItem('user', JSON.stringify(newUser));
+
 		var str = "User: <br> fName: "+ fName + "<br>lName: "+ lName +"<br>Email: " + email + 
 		"<br> Times Blue Button Clicked: " + localStorage.timesClickedBlue + 
 		"<br> Times Red Button Clicked: " + localStorage.timesClickedRed +
 		"<br> Steps Completed: " + localStorage.stepsCompleted ; 
 		
 		document.getElementById("demoUserData").innerHTML = str;
+		console.log(JSON.parse(localStorage.getItem('user')));
 	// }
 	// else {
 	// 	document.getElementById("demoUserData").innerHTML = "Sorry, your browser does not support Web Storage...";
