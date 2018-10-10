@@ -22,13 +22,14 @@ function User(fName, lName, email){
 function clickBlueButton(){
 	this.timesClickedBlue++;
 	this.stepsCompleted = 1;
+	document.getElementById("blue").innerHTML = "You clicked the blue button";
 
 }
 
 function clickRedButton(){
 	this.timesClickedRed++;
 	this.stepsCompleted = 1;
-
+	document.getElementById("red").innerHTML = "You clicked the red button";
 }
 
 function createUser(){
