@@ -20,6 +20,7 @@ function User(fName, lName, email){
 }
 
 function clickBlueButton(){
+	// localStorage.timesClickedBlue++;
 	this.timesClickedBlue++;
 	this.stepsCompleted = 1;
 	document.getElementById("blue").innerHTML = "You clicked the blue button";
