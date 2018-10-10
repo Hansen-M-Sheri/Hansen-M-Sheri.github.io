@@ -7,15 +7,15 @@ function User(fName, lName, email){
 	this.timesClickedRed = 0;
 	this.stepsCompleted = 0;
 	var steps = {
-		"step0": "Begin the steps",
-		"step1":"Decide what you want to store",
-		"step2": "Check that localStorage is defined in browser",
-		"step3": "Set storage using 'localStorage.setItem(\"key\", \"value\")'",
-		"step4": "Close the browser to simulate test of user",
-		"step5": "Open browser & retrieve with localStorage.getItem(\"key\")",
-		"step6": "If item is a JSON string, parse it",
-		"step7": "Use the data - congrats you have used localStorage!",
-		"step8": "Remove the data by using 'localStorage.removeItem(\"key\")'"
+		"0": "Begin the steps",
+		"1":"Decide what you want to store",
+		"2": "Check that localStorage is defined in browser",
+		"3": "Set storage using 'localStorage.setItem(\"key\", \"value\")'",
+		"4": "Close the browser to simulate test of user",
+		"5": "Open browser & retrieve with localStorage.getItem(\"key\")",
+		"6": "If item is a JSON string, parse it",
+		"7": "Use the data - congrats you have used localStorage!",
+		"8": "Remove the data by using 'localStorage.removeItem(\"key\")'"
 	}
 }
 
@@ -51,7 +51,11 @@ function createUser(){
 		localStorage.setItem("stepsCompleted", newUser.stepsCompleted.value);
 		localStorage.setItem("stepsCompleted", JSON.stringify(newUser.steps));
 		
-		var str = "User: <br> fName: "+ fName + "<br>lName: "+ lName +"<br>Email: " + email;
+		var str = "User: <br> fName: "+ fName + "<br>lName: "+ lName +"<br>Email: " + email + 
+		"<br> Times Blue Button Clicked: " + int(localStorage.timesClickedBlue) + 
+		"<br> Times Red Button Clicked: " + int(localStorage.timesClickedRed) +
+		"<br> Steps Completed: " + int(localStorage.stepsCompleted) + 
+		"<br> List of steps completed: " + JSON.parse(localStorage.steps);
 		document.getElementById("demoUserData").innerHTML = str;
 	// }
 	// else {
