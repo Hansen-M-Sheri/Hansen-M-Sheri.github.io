@@ -7,10 +7,16 @@
 <body>
 	<p>Local Storage is used similarly as session storage, BUT it will continue to reside on the computer even after the browser is closed.  It gives the web STATE!</p>
 	<p> For example, we can track how many times a person clicks on the red button vs the blue button. And return that after closing and opening the web browser.</p>
-
-	<p><button onclick="clickBlueButton()" type="button" style="background-color: blue; color: white">Click me!</button></p>
-
-	<p><button onclick="clickRedButton()" type="button" style="background-color: red; color: white">Click me!</button></p>
+	<div>
+		<p><button onclick="clickBlueButton()" type="button" style="background-color: blue; color: white">Click me!</button>
+		</p>
+		<p id="blue"></p>
+	</div>
+	<div>
+		<p><button onclick="clickRedButton()" type="button" style="background-color: red; color: white">Click me!</button>
+		</p>
+		<p id="red"></p>
+	</div>
 
 	<hr>
 	<h1>Simulate the trigger to store local storage</h1>
