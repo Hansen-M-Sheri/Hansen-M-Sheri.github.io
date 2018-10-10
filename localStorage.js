@@ -43,13 +43,13 @@ function createUser(){
 	//set the data in local storage
 	// if(typeof(storage) !== "undefined") {
 		//store user info
-		localStorage.setItem("fName", JSON.stringify(newUser.fName));
-		localStorage.setItem("lName", JSON.stringify(newUser.lName));
-		localStorage.setItem("email", JSON.stringify(newUser.email));
-		localStorage.setItem("timesClickedBlue", JSON.stringify(newUser.timesClickedBlue));
-		localStorage.setItem("timesClickedRed", JSON.stringify(newUser.timesClickedRed));
-		localStorage.setItem("stepsCompleted", JSON.stringify(newUser.stepsCompleted));
-		localStorage.setItem("stepsCompleted", JSON.stringify(newUser.steps));
+		localStorage.setItem("fName", newUser.fName.value);
+		localStorage.setItem("lName", newUser.lName.value);
+		localStorage.setItem("email", newUser.email.value);
+		localStorage.setItem("timesClickedBlue", newUser.timesClickedBlue.value);
+		localStorage.setItem("timesClickedRed", newUser.timesClickedRed.value);
+		localStorage.setItem("stepsCompleted", newUser.stepsCompleted.value);
+		localStorage.setItem("stepsCompleted", JSON.stringify(newUser.steps.value));
 		
 		var str = "User: <br> fName: "+ fName + "<br>lName: "+ lName +"<br>Email: " + email;
 		document.getElementById("demoUserData").innerHTML = str;
