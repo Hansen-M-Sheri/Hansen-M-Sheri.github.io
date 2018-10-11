@@ -95,7 +95,8 @@ function storeData() {
 		if(typeof(Storage) !== "undefined"){
 			localStorage.setItem("stepsCompleted", newUser.stepsCompleted);
 			localStorage.setItem("steps", JSON.stringify(steps));
-		}	document.getElementById("store").innerHTML = "Items have been stored. Close browser"
+			document.getElementById("store").innerHTML = "Items have been stored. Close browser"
+		}
 		else {
 			document.getElementById("store").innerHTML = "Your browser does not support web storage"
 		}
