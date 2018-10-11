@@ -78,7 +78,10 @@ function storeData() {
 		localStorage.setItem("timesClickedBlue", newUser.timesClickedBlue);
 		localStorage.setItem("timesClickedRed", newUser.timesClickedRed);
 		localStorage.setItem("stepsCompleted", newUser.stepsCompleted);
-		localStorage.setItem("user", JSON.stringify(newUser));
+		localStorage.setItem("steps", JSON.stringify(newUser.steps));
+
+		//store entire user
+		
 
 		document.getElementById("store").innerHTML = "Items have been stored. Close browser"
 
