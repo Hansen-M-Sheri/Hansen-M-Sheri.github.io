@@ -12,16 +12,16 @@ function User(fName, lName, email){
 function clickBlueButton(){
 	
 	this.timesClickedBlue  = localStorage.timesClickedBlue ;
-	localStorage.setItem(timesClickedBlue) = timesClickedBlue + 1;
-	localStorage.setItem(stepsCompleted) = 1;
+	localStorage.setItem("timesClickedBlue", timesClickedBlue) = timesClickedBlue + 1;
+	localStorage.setItem("stepsCompleted", stepsCompleted) = 1;
 	document.getElementById("blue").innerHTML = "You clicked the blue button " + timesClickedBlue + " times";
 
 }
 
 function clickRedButton(){
 this.timesClickedRed  = localStorage.timesClickedRed ;
-	localStorage.setItem(timesClickedRed) = timesClickedRed + 1;
-	this.stepsCompleted = 1;
+	localStorage.setItem("timesClickedRed", timesClickedRed) = timesClickedRed + 1;
+	localStorage.setItem("stepsCompleted", stepsCompleted) = 1;
 	document.getElementById("red").innerHTML = "You clicked the red button " + timesClickedRed + " times";
 }
 
@@ -39,7 +39,7 @@ function createUser(){
 		localStorage.setItem("timesClickedBlue", newUser.timesClickedBlue);
 		localStorage.setItem("timesClickedRed", newUser.timesClickedRed);
 		localStorage.setItem("stepsCompleted", newUser.stepsCompleted);
-		localStorage.setItem("stepsCompleted", JSON.stringify(newUser.steps));
+		//localStorage.setItem("stepsCompleted", JSON.stringify(newUser.steps));
 		//or we can store the entire object - very useful
 		localStorage.setItem("user", JSON.stringify(newUser));
 
