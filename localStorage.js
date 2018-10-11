@@ -92,6 +92,9 @@ function storeData() {
 function retrieveData() {
 	var newUser = JSON.parse(localStorage.getItem('user'));
 	var steps = JSON.parse(localStorage.getItem("steps"));
+	var clickBlue = JSON.parse(localStorage.getItem("timesClickedBlue"));
+	var clickRed = JSON.parse(localStorage.getItem("timesClickedRed"));
+	var stepsCompleted = 8;
 	var str = " ";
 	//print out user object
 	str += "Here is the data that was stored in Local Storage for you: <br>";
@@ -99,9 +102,9 @@ function retrieveData() {
 	"<br>fName: " + newUser.fName + 
 	"<br>lName: " + newUser.lName +
 	"<br>email: " + newUser.email +
-	"<br>timesClickedBlue: " + newUser.timesClickedBlue +
-	"<br>timesClickedRed: " + newUser.timesClickedRed +
-	"<br>stepsCompleted: " + newUser.stepsCompleted + "<br>";
+	"<br>timesClickedBlue: " + clickBlue +
+	"<br>timesClickedRed: " + clickRed +
+	"<br>stepsCompleted: " + stepsCompleted + "<br>";
 	
 	for (index in steps) {
 		str += index + ": " + steps[index] + "<br>";
