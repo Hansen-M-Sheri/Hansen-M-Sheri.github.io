@@ -150,6 +150,20 @@ function retrieveData() {
 		}
 }
 
+function removeData() {
+	localStorage.clear();
+	str = " ";
+	for (var i = 0; i < localStorage.length; i++){
+		str += "item: " + localStorage.getItem(localStorage.key(i)) + "<br>";
 
+	}
+	if (str == " "){
+		document.getElementById("remove").innerHTML = "There is nothing stored here";
+	}
+	else {
+		document.getElementById("remove").innerHTML = str;
+	}
+	 
+}
 //
 
