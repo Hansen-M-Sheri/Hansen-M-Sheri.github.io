@@ -161,7 +161,7 @@ function remove() {
 	}
 	document.getElementById("displayItemsRemaining1").innerHTML = str;
 
-	localStorage.removeItem(“fName”)
+	localStorage.removeItem("fName")
 	document.getElementById("remove2").innerHTML = "fName was removed from your localStorage";
 	var str = "Items remaining in local storage (in the manner they are stored): <br><br> ";
 	//display all items in localstorage
