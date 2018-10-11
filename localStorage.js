@@ -58,7 +58,7 @@ function createUser(){
 		"<br> Steps Completed: " + newUser.stepsCompleted ; 
 		
 		document.getElementById("demoUserData").innerHTML = str;
-		console.log(JSON.parse(localStorage.getItem('user')));
+		//console.log(JSON.parse(localStorage.getItem('user')));
 	// }
 	// else {
 	// 	document.getElementById("demoUserData").innerHTML = "Sorry, your browser does not support Web Storage...";
@@ -76,7 +76,7 @@ function storeData() {
 		localStorage.setItem("timesClickedBlue", newUser.timesClickedBlue);
 		localStorage.setItem("timesClickedRed", newUser.timesClickedRed);
 		localStorage.setItem("stepsCompleted", newUser.stepsCompleted);
-		localStorage.setItem('user', JSON.stringify(newUser));
+		localStorage.setItem("user", JSON.stringify(newUser));
 
 		document.getElementById("store").innerHTML = "Items have been stored. Close browser"
 
