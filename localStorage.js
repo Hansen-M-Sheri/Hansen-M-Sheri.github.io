@@ -93,8 +93,8 @@ function retrieveData() {
 	"<br>email: " + newUser.email +
 	"<br>timesClickedBlue: " + newUser.timesClickedBlue +
 	"<br>timesClickedRed: " + newUser.timesClickedRed +
-	"<br>stepsCompleted: " + newUser.stepsCompleted;
-
+	"<br>stepsCompleted: " + newUser.stepsCompleted + "<br>";
+	console.log(newUser.steps);
 	for (index in newUser.steps) {
 		str += index + ": " + newUser.steps[index] + "<br>";
 	}
