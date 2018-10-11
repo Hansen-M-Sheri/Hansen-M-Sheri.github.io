@@ -57,10 +57,16 @@ function createUser(){
 			//or we can store the entire object - very useful
 			localStorage.setItem("user", JSON.stringify(newUser));
 
+			//Store an array of users - to demo storing arrays
+			var rolesArray = {"Admin", "User", "SuperUser"};
+			localStorage.setItem("userTypes", JSON.stringify(rolesArray));
+
 			var str = "User: <br> fName: "+ fName + "<br>lName: "+ lName +"<br>Email: " + email + 
 			"<br> Times Blue Button Clicked: " + newUser.timesClickedBlue + 
 			"<br> Times Red Button Clicked: " + newUser.timesClickedRed +
 			"<br> Steps Completed: " + newUser.stepsCompleted ; 
+
+			str += "<br><br> Also storing an array of user types" + JSON.stringify(rolesArray);
 			
 			document.getElementById("demoUserData").innerHTML = str;
 		}
@@ -117,14 +123,14 @@ function retrieveData() {
 		var str = " ";
 		//print out user object
 		str += "Here is the data that was stored in Local Storage for you: <br>";
-		str += "User { " + 
+		str += "User Object{ " + 
 		"<br>fName: " + newUser.fName + 
 		"<br>lName: " + newUser.lName +
 		"<br>email: " + newUser.email +
 		"<br>timesClickedBlue: " + clickBlue +
 		"<br>timesClickedRed: " + clickRed +
-		"<br>stepsCompleted: " + stepsCompleted + "<br>";
-		
+		"<br>stepsCompleted: " + stepsCompleted + "<br>}";
+		str += "Steps Associative Array:"
 		for (index in steps) {
 			str += index + ": " + steps[index] + "<br>";
 		}
