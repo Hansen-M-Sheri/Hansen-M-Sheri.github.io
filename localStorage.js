@@ -53,9 +53,9 @@ function createUser(){
 		localStorage.setItem('user', JSON.stringify(newUser));
 
 		var str = "User: <br> fName: "+ fName + "<br>lName: "+ lName +"<br>Email: " + email + 
-		"<br> Times Blue Button Clicked: " + localStorage.timesClickedBlue + 
-		"<br> Times Red Button Clicked: " + localStorage.timesClickedRed +
-		"<br> Steps Completed: " + localStorage.stepsCompleted ; 
+		"<br> Times Blue Button Clicked: " + newUser.timesClickedBlue + 
+		"<br> Times Red Button Clicked: " + newUser.timesClickedRed +
+		"<br> Steps Completed: " + newUser.stepsCompleted ; 
 		
 		document.getElementById("demoUserData").innerHTML = str;
 		console.log(JSON.parse(localStorage.getItem('user')));
