@@ -71,7 +71,7 @@ function storeData() {
 		
 		//create a user from what we got from the localStorage
 		var newUser = JSON.parse(localStorage.getItem('user'));
-		newUser.stepsCompleted = 7:
+		newUser.stepsCompleted = 7;
 	//update clickTimes & steps
 		localStorage.setItem("timesClickedBlue", newUser.timesClickedBlue);
 		localStorage.setItem("timesClickedRed", newUser.timesClickedRed);
