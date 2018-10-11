@@ -170,13 +170,17 @@ function remove() {
 	// }
 	// document.getElementById("displayItemsRemaining2").innerHTML = str;
 	//display all current data in Local storage
+	console.log('line 173 <br>');
 	for (var i = 0; i < localStorage.length; i++){
 		str += "item: " + localStorage.getItem(localStorage.key(i)) + "<br>";
+		console.log('line 176 <br>');
 	}
+	console.log('line 178 <br>');
 	document.getElementById("displayItemsRemaining2").innerHTML = str;
-
+console.log('line 180 <br>');
 	//clear all storage
 	localStorage.clear();
+	console.log('line 183 <br>');
 	var str = "Items remaining in local storage (in the manner they are stored): <br><br> ";
 	//display all items in localstorage
 	for (var i = 0; i < localStorage.length; i++){
