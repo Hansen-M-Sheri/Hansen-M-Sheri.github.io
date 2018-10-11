@@ -169,7 +169,7 @@ function removeData() {
 		str += "item: " + localStorage.getItem(localStorage.key(i)) + "<br>";
 	}
 	document.getElementById("displayItemsRemaining2").innerHTML = str;
-	display all current data in Local storage
+	//display all current data in Local storage
 
 	for (var i = 0; i < localStorage.length; i++){
 		str += "item: " + localStorage.getItem(localStorage.key(i)) + "<br>";
