@@ -6,17 +6,6 @@ function User(fName, lName, email){
 	this.timesClickedBlue = 0;
 	this.timesClickedRed = 0;
 	this.stepsCompleted = 0;
-	var steps = {
-		"0": "Begin the steps",
-		"1":"Decide what you want to store",
-		"2": "Check that localStorage is defined in browser",
-		"3": "Set storage using 'localStorage.setItem(\"key\", \"value\")'",
-		"4": "Close the browser to simulate test of user",
-		"5": "Open browser & retrieve with localStorage.getItem(\"key\")",
-		"6": "If item is a JSON string, parse it",
-		"7": "Use the data - congrats you have used localStorage!",
-		"8": "Remove the data by using 'localStorage.removeItem(\"key\")'"
-	}
 
 }
 
@@ -72,16 +61,26 @@ function storeData() {
 		
 		//create a user from what we got from the localStorage
 		var newUser = JSON.parse(localStorage.getItem('user'));
-		console.log(newUser);
+		var steps = {
+		"step 0": "Begin the steps",
+		"step 1":"Decide what you want to store",
+		"step 2": "Check that localStorage is defined in browser",
+		"step 3": "Set storage using 'localStorage.setItem(\"key\", \"value\")'",
+		"step 4": "Close the browser to simulate test of user",
+		"step 5": "Open browser & retrieve with localStorage.getItem(\"key\")",
+		"step 6": "If item is a JSON string, parse it",
+		"step 7": "Use the data - congrats you have used localStorage!",
+		"step 8": "Remove the data by using 'localStorage.removeItem(\"key\")'"
+	}
 		newUser.stepsCompleted = 7;
 	//update clickTimes & steps
 		localStorage.setItem("timesClickedBlue", newUser.timesClickedBlue);
 		localStorage.setItem("timesClickedRed", newUser.timesClickedRed);
 		localStorage.setItem("stepsCompleted", newUser.stepsCompleted);
-		localStorage.setItem("steps", JSON.stringify(newUser.steps));
+		localStorage.setItem("steps", JSON.stringify(steps));
 
 		//store entire user
-		
+
 
 		document.getElementById("store").innerHTML = "Items have been stored. Close browser"
 
@@ -89,6 +88,7 @@ function storeData() {
 
 function retrieveData() {
 	var newUser = JSON.parse(localStorage.getItem('user'));
+	var steps = JSON.parse(localStorage.getItem("steps"));
 	var str = " ";
 	//print out user object
 	str += "Here is the data that was stored in Local Storage for you: <br>";
@@ -99,9 +99,9 @@ function retrieveData() {
 	"<br>timesClickedBlue: " + newUser.timesClickedBlue +
 	"<br>timesClickedRed: " + newUser.timesClickedRed +
 	"<br>stepsCompleted: " + newUser.stepsCompleted + "<br>";
-	console.log(newUser.steps);
-	for (index in newUser.steps) {
-		str += index + ": " + newUser.steps[index] + "<br>";
+	
+	for (index in steps) {
+		str += index + ": " + steps[index] + "<br>";
 	}
 	str += "}";
 
