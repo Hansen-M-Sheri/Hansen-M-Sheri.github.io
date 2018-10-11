@@ -6,7 +6,7 @@ function User(fName, lName, email){
 	this.timesClickedBlue = 0;
 	this.timesClickedRed = 0;
 	this.stepsCompleted = 0;
-	 steps : {
+	var steps = {
 		"0": "Begin the steps",
 		"1":"Decide what you want to store",
 		"2": "Check that localStorage is defined in browser",
@@ -17,6 +17,7 @@ function User(fName, lName, email){
 		"7": "Use the data - congrats you have used localStorage!",
 		"8": "Remove the data by using 'localStorage.removeItem(\"key\")'"
 	}
+	console.log(steps);
 }
 
 function clickBlueButton(){
