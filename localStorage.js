@@ -78,9 +78,7 @@ function storeData() {
 		"step 8": "Remove the data by using 'localStorage.removeItem(\"key\")'"
 	}
 		newUser.stepsCompleted = 7;
-	//update clickTimes & steps
-		localStorage.setItem("timesClickedBlue", newUser.timesClickedBlue);
-		localStorage.setItem("timesClickedRed", newUser.timesClickedRed);
+	
 		localStorage.setItem("stepsCompleted", newUser.stepsCompleted);
 		localStorage.setItem("steps", JSON.stringify(steps));
 
