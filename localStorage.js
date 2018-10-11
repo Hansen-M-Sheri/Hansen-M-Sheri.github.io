@@ -129,12 +129,19 @@ function retrieveData() {
 		"<br>email: " + newUser.email +
 		"<br>timesClickedBlue: " + clickBlue +
 		"<br>timesClickedRed: " + clickRed +
-		"<br>stepsCompleted: " + stepsCompleted + "<br>}";
-		str += "Steps Associative Array:"
+		"<br>stepsCompleted: " + stepsCompleted + "<br>} <br><br>";
+		//print out steps Associative array (object literal)
+		str += "Steps Associative Array:<br>"
 		for (index in steps) {
 			str += index + ": " + steps[index] + "<br>";
 		}
 		str += "}";
+		//print out user data as an object
+		str += "ORIGINAL USER DATA - NOT UPDATED WITH STEPS " + 
+		"(just for demo purposes to show object) <br>" +
+		"User: " + JSON.stringify(localStorage.getItem('user'));
+
+
 
 		document.getElementById("retrieve").innerHTML = str;
 	}
