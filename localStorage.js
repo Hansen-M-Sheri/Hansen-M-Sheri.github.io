@@ -14,19 +14,28 @@ function clickBlueButton(){
 	this.timesClickedBlue  = localStorage.timesClickedBlue ;
 	this.timesClickedBlue ++;
 	this.stepsCompleted = 1;
-	localStorage.setItem("timesClickedBlue", timesClickedBlue);
-	localStorage.setItem("stepsCompleted", stepsCompleted);
-	document.getElementById("blue").innerHTML = "You clicked the blue button " + timesClickedBlue + " times";
-
+	if(typeof(Storage) !== "undefined"){
+		localStorage.setItem("timesClickedBlue", timesClickedBlue);
+		localStorage.setItem("stepsCompleted", stepsCompleted);
+		document.getElementById("blue").innerHTML = "You clicked the blue button " + timesClickedBlue + " times";
+	}
+	else {
+			document.getElementById("blue").innerHTML = "Your browser does not support web storage"
+	}
 }
 
 function clickRedButton(){
 	this.timesClickedRed  = localStorage.timesClickedRed ;
 	this.timesClickedRed ++;
 	this.stepsCompleted = 1;
-	localStorage.setItem("timesClickedRed", timesClickedRed);
-	localStorage.setItem("stepsCompleted", stepsCompleted);
-	document.getElementById("red").innerHTML = "You clicked the red button " + timesClickedRed + " times";
+	if(typeof(Storage) !== "undefined"){
+		localStorage.setItem("timesClickedRed", timesClickedRed);
+		localStorage.setItem("stepsCompleted", stepsCompleted);
+		document.getElementById("red").innerHTML = "You clicked the red button " + timesClickedRed + " times";
+	}
+	else {
+			document.getElementById("red").innerHTML = "Your browser does not support web storage"
+	}
 }
 
 function createUser(){
@@ -37,22 +46,27 @@ function createUser(){
 	var newUser = new User(fName, lName, email);
 	//set the data in local storage
 		//we can store it item by item
-		localStorage.setItem("fName", fName);
-		localStorage.setItem("lName", lName);
-		localStorage.setItem("email", email);
-		localStorage.setItem("timesClickedBlue", newUser.timesClickedBlue);
-		localStorage.setItem("timesClickedRed", newUser.timesClickedRed);
-		localStorage.setItem("stepsCompleted", newUser.stepsCompleted);
-		//localStorage.setItem("stepsCompleted", JSON.stringify(newUser.steps));
-		//or we can store the entire object - very useful
-		localStorage.setItem("user", JSON.stringify(newUser));
+		if(typeof(Storage) !== "undefined"){
+			localStorage.setItem("fName", fName);
+			localStorage.setItem("lName", lName);
+			localStorage.setItem("email", email);
+			localStorage.setItem("timesClickedBlue", newUser.timesClickedBlue);
+			localStorage.setItem("timesClickedRed", newUser.timesClickedRed);
+			localStorage.setItem("stepsCompleted", newUser.stepsCompleted);
+			//localStorage.setItem("stepsCompleted", JSON.stringify(newUser.steps));
+			//or we can store the entire object - very useful
+			localStorage.setItem("user", JSON.stringify(newUser));
 
-		var str = "User: <br> fName: "+ fName + "<br>lName: "+ lName +"<br>Email: " + email + 
-		"<br> Times Blue Button Clicked: " + newUser.timesClickedBlue + 
-		"<br> Times Red Button Clicked: " + newUser.timesClickedRed +
-		"<br> Steps Completed: " + newUser.stepsCompleted ; 
-		
-		document.getElementById("demoUserData").innerHTML = str;
+			var str = "User: <br> fName: "+ fName + "<br>lName: "+ lName +"<br>Email: " + email + 
+			"<br> Times Blue Button Clicked: " + newUser.timesClickedBlue + 
+			"<br> Times Red Button Clicked: " + newUser.timesClickedRed +
+			"<br> Steps Completed: " + newUser.stepsCompleted ; 
+			
+			document.getElementById("demoUserData").innerHTML = str;
+		}
+		else {
+			document.getElementById("demoUserData").innerHTML = "Your browser does not support web storage"
+		}
 		//console.log(JSON.parse(localStorage.getItem('user')));
 	// }
 	// else {
@@ -78,40 +92,48 @@ function storeData() {
 		"step 8": "Remove the data by using 'localStorage.removeItem(\"key\")'"
 	}
 		newUser.stepsCompleted = 7;
-	
-		localStorage.setItem("stepsCompleted", newUser.stepsCompleted);
-		localStorage.setItem("steps", JSON.stringify(steps));
-
+		if(typeof(Storage) !== "undefined"){
+			localStorage.setItem("stepsCompleted", newUser.stepsCompleted);
+			localStorage.setItem("steps", JSON.stringify(steps));
+		}	document.getElementById("store").innerHTML = "Items have been stored. Close browser"
+		else {
+			document.getElementById("store").innerHTML = "Your browser does not support web storage"
+		}
 		//store entire user
 
 
-		document.getElementById("store").innerHTML = "Items have been stored. Close browser"
+		
 
 }
 
 function retrieveData() {
-	var newUser = JSON.parse(localStorage.getItem('user'));
-	var steps = JSON.parse(localStorage.getItem("steps"));
-	var clickBlue = JSON.parse(localStorage.getItem("timesClickedBlue"));
-	var clickRed = JSON.parse(localStorage.getItem("timesClickedRed"));
-	var stepsCompleted = 8;
-	var str = " ";
-	//print out user object
-	str += "Here is the data that was stored in Local Storage for you: <br>";
-	str += "User { " + 
-	"<br>fName: " + newUser.fName + 
-	"<br>lName: " + newUser.lName +
-	"<br>email: " + newUser.email +
-	"<br>timesClickedBlue: " + clickBlue +
-	"<br>timesClickedRed: " + clickRed +
-	"<br>stepsCompleted: " + stepsCompleted + "<br>";
-	
-	for (index in steps) {
-		str += index + ": " + steps[index] + "<br>";
-	}
-	str += "}";
+	if(typeof(Storage) !== "undefined"){
+		var newUser = JSON.parse(localStorage.getItem('user'));
+		var steps = JSON.parse(localStorage.getItem("steps"));
+		var clickBlue = JSON.parse(localStorage.getItem("timesClickedBlue"));
+		var clickRed = JSON.parse(localStorage.getItem("timesClickedRed"));
+		var stepsCompleted = 8;
+		var str = " ";
+		//print out user object
+		str += "Here is the data that was stored in Local Storage for you: <br>";
+		str += "User { " + 
+		"<br>fName: " + newUser.fName + 
+		"<br>lName: " + newUser.lName +
+		"<br>email: " + newUser.email +
+		"<br>timesClickedBlue: " + clickBlue +
+		"<br>timesClickedRed: " + clickRed +
+		"<br>stepsCompleted: " + stepsCompleted + "<br>";
+		
+		for (index in steps) {
+			str += index + ": " + steps[index] + "<br>";
+		}
+		str += "}";
 
-	document.getElementById("retrieve").innerHTML = str;
+		document.getElementById("retrieve").innerHTML = str;
+	}
+	else {
+			document.getElementById("retrieve").innerHTML = "Unable to retrieve any data, your browser does not support web storage"
+		}
 }
 //
 
