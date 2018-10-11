@@ -10,18 +10,19 @@ function User(fName, lName, email){
 }
 
 function clickBlueButton(){
-	localStorage.timesClickedBlue ++;
-	this.timesClickedBlue ++;
-	this.stepsCompleted = 1;
-	document.getElementById("blue").innerHTML = "You clicked the blue button";
+	
+	this.timesClickedBlue  = localStorage.timesClickedBlue ;
+	localStorage.setItem(timesClickedBlue) = timesClickedBlue + 1;
+	localStorage.setItem(stepsCompleted) = 1;
+	document.getElementById("blue").innerHTML = "You clicked the blue button " + timesClickedBlue + " times";
 
 }
 
 function clickRedButton(){
-localStorage.timesClickedRed ++;
-	this.timesClickedRed ++;
+this.timesClickedRed  = localStorage.timesClickedRed ;
+	localStorage.setItem(timesClickedRed) = timesClickedRed + 1;
 	this.stepsCompleted = 1;
-	document.getElementById("red").innerHTML = "You clicked the red button";
+	document.getElementById("red").innerHTML = "You clicked the red button " + timesClickedRed + " times";
 }
 
 function createUser(){
