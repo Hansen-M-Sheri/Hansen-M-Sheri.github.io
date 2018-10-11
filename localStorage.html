@@ -18,8 +18,9 @@
 			<button type="button" onclick="createUser()">Add User Info</button>
 		</form>
 	</div>
-	<p id="demoUserData">User Info</p>
 	<hr>
+	<p id="demoUserData">User Info</p>
+	
 	<button onclick="createUser()" type="button" style="background-color: black; color: white">Click here to store the user data</button>
 
 
@@ -41,9 +42,24 @@
 
 	<hr>
 
-	<h1>Simulate the trigger to store local storage</h1>
+	<h1>Simulate the trigger to use local storage</h1>
 	<p>You could store data any time in live code, but for our example, push the button and it will start the process of storing your User data to local storage</p>
 
+	<div>
+		<p><button onclick="storeData()" type="button" style="background-color: black; color: white">Store your stuff!</button>
+		</p>
+		<p id="store"></p>
+
+	</div>
+	<hr>
+	<h1>Close the browser and now once you open it again, click to retrieve the data from local storage</h1>
+
+	<div>
+		<p><button onclick="retrieveData()" type="button" style="background-color: orange; color: white">Retrieve your stuff!</button>
+		</p>
+		<p id="retrieve"></p>
+
+	</div>
 	
 </body>
 </html>

@@ -41,15 +41,15 @@ function createUser(){
 	var email = document.getElementById("form").email.value;
 	var newUser = new User(fName, lName, email);
 	//set the data in local storage
-	// if(typeof(storage) !== "undefined") {
-		//store user info
+		//we can store it item by item
 		localStorage.setItem("fName", fName);
 		localStorage.setItem("lName", lName);
 		localStorage.setItem("email", email);
-		// localStorage.setItem("timesClickedBlue", String(newUser.timesClickedBlue.value));
-		// localStorage.setItem("timesClickedRed", newUser.timesClickedRed.value);
-		// localStorage.setItem("stepsCompleted", newUser.stepsCompleted.value);
+		localStorage.setItem("timesClickedBlue", newUser.timesClickedBlue);
+		localStorage.setItem("timesClickedRed", newUser.timesClickedRed);
+		localStorage.setItem("stepsCompleted", newUser.stepsCompleted);
 		localStorage.setItem("stepsCompleted", JSON.stringify(newUser.steps));
+		//or we can store the entire object - very useful
 		localStorage.setItem('user', JSON.stringify(newUser));
 
 		var str = "User: <br> fName: "+ fName + "<br>lName: "+ lName +"<br>Email: " + email + 
@@ -67,5 +67,38 @@ function createUser(){
 
 }
 
+function storeData() {
+		
+		//create a user from what we got from the localStorage
+		var newUser = JSON.parse(localStorage.getItem('user'));
+		newUser.stepsCompleted = 7:
+	//update clickTimes & steps
+		localStorage.setItem("timesClickedBlue", newUser.timesClickedBlue);
+		localStorage.setItem("timesClickedRed", newUser.timesClickedRed);
+		localStorage.setItem("stepsCompleted", newUser.stepsCompleted);
+		localStorage.setItem('user', JSON.stringify(newUser);
+
+		document.getElementById("store").innerHTML = "Items have been stored. Close browser"
+
+}
+
+function retrieveData() {
+	var newUser = JSON.parse(localStorage.getItem('user'));
+	var str = " ";
+	//print out user object
+	str += "Here is the data that was stored in Local Storage for you: <br>";
+	str += "User { " + 
+	"<br>fName: " + newUser.fName + 
+	"<br>lName: " + newUser.lName +
+	"<br>email: " + newUser.email +
+	"<br>timesClickedBlue: " + newUser.timesClickedBlue +
+	"<br>timesClickedRed: " + newUser.timesClickedRed +
+	"<br>stepsCompleted: " + newUser.stepsCompleted;
+
+	for (index in newUser.steps) {
+		str += index + ": " + newUser.steps[index] + "<br>";
+	}
+	str += "}";
+}
 //
 
