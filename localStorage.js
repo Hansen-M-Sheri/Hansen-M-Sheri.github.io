@@ -17,7 +17,7 @@ function User(fName, lName, email){
 		"7": "Use the data - congrats you have used localStorage!",
 		"8": "Remove the data by using 'localStorage.removeItem(\"key\")'"
 	}
-	console.log(steps);
+
 }
 
 function clickBlueButton(){
@@ -51,7 +51,7 @@ function createUser(){
 		localStorage.setItem("stepsCompleted", newUser.stepsCompleted);
 		localStorage.setItem("stepsCompleted", JSON.stringify(newUser.steps));
 		//or we can store the entire object - very useful
-		localStorage.setItem('user', JSON.stringify(newUser));
+		localStorage.setItem("user", JSON.stringify(newUser));
 
 		var str = "User: <br> fName: "+ fName + "<br>lName: "+ lName +"<br>Email: " + email + 
 		"<br> Times Blue Button Clicked: " + newUser.timesClickedBlue + 
@@ -72,6 +72,7 @@ function storeData() {
 		
 		//create a user from what we got from the localStorage
 		var newUser = JSON.parse(localStorage.getItem('user'));
+		console.log(newUser);
 		newUser.stepsCompleted = 7;
 	//update clickTimes & steps
 		localStorage.setItem("timesClickedBlue", newUser.timesClickedBlue);
