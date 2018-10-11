@@ -58,7 +58,7 @@ function createUser(){
 			localStorage.setItem("user", JSON.stringify(newUser));
 
 			//Store an array of users - to demo storing arrays
-			var rolesArray = {"Admin", "User", "SuperUser"};
+			var rolesArray = ["Admin", "User", "SuperUser"];
 			localStorage.setItem("userTypes", JSON.stringify(rolesArray));
 
 			var str = "User: <br> fName: "+ fName + "<br>lName: "+ lName +"<br>Email: " + email + 
