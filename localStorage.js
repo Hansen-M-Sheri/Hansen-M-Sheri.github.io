@@ -6,7 +6,7 @@ function User(fName, lName, email){
 	this.timesClickedBlue = 0;
 	this.timesClickedRed = 0;
 	this.stepsCompleted = 0;
-	var steps = {
+	 steps : {
 		"0": "Begin the steps",
 		"1":"Decide what you want to store",
 		"2": "Check that localStorage is defined in browser",
