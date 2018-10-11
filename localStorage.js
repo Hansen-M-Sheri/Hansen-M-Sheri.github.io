@@ -12,16 +12,20 @@ function User(fName, lName, email){
 function clickBlueButton(){
 	
 	this.timesClickedBlue  = localStorage.timesClickedBlue ;
-	localStorage.setItem("timesClickedBlue", timesClickedBlue) = timesClickedBlue + 1;
-	localStorage.setItem("stepsCompleted", stepsCompleted) = 1;
+	this.timesClickedBlue ++;
+	this.stepsCompleted = 1;
+	localStorage.setItem("timesClickedBlue", timesClickedBlue);
+	localStorage.setItem("stepsCompleted", stepsCompleted);
 	document.getElementById("blue").innerHTML = "You clicked the blue button " + timesClickedBlue + " times";
 
 }
 
 function clickRedButton(){
-this.timesClickedRed  = localStorage.timesClickedRed ;
-	localStorage.setItem("timesClickedRed", timesClickedRed) = timesClickedRed + 1;
-	localStorage.setItem("stepsCompleted", stepsCompleted) = 1;
+	this.timesClickedRed  = localStorage.timesClickedRed ;
+	this.timesClickedRed ++;
+	this.stepsCompleted = 1;
+	localStorage.setItem("timesClickedRed", timesClickedRed);
+	localStorage.setItem("stepsCompleted", stepsCompleted);
 	document.getElementById("red").innerHTML = "You clicked the red button " + timesClickedRed + " times";
 }
 
