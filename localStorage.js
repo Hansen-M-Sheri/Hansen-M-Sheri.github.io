@@ -20,16 +20,16 @@ function User(fName, lName, email){
 }
 
 function clickBlueButton(){
-	// localStorage.timesClickedBlue++;
-	this.timesClickedBlue++;
+	localStorage.timesClickedBlue ++;
+	this.timesClickedBlue ++;
 	this.stepsCompleted = 1;
 	document.getElementById("blue").innerHTML = "You clicked the blue button";
 
 }
 
 function clickRedButton(){
-
-	this.timesClickedRed++;
+localStorage.timesClickedRed ++;
+	this.timesClickedRed ++;
 	this.stepsCompleted = 1;
 	document.getElementById("red").innerHTML = "You clicked the red button";
 }
@@ -99,6 +99,8 @@ function retrieveData() {
 		str += index + ": " + newUser.steps[index] + "<br>";
 	}
 	str += "}";
+
+	document.getElementById("retrieve").innerHTML = str;
 }
 //
 
