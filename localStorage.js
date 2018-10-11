@@ -152,7 +152,7 @@ function retrieveData() {
 
 function remove() {
 	//remove items one by one
-	localStorage.removeItem(“email”);
+	localStorage.removeItem("email");
 	document.getElementById("remove1").innerHTML = "Email was removed from your localStorage";
 	var str = "Items remaining in local storage (in the manner they are stored): <br><br> ";
 	//display all items in localstorage
