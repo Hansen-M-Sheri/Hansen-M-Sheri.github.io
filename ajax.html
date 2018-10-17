@@ -18,36 +18,51 @@
 	</header>
 	<div>
 		<h3 id="date">Date</h3>: <input type="text" id="input" value="YYYY-MM-DD">
-		<button onclick="displayImage()">Click to see the image</button>
+		<button onclick="loadImage()">Click to see the image</button>
 	</div>
 
 	<script>
-		function displayImage() {
-			var imgOfDay = "https://apod.nasa.gov/apod/image/1810/M015-2_Hubl1024.jpg";
-			var title = "Testing the title";
-			var description = "This is a sample text of what will be displayed for the image";
-			var date = document.getElementById("input").value;
-			//from the input get the date we want to 
+		function loadImage() {
+			//do the AJAX magic here
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if(this.readyState == 4 && this.status == 200) {
+					var nasaObject= JSON.parse(this.responseText);
+					var imgOfDay = nasaObject.url;
+					var title = nasaObject.title;
+					var description = nasaObject.explanation;
+					//var date = document.getElementById("input").value;
+
+					//call method to display the image
+					displayImage();
+				}
+			}
+			// var imgOfDay = "https://apod.nasa.gov/apod/image/1810/M015-2_Hubl1024.jpg";
+			// var title = "Testing the title";
+			// var description = "This is a sample text of what will be displayed for the image";
+			
+			
+			
 
 			//create a img element in the dom, and show the picture
-		
-			var x = document.createElement("IMG");
-			x.setAttribute("src", imgOfDay);
-			x.setAttribute("alt", title);
-			document.body.appendChild(x);
-			
-			//Create and append title of image
-			var imgTitle = document.createElement("H3");
-			var info = document.createTextNode(title);
-			imgTitle.appendChild(info);
-			document.body.appendChild(imgTitle);
+			function displayImage() {
+				var x = document.createElement("IMG");
+				x.setAttribute("src", imgOfDay);
+				x.setAttribute("alt", title);
+				document.body.appendChild(x);
+				
+				//Create and append title of image
+				var imgTitle = document.createElement("H3");
+				var info = document.createTextNode(title);
+				imgTitle.appendChild(info);
+				document.body.appendChild(imgTitle);
 
-			//append description of image also
-			var desc = document.createElement("P");
-			var t = document.createTextNode(description);
-			desc.appendChild(t);
-			document.body.appendChild(desc);
-
+				//append description of image also
+				var desc = document.createElement("P");
+				var t = document.createTextNode(description);
+				desc.appendChild(t);
+				document.body.appendChild(desc);
+			}
 
 		}
 		
