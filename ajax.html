@@ -5,8 +5,10 @@
 	<script src="ajax.js"></script>
 	<style>
 	img {
-		height: 300px;
-		width: 300px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
 	}
 </style>
 </head>
@@ -14,8 +16,10 @@
 	<header>
 		<h1>View the Solar System Day by Day </h1>
 	</header>
-	<button onclick="displayImage()">Click to see the image</button>
-	
+	<div>
+		<button onclick="displayImage()">Click to see the image</button>
+	</div>
+
 	<script>
 		var imgOfDay = "https://apod.nasa.gov/apod/image/1810/M015-2_Hubl1024.jpg";
 		var title = "Testing the title";
@@ -25,8 +29,6 @@
 		function displayImage() {
 			var x = document.createElement("IMG");
 			x.setAttribute("src", imgOfDay);
-			x.setAttribute("width", "500");
-			x.setAttribute("height", "400");
 			x.setAttribute("alt", title);
 			document.body.appendChild(x);
 			
