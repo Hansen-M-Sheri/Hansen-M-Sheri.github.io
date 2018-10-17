@@ -4,20 +4,49 @@
 	<title>AJAX FLUENCY </title>
 	<script src="ajax.js"></script>
 	<style>
+	img {
+		height: 300px;
+		width: 300px;
+	}
 </style>
 </head>
 <body>
 	<header>
 		<h1>View the Solar System Day by Day </h1>
 	</header>
+	<button onclick="displayImage()">Click to see the image</button>
+	
 	<script>
-		var img = "https://apod.nasa.gov/apod/image/1810/M015-2_Hubl1024.jpg";
+		var imgOfDay = "https://apod.nasa.gov/apod/image/1810/M015-2_Hubl1024.jpg";
 		var title = "Testing the title";
+		var description = "This is a sample text of what will be displayed for the image";
+
+		//create a img element in the dom, and show the picture
+		function displayImage() {
+			var x = document.createElement("IMG");
+			x.setAttribute("src", imgOfDay);
+			x.setAttribute("width", "500");
+			x.setAttribute("height", "400");
+			x.setAttribute("alt", title);
+			document.body.appendChild(x);
+			
+			//Create and append title of image
+			var imgTitle = document.createElement("H3");
+			var info = document.createTextNode(title);
+			imgTitle.appendChild(info);
+			document.body.appendChild(imgTitle);
+
+			//append description of image also
+			var desc = document.createElement("P");
+			var t = document.createTextNode(description);
+			desc.appendChild(t);
+			document.body.appendChild(desc);
+
+
+		}
 		document.getElementById("img").innerHTML = img;
 	</script>
-	<div id="imageOfDay">
-		<img id="img" alt="">
-	</div>
+	
 
 </body>
 </html>
