@@ -23,10 +23,13 @@
 <body>
 	<header>
 		<h1>View the Solar System Day by Day </h1>
+		<h6> Thanks to the NASA's "Astronomy Picture of the Day" API of (APOD)</h6>
 	</header>
 	<div id="userInput">
-		<p>Select a date between June 16, 1995 & today using the format YYY-MM-DD</p>
+		<p>Select a date between June 16, 1995 & today using the format YYYY-MM-DD</p>
 		Date: <input type="text" id="input" value="YYYY-MM-DD">
+		<br><br>
+		<p>If you click more than once, the new images will continue to be added to the bottom of the page. Just scroll down to see them. </p>
 		<button onclick="loadImage()">Click to see the image</button>
 		<p id="error"></p>
 		<br>
