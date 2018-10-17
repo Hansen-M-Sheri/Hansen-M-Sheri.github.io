@@ -39,14 +39,15 @@
 			var xhttp = new XMLHttpRequest();
 			var api_key = "cO4P2XofU0t9H3IPofZIs7Ws0lF4jQFPYnrLUoB3";
 			var url = "https://api.nasa.gov/planetary/apod?api_key=cO4P2XofU0t9H3IPofZIs7Ws0lF4jQFPYnrLUoB3";
+			var date = document.getElementById("input").value;
+			url += "&date=" + date;
 			xhttp.onreadystatechange = function() {
 				if(this.readyState == 4 && this.status == 200) {
 					var nasaObject= JSON.parse(this.responseText);
 					
 					var title = nasaObject.title;
 					var description = nasaObject.explanation;
-					var date = document.getElementById("input").value;
-					url += "&date=" + date;
+					
 
 					var imgOfDay = nasaObject.url;
 					console.log(nasaObject);
