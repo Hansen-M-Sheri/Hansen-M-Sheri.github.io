@@ -47,12 +47,13 @@
 					var description = nasaObject.explanation;
 					var date = document.getElementById("input").value;
 					var regex = RegExp('/\d{4}\-\d+\-\d+/g');
-						if (regex.test(date) ) {
+						//if (regex.test(date) ) {
 							url += "&date=" + date;
+							/*
 						}
 						else {
 							document.getElementById("error").innerHTML = "Your date doesn't match the format YYYY-MM-DD, but we will show you today's image";
-						}
+						} */
 
 					//call method to display the image
 					displayImage(imgOfDay, title, description);
