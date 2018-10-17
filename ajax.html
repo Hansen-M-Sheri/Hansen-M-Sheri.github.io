@@ -4,21 +4,32 @@
 	<title>AJAX FLUENCY </title>
 	<script src="ajax.js"></script>
 	<style>
+	body {
+		background-color: navy-blue;
+		color: white;
+		text-align: center;
+	}
 	img {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 		width: 50%;
 	}
+	#userInput, h3, p {
+		text-align: center;
+	}
 </style>
 </head>
 <body>
 	<header>
-		<h1>Select a Date and view the Solar System Image for that day </h1>
+		<h1>View the Solar System Day by Day </h1>
 	</header>
-	<div>
-		<h3 id="date">Date</h3>: <input type="text" id="input" value="YYYY-MM-DD">
+	<div id="userInput">
+		Date: <input type="text" id="input" value="YYYY-MM-DD">
 		<button onclick="loadImage()">Click to see the image</button>
+		<br>
+		<br>
+		<br>
 	</div>
 
 	<script>
