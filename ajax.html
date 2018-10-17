@@ -14,19 +14,23 @@
 </head>
 <body>
 	<header>
-		<h1>View the Solar System Day by Day </h1>
+		<h1>Select a Date and view the Solar System Image for that day </h1>
 	</header>
 	<div>
+		<h3 id="date">Date</h3>: <input type="text" id="input" value="YYYY-MM-DD">
 		<button onclick="displayImage()">Click to see the image</button>
 	</div>
 
 	<script>
-		var imgOfDay = "https://apod.nasa.gov/apod/image/1810/M015-2_Hubl1024.jpg";
-		var title = "Testing the title";
-		var description = "This is a sample text of what will be displayed for the image";
-
-		//create a img element in the dom, and show the picture
 		function displayImage() {
+			var imgOfDay = "https://apod.nasa.gov/apod/image/1810/M015-2_Hubl1024.jpg";
+			var title = "Testing the title";
+			var description = "This is a sample text of what will be displayed for the image";
+			var date = document.getElementById("input").value;
+			//from the input get the date we want to 
+
+			//create a img element in the dom, and show the picture
+		
 			var x = document.createElement("IMG");
 			x.setAttribute("src", imgOfDay);
 			x.setAttribute("alt", title);
@@ -46,7 +50,7 @@
 
 
 		}
-		document.getElementById("img").innerHTML = img;
+		
 	</script>
 	
 
