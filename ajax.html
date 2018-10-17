@@ -25,6 +25,8 @@
 		function loadImage() {
 			//do the AJAX magic here
 			var xhttp = new XMLHttpRequest();
+			var api_key = "cO4P2XofU0t9H3IPofZIs7Ws0lF4jQFPYnrLUoB3";
+			var url = "https://api.nasa.gov/planetary/apod?api_key=cO4P2XofU0t9H3IPofZIs7Ws0lF4jQFPYnrLUoB3";
 			xhttp.onreadystatechange = function() {
 				if(this.readyState == 4 && this.status == 200) {
 					var nasaObject= JSON.parse(this.responseText);
@@ -36,7 +38,10 @@
 					//call method to display the image
 					displayImage();
 				}
-			}
+
+			};
+			xhttp.open("GET", url, true);
+			xhttp.send();
 			// var imgOfDay = "https://apod.nasa.gov/apod/image/1810/M015-2_Hubl1024.jpg";
 			// var title = "Testing the title";
 			// var description = "This is a sample text of what will be displayed for the image";
