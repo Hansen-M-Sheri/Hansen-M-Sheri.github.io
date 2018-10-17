@@ -36,7 +36,7 @@
 					//var date = document.getElementById("input").value;
 
 					//call method to display the image
-					displayImage();
+					displayImage(imgOfDay, title, description);
 				}
 
 			};
@@ -50,7 +50,7 @@
 			
 
 			//create a img element in the dom, and show the picture
-			function displayImage() {
+			function displayImage(imgOfDay, title, description) {
 				var x = document.createElement("IMG");
 				x.setAttribute("src", imgOfDay);
 				x.setAttribute("alt", title);
