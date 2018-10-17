@@ -3,12 +3,18 @@
 <head>
 	<title>AJAX FLUENCY </title>
 	<script src="ajax.js"></script>
+	<style>
+</style>
 </head>
 <body>
 	<header>
 		<h1>View the Solar System Day by Day </h1>
 	</header>
-	<img src="https://apod.nasa.gov/apod/image/1810/M015-2_Hubl1024.jpg">
+	<script>
+		var img = "https://apod.nasa.gov/apod/image/1810/M015-2_Hubl1024.jpg";
+		var title = "Testing the title";
+	</script>
+	<img src=\"'.(img).'\" alt=\"'.(title).'\"'>
 
 </body>
 </html>
