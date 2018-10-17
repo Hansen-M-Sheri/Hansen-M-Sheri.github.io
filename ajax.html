@@ -25,6 +25,7 @@
 		<h1>View the Solar System Day by Day </h1>
 	</header>
 	<div id="userInput">
+		<p>Select a date between June 16, 1995 & today using the format YYY-MM-DD</p>
 		Date: <input type="text" id="input" value="YYYY-MM-DD">
 		<button onclick="loadImage()">Click to see the image</button>
 		<p id="error"></p>
@@ -47,8 +48,6 @@
 					
 					var title = nasaObject.title;
 					var description = nasaObject.explanation;
-					
-
 					var imgOfDay = nasaObject.url;
 					console.log(nasaObject);
 					console.log(imgOfDay);
