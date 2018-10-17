@@ -46,18 +46,13 @@
 					var title = nasaObject.title;
 					var description = nasaObject.explanation;
 					var date = document.getElementById("input").value;
-					var regex = RegExp('/\d{4}\-\d+\-\d+/g');
-						//if (regex.test(date) ) {
-							url += "&date=" + date;
-							console.log(imgOfDay);
-							console.log(url);
-							console.log(date);
-							/*
-						}
-						else {
-							document.getElementById("error").innerHTML = "Your date doesn't match the format YYYY-MM-DD, but we will show you today's image";
-						} */
-						var imgOfDay = nasaObject.url;
+					url += "&date=" + date;
+
+					var imgOfDay = nasaObject.url;
+					console.log(imgOfDay);
+					console.log(url);
+					console.log(date);
+						
 					//call method to display the image
 					displayImage(imgOfDay, title, description);
 				}
