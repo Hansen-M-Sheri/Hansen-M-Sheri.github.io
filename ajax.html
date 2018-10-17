@@ -13,8 +13,11 @@
 	<script>
 		var img = "https://apod.nasa.gov/apod/image/1810/M015-2_Hubl1024.jpg";
 		var title = "Testing the title";
+		document.getElementById("img").innerHTML = img;
 	</script>
-	<img src=\"'.(img).'\" alt=\"'.(title).'\"'>
+	<div id="imageOfDay">
+		<img id="img" alt="">
+	</div>
 
 </body>
 </html>
