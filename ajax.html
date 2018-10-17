@@ -42,7 +42,7 @@
 			xhttp.onreadystatechange = function() {
 				if(this.readyState == 4 && this.status == 200) {
 					var nasaObject= JSON.parse(this.responseText);
-					var imgOfDay = nasaObject.url;
+					
 					var title = nasaObject.title;
 					var description = nasaObject.explanation;
 					var date = document.getElementById("input").value;
@@ -57,7 +57,7 @@
 						else {
 							document.getElementById("error").innerHTML = "Your date doesn't match the format YYYY-MM-DD, but we will show you today's image";
 						} */
-
+						var imgOfDay = nasaObject.url;
 					//call method to display the image
 					displayImage(imgOfDay, title, description);
 				}
