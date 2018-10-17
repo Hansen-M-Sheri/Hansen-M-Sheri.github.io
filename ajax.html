@@ -15,6 +15,7 @@
 		margin-right: auto;
 		width: 50%;
 	}
+
 	#userInput, h3, p {
 		text-align: center;
 	}
@@ -24,10 +25,12 @@
 	<header>
 		<h1>View the Solar System Day by Day </h1>
 		<h4> Thanks to the NASA's "Astronomy Picture of the Day" API of (APOD)</h4>
+		<hr style="width: 70%">
+		<br><br>
 	</header>
 	<div id="userInput">
-		<p>Select a date between June 16, 1995 & today using the format YYYY-MM-DD. </p>
-		<p>Each date you try, the new images will be added to the bottom of the page. Just scroll down to see them. </p>
+		<p>Select a date between June 16, 1995 & today using the format YYYY-MM-DD. <br>
+		Each date you try, the new images will be added to the bottom of the page. Just scroll down to see them. </p>
 		Date: <input type="text" id="input" value="YYYY-MM-DD">
 		
 		<button onclick="loadImage()">Click to see the image</button>
