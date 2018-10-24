@@ -1,5 +1,6 @@
 function castSpell(spellName) {
 	//transform wand 2 times to left and then 4 times to right to simulate shaking
+	alert("spellName = " + spellName);
 	//var wand = document.getElementById("wand");
 	var wand = document.getElementById("wand");
 	console.log("onclick worked");
@@ -15,7 +16,7 @@ function castSpell(spellName) {
 	// wand.style.transform = "rotate(-10deg)";
 
 }
-function setScale() {
+function setRotate() {
 document.getElementByID("spellName").value = "rotate";
 }
 function setShrink() {
