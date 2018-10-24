@@ -6,47 +6,48 @@
 	<style>
 	#wand {
 		margin: auto;
-    	margin-top: 200px;
+    	margin-top: 30px;
 		background-color: brown;
 		width: 8px;
 		height: 90px;
 	}
-	
+	#boxes {
+		width: 800px;
+	}
 	#redBox {
 		background-color: red;
-		margin: auto;
 		margin-top: 50px;
-		width: 300px;
-		height: 300px;
+		width: 200px;
+		height: 200px;
 	}
 	#greenBox {
 		background-color: green;
 		margin: auto;
 		margin-top: 50px;
-		width: 300px;
-		height: 300px;
+		width: 200px;
+		height: 200px;
 	}
 	#blueBox {
 		background-color: blue;
 		margin: auto;
 		margin-top: 50px;
-		width: 300px;
-		height: 300px;
+		width: 200px;
+		height: 200px;
 		transition: opacity .2s ;
 	}
 	#purpleBox {
 		background-color: purple;
 		margin: auto;
 		margin-top: 50px;
-		width: 300px;
-		height: 300px;
+		width: 200px;
+		height: 200px;
 	}
 </style>
 </head>
 <body>
 	<div id="options">
 		<button id="rotate" type="button" onclick="setRotate()">Rotate the red box</button>
-		<button id="shrink" type="button" onclick="setScale()">Shrink the green box</button>
+		<button id="shrink" type="button" onclick="setShrink()">Shrink the green box</button>
 		<button id="enlarge" type="button" onclick="setScaleEnlarge()">Make Blue Box Disappear</button>
 		<button id="translate" type="button" onclick="setTranslate()">Transport the purple box</button>
 
@@ -56,14 +57,11 @@
 
 	<div id="boxes">	
 			<div id="redBox"></div>
-	</div>
-	<div id="boxes">	
+		
 			<div id="greenBox"></div>
-	</div>
-	<div id="boxes">	
+	
 			<div id="blueBox"></div>
-	</div>
-	<div id="boxes">	
+		
 			<div id="purpleBox"></div>
 	</div>
 
