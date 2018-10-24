@@ -6,12 +6,12 @@ function castSpell() {
 
 	wand.style.transform = "rotate(-10deg)";
 	console.log("first transform complete");
-	wand.style.transform = "rotate(-10deg)";
-	wand.style.transform = "rotate(10deg)";
-	wand.style.transform = "rotate(10deg)";
-	wand.style.transform = "rotate(10deg)";
-	wand.style.transform = "rotate(10deg)";
-	wand.style.transform = "rotate(-10deg)";
-	wand.style.transform = "rotate(-10deg)";
+	// wand.style.transform = "rotate(-10deg)";
+	// wand.style.transform = "rotate(10deg)";
+	// wand.style.transform = "rotate(10deg)";
+	// wand.style.transform = "rotate(10deg)";
+	// wand.style.transform = "rotate(10deg)";
+	// wand.style.transform = "rotate(-10deg)";
+	// wand.style.transform = "rotate(-10deg)";
 
 }
