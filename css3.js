@@ -1,6 +1,5 @@
 function castSpell(spellName) {
-	//transform wand 2 times to left and then 4 times to right to simulate shaking
-	alert("spellName = " + spellName);
+	
 	//var wand = document.getElementById("wand");
 	var wand = document.getElementById("wand");
 	
@@ -25,19 +24,19 @@ function castSpell(spellName) {
 }
 function setRotate() {
 document.getElementById("spellName").value = "rotate";
-alert(document.getElementById("spellName").value);
+
 }
 function setShrink() {
 document.getElementById("spellName").value = "shrink";
-alert(document.getElementById("spellName").value);
+
 }
 function setDisappear() {
 document.getElementById("spellName").value = "disappear";
-alert(document.getElementById("spellName").value);
+
 }
 function setTranslate() {
 document.getElementById("spellName").value = "translate";
-alert(document.getElementById("spellName").value);
+
 }
 
 function rotateSpell(){

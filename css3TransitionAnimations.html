@@ -12,16 +12,10 @@
 		height: 90px;
 	}
 	#wand:hover{
-		background-color: black;
-		 -webkit-animation-name: shakeWand; /* Safari 4.0 - 8.0 */
-    	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-		animation-name: shakeWand;
-		animation-duration: 4s;
-		animation-iteration-count: 10;
-		animation-direction: alternate;
-		animation-timing-function: ease-out;
-		animation-fill-mode: forwards;
-		animation-delay: 2s;
+		/*start shake animation and make animation last for .5 sec*/
+		animation: shakeWand 0.5s;
+		/*When finished, start again*/
+		animation-iteration-count: infinite;
 
 	}
 	#boxes {
@@ -68,13 +62,31 @@
 	}
 	/* Safari 4.0 - 8.0 */
 @-webkit-keyframes shakeWand {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(-20deg);}
+    0%   { transform: translate(1px, 1px) rotate(0deg); }
+    10%  { transform: translate(-1px, -2px) rotate(-1deg); }
+    20%  { transform: translate(-3px, 0px) rotate(1deg); }
+    30%  { transform: translate(3px, 2px) rotate(0deg); }
+    40%  { transform: translate(1px, -1px) rotate(1deg); }
+    50%  { transform: translate(-1px, 2px) rotate(-1deg); }
+    60%  { transform: translate(-3px, 1px) rotate(0deg); }
+    70%  { transform: translate(3px, 1px) rotate(-1deg); }
+    80%  { transform: translate(-1px, -1px) rotate(1deg); }
+    90%  { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 @keyframes shakeWand {
-    from {transform: rotate(0deg)}
-    to {transform: rotate(-20deg);}
+    0%   { transform: translate(1px, 1px) rotate(0deg); }
+    10%  { transform: translate(-1px, -2px) rotate(-1deg); }
+    20%  { transform: translate(-3px, 0px) rotate(1deg); }
+    30%  { transform: translate(3px, 2px) rotate(0deg); }
+    40%  { transform: translate(1px, -1px) rotate(1deg); }
+    50%  { transform: translate(-1px, 2px) rotate(-1deg); }
+    60%  { transform: translate(-3px, 1px) rotate(0deg); }
+    70%  { transform: translate(3px, 1px) rotate(-1deg); }
+    80%  { transform: translate(-1px, -1px) rotate(1deg); }
+    90%  { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 </style>
 </head>
