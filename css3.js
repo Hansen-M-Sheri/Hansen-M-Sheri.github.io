@@ -57,6 +57,7 @@ function transitionSpell() {
 function translateSpell() {
 	var box = document.getElementById("purpleBox");
 	box.style.transform = "translate(50px, 100px)";
+	console.log("translateSpell reached end of method");
 }
 
 
