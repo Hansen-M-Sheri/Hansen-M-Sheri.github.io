@@ -10,26 +10,34 @@
 		background-color: brown;
 		width: 8px;
 		height: 90px;
+
 	}
 	#boxes {
-		width: 800px;
+		width: 9000px;
+		height: 400px;
+		padding-top: 10px;
 	}
 	#redBox {
 		background-color: red;
 		margin-top: 50px;
 		width: 200px;
 		height: 200px;
+		float: left;
 	}
 	#greenBox {
 		background-color: green;
-		margin: auto;
+		float: left;
+		margin-left: 25px;
 		margin-top: 50px;
 		width: 200px;
 		height: 200px;
+		
 	}
 	#blueBox {
 		background-color: blue;
-		margin: auto;
+		float: right;
+		margin-left: 25px;
+		margin-right: 25px;
 		margin-top: 50px;
 		width: 200px;
 		height: 200px;
@@ -37,7 +45,8 @@
 	}
 	#purpleBox {
 		background-color: purple;
-		margin: auto;
+		float: right;
+		margin-right: 25px;
 		margin-top: 50px;
 		width: 200px;
 		height: 200px;
@@ -53,8 +62,7 @@
 
 	</div>
 	<input id="spellName" value="test">
-	<div id="wand"  onClick="castSpell(document.getElementById('spellName').value)"></div>
-
+	
 	<div id="boxes">	
 			<div id="redBox"></div>
 		
@@ -64,6 +72,7 @@
 		
 			<div id="purpleBox"></div>
 	</div>
+<div id="wand"  onClick="castSpell(document.getElementById('spellName').value)"></div>
 
 </body>
 </html>
