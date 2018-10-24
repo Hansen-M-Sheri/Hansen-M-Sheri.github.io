@@ -11,18 +11,50 @@
 		width: 8px;
 		height: 90px;
 	}
+	#boxes {
+		margin: auto;
+		margin-top: 50px;
+		width: 300px;
+		height: 300px;
+	}
+	#redBox {
+		background-color: red;
+	}
+	#greenBox {
+		background-color: green;
+	}
+	#blueBox {
+		background-color: blue;
+		transition: opacity .2s ;
+	}
+	#purpleBox {
+		background-color: purple;
+	}
 </style>
 </head>
 <body>
 	<div id="options">
-		<button id="rotate" type="button" onclick="setRotate()">Rotate</button>
-		<button id="shrink" type="button" onclick="setScale()">Shrink it</button>
-		<button id="enlarge" type="button" onclick="setScaleEnlarge()">Enlarge it</button>
-		<button id="translate" type="button" onclick="setTranslate()">Transport</button>
+		<button id="rotate" type="button" onclick="setRotate()">Rotate the red box</button>
+		<button id="shrink" type="button" onclick="setScale()">Shrink the green box</button>
+		<button id="enlarge" type="button" onclick="setScaleEnlarge()">Make Blue Box Disappear</button>
+		<button id="translate" type="button" onclick="setTranslate()">Transport the purple box</button>
 
 	</div>
 	<input id="spellName" value="test">
 	<div id="wand"  onClick="castSpell(document.getElementById('spellName').value)"></div>
+
+	<div id="boxes">	
+			<div id="redBox"></div>
+	</div>
+	<div id="boxes">	
+			<div id="greenBox"></div>
+	</div>
+	<div id="boxes">	
+			<div id="blueBox"></div>
+	</div>
+	<div id="boxes">	
+			<div id="purpleBox"></div>
+	</div>
 
 </body>
 </html>

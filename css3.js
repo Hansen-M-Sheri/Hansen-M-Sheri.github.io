@@ -3,17 +3,24 @@ function castSpell(spellName) {
 	alert("spellName = " + spellName);
 	//var wand = document.getElementById("wand");
 	var wand = document.getElementById("wand");
-	console.log("onclick worked");
+	
+	switch(spellName){
+		case "rotate":
+			rotateSpell();
+			break;
+		case "shrink":
+			scaleSpell();
+			break;
+		case "enlarge":
+			transitionSpell();
+			break;
+		case "transport":
+			translateSpell();
+			break;
+		default:
+			alert("No spell called " + spellName);
 
-	wand.style.transform = "rotate(-10deg)";
-	console.log("first transform complete");
-	// wand.style.transform = "rotate(-10deg)";
-	// wand.style.transform = "rotate(10deg)";
-	// wand.style.transform = "rotate(10deg)";
-	// wand.style.transform = "rotate(10deg)";
-	// wand.style.transform = "rotate(10deg)";
-	// wand.style.transform = "rotate(-10deg)";
-	// wand.style.transform = "rotate(-10deg)";
+	}
 
 }
 function setRotate() {
@@ -32,3 +39,25 @@ function setTranslate() {
 document.getElementById("spellName").value = "translate";
 alert(document.getElementById("spellName").value);
 }
+
+function rotateSpell(){
+	var box = document.getElementById("redBox");
+	box.style.transform = "rotate(-20deg)";
+}
+
+function scaleSpell() {
+	var box = document.getElementById("greenBox");
+	box.style.transform = "scale(.5, .5)";
+}
+
+function transitionSpell() {
+	var box = document.getElementById("blueBox");
+	box.style.opacity = '0';
+}
+
+function translateSpell() {
+	var box = document.getElementById("purpleBox");
+	box.style.tranform = "translate(50px, 100px)";
+}
+
+
