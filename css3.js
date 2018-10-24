@@ -14,7 +14,7 @@ function castSpell(spellName) {
 		case "disappear":
 			transitionSpell();
 			break;
-		case "transport":
+		case "tranlate":
 			translateSpell();
 			break;
 		default:
