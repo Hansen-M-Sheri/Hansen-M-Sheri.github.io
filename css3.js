@@ -11,7 +11,7 @@ function castSpell(spellName) {
 		case "shrink":
 			scaleSpell();
 			break;
-		case "enlarge":
+		case "disappear":
 			transitionSpell();
 			break;
 		case "transport":
@@ -31,8 +31,8 @@ function setShrink() {
 document.getElementById("spellName").value = "shrink";
 alert(document.getElementById("spellName").value);
 }
-function setEnlarge() {
-document.getElementById("spellName").value = "enlarge";
+function setDisappear() {
+document.getElementById("spellName").value = "disappear";
 alert(document.getElementById("spellName").value);
 }
 function setTranslate() {
