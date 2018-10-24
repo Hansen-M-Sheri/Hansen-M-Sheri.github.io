@@ -18,6 +18,7 @@ function castSpell(spellName) {
 }
 function setRotate() {
 document.getElementByID("spellName").value = "rotate";
+alert(document.getElementByID("spellName").value);
 }
 function setShrink() {
 document.getElementByID("spellName").value = "shrink";
