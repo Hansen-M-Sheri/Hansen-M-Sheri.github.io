@@ -17,15 +17,18 @@ function castSpell(spellName) {
 
 }
 function setRotate() {
-document.getElementByID("spellName").value = "rotate";
-alert(document.getElementByID("spellName").value);
+document.getElementById("spellName").value = "rotate";
+alert(document.getElementById("spellName").value);
 }
 function setShrink() {
-document.getElementByID("spellName").value = "shrink";
+document.getElementById("spellName").value = "shrink";
+alert(document.getElementById("spellName").value);
 }
 function setEnlarge() {
-document.getElementByID("spellName").value = "enlarge";
+document.getElementById("spellName").value = "enlarge";
+alert(document.getElementById("spellName").value);
 }
 function setTranslate() {
-document.getElementByID("spellName").value = "translate";
+document.getElementById("spellName").value = "translate";
+alert(document.getElementById("spellName").value);
 }
