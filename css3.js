@@ -13,7 +13,7 @@ function castSpell(spellName) {
 		case "disappear":
 			transitionSpell();
 			break;
-		case "tranlate":
+		case "translate":
 			translateSpell();
 			break;
 		default:
