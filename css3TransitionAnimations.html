@@ -12,7 +12,9 @@
 		height: 90px;
 	}
 	#wand:hover{
-		background-color: red;
+		background-color: black;
+		 -webkit-animation-name: shakeWand; /* Safari 4.0 - 8.0 */
+    	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
 		animation-name: shakeWand;
 		animation-duration: 4s;
 		animation-iteration-count: 10;
@@ -64,6 +66,16 @@
 		width: 200px;
 		height: 200px;
 	}
+	/* Safari 4.0 - 8.0 */
+@-webkit-keyframes shakeWand {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-20deg);}
+}
+
+@keyframes shakeWand {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(-20deg);}
+}
 </style>
 </head>
 <body>
