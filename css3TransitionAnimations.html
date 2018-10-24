@@ -14,6 +14,15 @@
 </style>
 </head>
 <body>
-	<div id="wand" onClick="castSpell()"></div>
+	<div id="options">
+		<button id="rotate" type="button" onclick="setRotate()">Rotate</button>
+		<button id="shrink" type="button" onclick="setScale()">Shrink it</button>
+		<button id="enlarge" type="button" onclick="setScaleEnlarge()">Enlarge it</button>
+		<button id="translate" type="button" onclick="setTranslate()">Transport</button>
+
+	</div>
+	<p id="spellName">
+	<div id="wand" onClick="castSpell('#spellName')"></div>
+
 </body>
 </html>
