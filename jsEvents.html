@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	<script src="assign05.js"></script>
+	<link type="text/css" rel="stylesheet" href="assign05.css"></link>
+</head>
+<body onload="setFormFocus();">
+	<div id="wrapper">
+		<form id="myForm" action="" onsubmit="validateForm(); return false;" >
+			<div id="customerWrapper">
+				<h2 id="customerInfo">Customer Information</h2>
+				<div>
+					<label> First Name: </label>
+					<input type="text" id="first_name" placeholder=" " onfocusout="validateFName()" onchange="validateFName()">
+				</div>
+				<div>
+					<label> Last Name: </label>
+					<input type="text" id="last_name" onfocusout="validateLName()" onchange="validateLName()">
+				</div>
+				<div>
+					<label>Phone: (000-000-0000)</label>
+					<input type="text" id="phone" onfocusout="validatePhone()" onchange="validatePhone()" >
+				</div>
+				<div>
+					<label>Address: </label>
+					<textarea placeholder="Street address, City, State, and Zip" id="address" onfocusout="validateAddress()" onchange="validateAddress()"></textarea>
+				</div>
+				
+				<br>
+				
+			</div>
+			<div id="productWrapper">
+				<h2>Products</h2>
+				<table id="products">
+					<thead>
+						<tr>
+							<th id="first">Item to Purchase</th>
+							<th id="middle">Price</th>
+							<th id="last">Add Product</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td >Tent</td>
+							<td id="item0Price">$400.00</td>
+							<td ><input class="checkbox" id="item_0" type="checkbox" value="400.00" onchange="updateAmount()"></td>
+						</tr>
+						<tr>
+							<td>Sleeping Bag</td>
+							<td id="item1Price">$100.00</td>
+							<td><input class="checkbox" id="item_1" type="checkbox" value="100.00" onchange="updateAmount()"></td>
+						</tr>
+						<tr>
+							<td>Camp Stove</td>
+							<td id="item2Price">$60.00</td>
+							<td><input class="checkbox" id="item_2" type="checkbox" value="60.00" onchange="updateAmount()"></td>
+						</tr>
+						<tr>
+							<td>Camp chair</td>
+							<td id="item3Price">$25.00</td>
+							<td><input class="checkbox" id="item_3" type="checkbox" value="25.00" onchange="updateAmount()"></td>
+						</tr>
+						<tr>
+							<td>Total Price</td>
+							<td><p id="total">$ 0.00</p></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br><br>
+				<div id="totalAmt"></div>
+				
+			</div>
+			
+			<div id="errorWrapper">
+				<span id="validate" ></span></div>
+			<div id="paymentWrapper">
+					<h2 id="pay">Payment</h2>
+					<input class="radio" type="radio" name="card" id="card_0" onchange="radioSet()">Visa
+					<input class="radio" type="radio" name="card" id="card_1" onchange="radioSet()">MasterCard
+					<input class="radio" type="radio" name="card" id="card_2" onchange="radioSet()">American Express<br>
+					<div>
+						<label>Credit Card Number:</label>
+						<input type="text" id="credit_card" onfocusout ="validateCC()" onchange="validateCC()">
+					</div>
+					<div>
+						<label>Credit Card Expiration: (MM/YYYY)</label>
+						<input type="text" id="exp_date" onchange="validateExpiration()">
+					</div>
+				</div>
+			
+			
+				
+			
+			
+			<div id="buttons">
+				<button type="reset" name="reset" onreset="setFormFocus()">Reset</button>
+				<button type="submit" name="submit" >Submit</button>
+				
+			</div>
+		</form>
+	</div>
+</body>
+</html>
