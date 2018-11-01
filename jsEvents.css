@@ -176,4 +176,6 @@ button {
     height: 1em;
 }
 
-
+#btnSubmit {
+	transition: background-color 1s;
+	}

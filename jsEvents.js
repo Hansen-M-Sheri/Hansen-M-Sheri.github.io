@@ -85,6 +85,7 @@ function validateForm() {
 	document.getElementById("errorWrapper").style.border = "2px solid green";
 	//document.getElementById("errorWrapper")style.transition = "opacity, 5s";
 	document.getElementById("errorWrapper").style.opacity = "1";
+	document.getElementById("btnSubmit").style.background-color = "green";
 
 
 
