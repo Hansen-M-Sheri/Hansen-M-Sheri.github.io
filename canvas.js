@@ -22,3 +22,14 @@ c.beginPath();
 c.arc(300, 300, 20, 0, Math.PI * 2, false);
 c.strokeStyle = "blue";
 c.stroke();
+
+//create a lot of circles with a forloop
+for (var i = 0; i < 20; i++) {
+	var x = Math.random() * window.innerWidth;
+	var y = Math.random() * window.innerHeight;
+	c.beginPath();
+	c.arc(300, 300, 30, 0, Math.PI * 2, false);
+	
+	c.strokeStyle = "blue";
+	c.stroke();
+}
