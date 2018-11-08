@@ -52,3 +52,5 @@ function animate() {
 	}
 	x += dx;
 }
+
+animate();
