@@ -8,12 +8,12 @@ var c = canvas.getContext('2d');
 // c.fillStyle="green";
 // c.fillRect(100, 100, 30, 30);
 
-// //line
-// c.beginPath();
-// c.moveTo(50, 300);
-// c.lineTo(300, 100);
-// c.strokeStyle = "red";
-// c.stroke();
+//line
+c.beginPath();
+c.moveTo(50, 300);
+c.lineTo(300, 100);
+c.strokeStyle = "red";
+c.stroke();
 
 // //arc / circle
 // c.beginPath();
