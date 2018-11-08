@@ -37,6 +37,7 @@ var c = canvas.getContext('2d');
 c.beginPath();
 c.arc(200,200, 30, 0, Math.PI * 2, false);
 c.strokeStyle = "blue";
+c.stroke();
 
 function animate() {
 	requestAnimationFrame(animate);
