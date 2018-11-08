@@ -8,12 +8,12 @@ var c = canvas.getContext('2d');
 // c.fillStyle="green";
 // c.fillRect(100, 100, 30, 30);
 
-//line
-c.beginPath();
-c.moveTo(50, 300);
-c.lineTo(300, 100);
-c.strokeStyle = "red";
-c.stroke();
+// //line
+// c.beginPath();
+// c.moveTo(50, 300);
+// c.lineTo(300, 100);
+// c.strokeStyle = "red";
+// c.stroke();
 
 // //arc / circle
 // c.beginPath();
@@ -34,13 +34,22 @@ c.stroke();
 // 	c.stroke();
 // }
 // 
-c.beginPath();
-c.arc(200,200, 30, 0, Math.PI * 2, false);
-c.strokeStyle = "blue";
-c.stroke();
 
+var x = 200;
+var dx = 1;
 function animate() {
 	requestAnimationFrame(animate);
+	c.clearRect(0,0, innerWidth, innerHeight);	
+
+	c.beginPath();
+	c.arc(x,200, 30, 0, Math.PI * 2, false);
+	c.strokeStyle = "blue";
+	c.stroke();
+
+	if(x > innerWidth) {
+		dx = -dx;
+	}
+	x += dx;
 }
 
 animate();
