@@ -53,8 +53,8 @@ function animate() {
 		dx = -dx;
 	}
 
-	if(y + radius > innerWidth || y - radius < 0) {
-		dy = -dy;
+	if(y + radius > innerHeight || y - radius < 0) {
+		dy = -dy	;
 	}
 	x += dx;
 	y += dy;
