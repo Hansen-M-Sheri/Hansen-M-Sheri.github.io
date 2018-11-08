@@ -35,10 +35,10 @@ var c = canvas.getContext('2d');
 // }
 // 
 
-var x = 200;
-var y = 200;
-var dx = 1;
-var dy = 4;
+var x = Math.random() * innerWidth;
+var y = Math.random() * innerHeight;
+var dx = (Math.random() - 0.5) * 8; 
+var dy = (Math.random() - 0.5) * 8;
 var radius = 30;
 function animate() {
 	requestAnimationFrame(animate);
