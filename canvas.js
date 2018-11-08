@@ -33,24 +33,13 @@ canvas.height = window.innerHeight;
 // 	c.strokeStyle = "blue";
 // 	c.stroke();
 // }
-var x = Math.random() * innerWidth;
-var y = Math.random() * innerHeight;
-var dx = (Math.random() - 0.5) * 8;
-var dy = (Math.random() - 0.5) * 8;
-var radius = 30;
+// 
+c.beginPath();
+c.arc(200,200, 30, 0, Math.PI * 2, false);
+c.strokeStyle = "blue";
+
 function animate() {
 	requestAnimationFrame(animate);
-	c.clearRec(0,0,innerWidth, innerHeight);
-	c.beginPath();
-	c.arc(x, y, radius, 0, Math.PI * 2, false);
-	
-	c.strokeStyle = "blue";
-	c.stroke();
-
-	if(x + radius>innerWidth || x - radius < 0) {
-		dx = -dx;
-	}
-	x += dx;
 }
 
 animate();
