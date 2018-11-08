@@ -4,7 +4,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 // //draw on the canvas c = context
-// var c = canvas.getContext('2d');
+var c = canvas.getContext('2d');
 // c.fillStyle="green";
 // c.fillRect(100, 100, 30, 30);
 
