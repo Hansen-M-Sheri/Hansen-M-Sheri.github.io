@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html>
-<script src="animations.js"></script>
-<link rel="stylesheet" type="text/css" src="animations.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 <head>
+	<script src="animations.js"></script>
+<link rel="stylesheet" type="text/css" src="animations.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<style>
+.sun {
+	background-color: #f7ff00;
+	transition-duration: .8s;
+	transition-property: transform;
+	transform: rotate(360deg);
+}
+  /*Animate sun*/
+  @keyframes .sun {
+  	0% {background-color: #f7ff00; }
+  	25% {background-color: #faff60; }
+  	50% {background-color: #fcff9f; }
+  	75% {background-color: #faff60; }
+  	100% {background-color: #f7ff00; }
+  }
+</style>
 </head>
 <body>
 <div class="bg"></div>
 <h1>CSS3 Animations</h1>
 
 <div class="cloud">
-	<i class="fas fa-cloud"></i>
+	<i class="fas fa-cloud fa-5x"></i>
 </div>
 <div class="rain">
 	<i class="fas fa-raindrops"></i>
@@ -19,6 +35,9 @@
 	</div>
 <div class="sun">
 	<i class="fas fa-sun"></i>
+</div>
+<div class="snowflake">
+	<i class="fal fa-snowflake"></i>
 </div>
 
 </body>
