@@ -19,6 +19,8 @@ body {
 	transform: rotate(360deg);
 	animation-name: sunShining;
 	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation:spin 4s linear infinite;
 }
   /*Animate sun*/
   @keyframes sunShining {
@@ -32,6 +34,8 @@ body {
   	from{color: #f7ff00;}
   	to{color: #fcff9f}
   }
+
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 </style>
 </head>
 <body>
