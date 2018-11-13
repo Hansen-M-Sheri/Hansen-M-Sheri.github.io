@@ -20,8 +20,10 @@ body {
 	animation-name: sunShining;
 	animation-duration: 4s;
 	animation-iteration-count: infinite;
-	animation:spin 4s linear infinite;
-	
+	/*animation:spin 4s linear infinite;*/
+	-ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari */
+    transform: rotate(20deg); /* Standard syntax */
 }
 }
   /*Animate sun*/
@@ -39,11 +41,9 @@ body {
 
   /* start spin animation */
 @-webkit-keyframes spin{
-	0% {transform:rotate(20deg); }
-  	25% {transform:rotate(20deg); }
-  	50% {transform:rotate(20deg); }
-  	75% {transform:rotate(20deg); }
-  	100% {transform:rotate(20deg);}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
 }
 @-moz-keyframes spin{
 	100% {
@@ -70,7 +70,7 @@ body {
 <body>
 <div class="bg"></div>
 <h1>CSS3 Animations</h1>
-
+<!--
 <div class="cloud">
 	<i class="fas fa-cloud fa-5x"></i>
 </div>
@@ -78,11 +78,12 @@ body {
 	<i class="fas fa-raindrops"></i>
 	<i class="fas fa-tint"></i> 
 	</div>
-<div class="sun">
-	<i id="sun" class="fas fa-sun fa-5x"></i>
-</div>
+
 <div class="snowflake">
 	<i class="fal fa-snowflake"></i>
+</div> -->
+<div class="sun">
+	<i id="sun" class="fas fa-sun fa-5x"></i>
 </div>
 
 </body>
