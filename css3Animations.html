@@ -17,7 +17,7 @@ body {
 	transition-duration: .8s;
 	transition-property: transform;
 	transform: rotate(360deg);
-	animation-name: sunShining;
+	animation-name: spin;
 	animation-duration: 4s;
 	animation-iteration-count: infinite;
 	/*animation:spin 4s linear infinite;*/
@@ -42,27 +42,28 @@ body {
   /* start spin animation */
 @-webkit-keyframes spin{
 	100% {
-		-webkit-transform: rotate(360deg);
+		-webkit-transform: rotate(380deg);
 	}
 }
 @-moz-keyframes spin{
 	100% {
-		-moz-transform: rotate(360deg);
+		-moz-transform: rotate(380deg);
 	}
 }
 @-o-keyframes spin{
 	100% {
-		-o-transform: rotate(360deg);
+		-o-transform: rotate(380deg);
 	}
 }
 @-ms-keyframes spin{
 	100% {
-		-ms-transform: rotate(360deg);
+		-ms-transform: rotate(380deg);
 	}
 }
+
 @keyframes spin{
 	100% {
-		transform: rotate(360deg);
+	transform: rotate(380deg);
 	}
 }
 </style>
