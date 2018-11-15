@@ -11,6 +11,16 @@ body {
 }
 .cloud1 {
 	color: #C6C6C4;
+	animation-name: slide;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	z-index: -1;
+}
+.cloud2 {
+	color: #fff;
+	position: absolute;
+	top: 30px;
+	left: 30px;
 }
 #sun {
 	color: #f7ff00;
@@ -23,19 +33,16 @@ body {
 	/*animation:spin 4s linear infinite;*/
 	
 }
+
+@keyframes slide {
+	0% {left: 30px; top: 30px}
+	20% {left: 40px; top: 30px}
+	40% {left: 50px; top: 30px}
+	60% {left: 60px; top: 30px}
+	80% {left: 50px; top: 30px}
+	100% {left: 40px; top: 30px}
+	
 }
-  /*Animate sun*/
-  @keyframes sunShining {
-  	/*
-  	0% {color: #f7ff00; }
-  	25% {color: #faff60; }
-  	50% {color: #fcff9f; }
-  	75% {color: #faff60; }
-  	100% {color: #f7ff00; }
-  	*/
-  	from{color: #f7ff00;}
-  	to{color: #fff}
-  }
 
   /* start spin animation */
 
@@ -54,6 +61,9 @@ body {
 <h1>CSS3 Animations</h1>
 
 <div class="cloud1">
+	<i class="fas fa-cloud fa-5x"></i>
+</div>
+<div class="cloud2">
 	<i class="fas fa-cloud fa-5x"></i>
 </div>
 <!--
