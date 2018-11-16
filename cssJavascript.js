@@ -1,27 +1,41 @@
 
+function generateColor() {
+	var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+	return hue;
+}
+
 /* Pull data for selected country from file*/
 function getData(country) {
 	console.log(country);
-	
+	var color = generateColor;
 	var filename = "";
 	switch(country) {
 		case "russia":
 			filename = "russia.txt";
+			document.getElementById("russia").style.backgroundColor= color;
 			break;
 		case "mexico":
 			filename = "mexico.txt";
+			document.getElementById("mexico").style.backgroundColor= color;
 			break;
 		case "canada":
 			filename = "canada.txt";
+			document.getElementById("canada").style.backgroundColor= color;
 			break;
 		case "usa":
 			filename = "usa.txt";
+			document.getElementById("usa").style.backgroundColor= color;
 			break;
 
 	}
 	console.log(filename);
 	loadDoc(filename);
 	
+}
+
+function generateColor() {
+	var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+	return hue;
 }
 
 function loadDoc(filename) {
