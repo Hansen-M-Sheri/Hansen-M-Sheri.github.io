@@ -12,7 +12,7 @@ function getData(country) {
 	switch(country) {
 		case "russia":
 			filename = "russia.txt";
-			console.log("russia changed to white");
+			console.log(color);
 			document.getElementById("russia").style.background= "#fff";
 			break;
 		case "mexico":
