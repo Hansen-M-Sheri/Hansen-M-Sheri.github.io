@@ -12,19 +12,19 @@ function getData(country) {
 	switch(country) {
 		case "russia":
 			filename = "russia.txt";
-			document.getElementById("russia").style.backgroundColor= color;
+			document.getElementById("russia").style.background= color;
 			break;
 		case "mexico":
 			filename = "mexico.txt";
-			document.getElementById("mexico").style.backgroundColor= color;
+			document.getElementById("mexico").style.background= color;
 			break;
 		case "canada":
 			filename = "canada.txt";
-			document.getElementById("canada").style.backgroundColor= color;
+			document.getElementById("canada").style.background= color;
 			break;
 		case "usa":
 			filename = "usa.txt";
-			document.getElementById("usa").style.backgroundColor= color;
+			document.getElementById("usa").style.background= color;
 			break;
 
 	}
