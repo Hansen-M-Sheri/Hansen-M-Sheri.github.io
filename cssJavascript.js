@@ -25,7 +25,7 @@ function getData(country) {
 			break;
 		case "usa":
 			filename = "usa.txt";
-			document.getElementById("usa").style.background= #F3F17E";
+			document.getElementById("usa").style.background= "#F3F17E";
 			break;
 
 	}
