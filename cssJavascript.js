@@ -7,7 +7,7 @@ function generateColor() {
 /* Pull data for selected country from file*/
 function getData(country) {
 	console.log(country);
-	var color = generateColor;
+	
 	var filename = "";
 	switch(country) {
 		case "russia":
@@ -17,15 +17,15 @@ function getData(country) {
 			break;
 		case "mexico":
 			filename = "mexico.txt";
-			document.getElementById("mexico").style.background= color;
+			document.getElementById("mexico").style.background= "#3498DB";
 			break;
 		case "canada":
 			filename = "canada.txt";
-			document.getElementById("canada").style.background= color;
+			document.getElementById("canada").style.background= "#922B21";
 			break;
 		case "usa":
 			filename = "usa.txt";
-			document.getElementById("usa").style.background= color;
+			document.getElementById("usa").style.background= "#F3F17E";
 			break;
 
 	}
@@ -34,10 +34,7 @@ function getData(country) {
 	
 }
 
-function generateColor() {
-	var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
-	return hue;
-}
+
 
 function loadDoc(filename) {
 	
