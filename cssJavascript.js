@@ -7,7 +7,7 @@ function generateColor() {
 /* Pull data for selected country from file*/
 function getData(country) {
 	console.log(country);
-	
+	var color = generateColor
 	var filename = "";
 	switch(country) {
 		case "russia":
@@ -34,7 +34,10 @@ function getData(country) {
 	
 }
 
-
+function generateColor() {
+	var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+	return hue;
+}
 
 function loadDoc(filename) {
 	
