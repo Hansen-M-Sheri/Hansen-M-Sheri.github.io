@@ -7,7 +7,7 @@ function generateColor() {
 /* Pull data for selected country from file*/
 function getData(country) {
 	console.log(country);
-	var color = generateColor
+	var color = generateColor();
 	var filename = "";
 	switch(country) {
 		case "russia":
@@ -25,7 +25,7 @@ function getData(country) {
 			break;
 		case "usa":
 			filename = "usa.txt";
-			document.getElementById("usa").style.background= "#F3F17E";
+			document.getElementById("usa").style.background= #F3F17E";
 			break;
 
 	}
