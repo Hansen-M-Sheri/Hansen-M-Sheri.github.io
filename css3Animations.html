@@ -28,16 +28,27 @@ body {
 }
 #sun {
 	color: #f7ff00;
-	transition-duration: .8s;
-	transition-property: transform;
-	transform: rotate(360deg);
 	animation-name: spin;
 	animation-duration: 8s;
 	animation-iteration-count: infinite;
 	/*animation:spin 4s linear infinite;*/
 	
 }
-
+#snowflake {
+	color: #E0E9F2;
+	animation-name: fall;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	top: 80px;
+	left: 20px;
+}
+@keyframes fall {
+	0% { top: 80px;}
+	25% {top: 85px;}
+	50% {top: 90px;}
+	75% {top: 95px;}
+	100% {top: 100px;}
+}
 @keyframes slide {
 	0% {left: 20px; top: 20px}
 	50% {left: 80px; top: 20px}
@@ -72,10 +83,10 @@ body {
 	<i class="fas fa-raindrops"></i>
 	<i class="fas fa-tint"></i> 
 	</div>
-
+-->
 <div class="snowflake">
-	<i class="fal fa-snowflake"></i>
-</div> -->
+	<i id="snowflake" class="fal fa-snowflake"></i>
+</div> 
 <div class="sun">
 	<i id="sun" class="fas fa-sun fa-5x"></i>
 </div>
