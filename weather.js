@@ -52,7 +52,7 @@ function populateWeatherConditions(jObj){
 	storeWeatherData(jObj, id);
 	//grab associated background image and display it (with backup image color)
 	//display temp
-	document.getElementById("currentTemp").innerHTML = jObj.main.temp;
+	document.getElementById("currentTemp").innerHTML = Math.round(jObj.main.temp) + "&#8457";
 	//display city, and time
 	document.getElementById("location").innerHTML = jObj.name;
 	formatTime();
