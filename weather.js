@@ -49,8 +49,32 @@ function populateWeatherConditions(jObj){
 	console.log(jObj.weather);
 	
 	//store weather condition id's and current location in local storage
+	storeWeatherData(jObj, id);
 	//grab associated background image and display it (with backup image color)
 	//display temp
+	document.getElementById("currentTemp").innerHTML = jObj.main.temp;
 	//display city, and time
+	document.getElementById("location").innerHTML = jObj.name;
+	formatTime();
 
+}
+
+function storeWeatherData(jObj, id){
+	if(typeof(Storage) !== "undefined"){
+		localStorage.setItem("weatherObject", jObj);
+		localStorage.setItem("conditionID", id);
+		localStorage.setItem("temp", jObj.main.temp);
+	}
+}
+
+function formatTime() {
+    var d = new Date();
+    var m = d.getMinutes();
+     var ampm = hours >= 12 ? 'pm' : 'am';
+  	hours = hours % 12;
+  	hours = hours ? hours : 12; // the hour '0' should be '12'
+  	minutes = minutes < 10 ? '0'+minutes : minutes;
+  	var strTime = hours + ':' + minutes + ' ' + ampm;
+  	document.getElementById("timeAndDate").innerHTML =  strTime;
+    x.innerHTML = h + ":" + m + ":" + s;
 }
