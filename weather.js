@@ -82,6 +82,6 @@ function formatTime() {
 }
 
 function convertToFahrenheit(temp){
-	var f = (9/5)(temp - 273) + 32;
+	var f = 1.8 * (temp - 273) + 32;
 	return f;
 }
