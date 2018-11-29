@@ -69,7 +69,7 @@ function storeWeatherData(jObj, id){
 }
 
 function formatTime() {
-    var d = new Date();
+    var date = new Date();
     var hours = date.getHours();
   	var minutes = date.getMinutes();
      var ampm = hours >= 12 ? 'pm' : 'am';
