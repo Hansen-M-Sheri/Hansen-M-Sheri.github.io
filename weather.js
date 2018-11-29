@@ -47,12 +47,13 @@ function populateWeatherConditions(jObj){
 	}
 	console.log(id);
 	console.log(jObj.weather);
-	
+	var temp = jObj.main.temp;
+	var fTemp = convertToFahrenheit(temp);
 	//store weather condition id's and current location in local storage
 	storeWeatherData(jObj, id);
 	//grab associated background image and display it (with backup image color)
 	//display temp
-	document.getElementById("currentTemp").innerHTML = Math.round(jObj.main.temp) + "&#176";
+	document.getElementById("currentTemp").innerHTML = Math.round() + "&#176";
 	//display city, and time
 	document.getElementById("location").innerHTML = jObj.name;
 	formatTime();
@@ -78,4 +79,9 @@ function formatTime() {
   	var strTime = hours + ':' + minutes + ' ' + ampm;
   	document.getElementById("timeAndDate").innerHTML =  strTime;
     
+}
+
+function convertToFahrenheit(temp){
+	var f = (9/5)(temp - 273) + 32;
+	return f;
 }
