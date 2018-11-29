@@ -29,7 +29,8 @@ window.onload = callWeatherApi();
 function populateWeatherConditions(jObj){
 	//loop thru weather id to determine background image
 	var length = jObj.weather.length;
-	var id;
+	var id = 0;
+	console.log(id);
 	if(length <= 1) {
 		id = jObj.weather[0];
 	}
