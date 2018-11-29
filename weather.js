@@ -24,7 +24,7 @@ function callWeatherApi(city, country) {
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send()
 }
-window.onload = callWeatherApi();
+window.onload = callWeatherApi("Boise", "us");
 
 function populateWeatherConditions(jObj){
 	//loop thru weather id to determine background image
