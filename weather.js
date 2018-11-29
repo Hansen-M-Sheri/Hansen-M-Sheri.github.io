@@ -37,11 +37,11 @@ function populateWeatherConditions(jObj){
 	for(var i = 0; i < length; i++){
 		//keep the lowest id in the array & use for background
 		if(i == 0){
-			id = jObj.weather[0];
+			id = jObj.weather[0].id;
 		}
 		else {
-			if(id > jObj.weather[i]){
-				id = jObj.weather[i];
+			if(id > jObj.weather[i].id){
+				id = jObj.weather[i].id;
 			}
 		}
 	}
