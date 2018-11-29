@@ -10,11 +10,12 @@
 */
 function callWeatherApi() {
 	var xmlhttp = new XMLHttpRequest();
-	var city = "Boise,id&";
+	var city = "Boise";
+	var country = "us";
 	var api_key = "94c477428543f4d7a37d952a58632aab";
-	var appID = "APPID=" + api_key;
+	var appID = "&APPID=" + api_key;
 	var url = "https://api.openweathermap.org/data/2.5/weather?=";
-	url += city + appID;
+	url += city + "," + country + appID;
 	console.log(url);
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 &&  this.status == 200) {
