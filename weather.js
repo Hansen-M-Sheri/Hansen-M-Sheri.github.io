@@ -15,6 +15,7 @@ function callWeatherApi() {
 		if (this.readyState == 4 &&  this.status == 200) {
 			var jObj = JSON.parse(this.responseText);
 			console.log(jObj);
+			console.log("testAjax");
 		}
 	};
 	xmlhttp.open("GET", apiCall, true);
