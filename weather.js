@@ -20,7 +20,7 @@ function callWeatherApi() {
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 &&  this.status == 200) {
 			var jObj = JSON.parse(this.responseText);
-			console.log(jObj);
+			console.log(jObj.weather[0]);
 			console.log("testAjax");
 
 		}
