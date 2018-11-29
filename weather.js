@@ -46,6 +46,7 @@ function populateWeatherConditions(jObj){
 		}
 	}
 	console.log(id);
+	console.log(jObj.weather);
 	
 	//store weather condition id's and current location in local storage
 	//grab associated background image and display it (with backup image color)
