@@ -12,24 +12,30 @@ body{
 .mainContainer {
 	perspective: 1000px;
     position: absolute;
-    width: 250px;
+    width: 550px;
     height: 320px;
     background: none;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.fiveDayFlex{
-	position: absolute;
-    top: 60%;
-    left: 10%;
-    right: 10%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 200px;
-    align-items: center;
+/****** Option for changing location *****/
+.changeLocation {
+	float: right;
+    height: 40px;
 }
+#inputLocation{
+	height: 2em;
+    width: 200px;
+    border-radius: 10px;
+}
+#newLocation{
+	height: 100%;
+    border-radius: 10px;
+}
+
+
+/*** The main temp display w/flip card*****/
 .theCard {
 		position: relative;
 		top: 0;
@@ -91,20 +97,27 @@ body{
 		padding-left: 20px;
 		padding-right: 20px;
 	}
-.day{
-	background-color: rgba(51, 51, 51, 1);/*#333 but needed to not have opacity affect children*/
-	margin: 10px;
-	padding: 20px;
-	min-width: 50px;
-	min-height: 80px;
-	opacity: .6;
 
-}
+/**** 5 day forecast section ******/
 .fiveDayFlex{
-	    grid-row: 7/8;
+	position: absolute;
+    top: 60%;
+    left: 10%;
+    right: 10%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     height: 200px;
     align-items: center;
+}
+.day{
+	background-color: rgba(51, 51, 51, 1);/*#333 but needed to not have opacity affect children*/
+	border-radius: 10px;
+    margin: 10px;
+    min-width: 50px;
+    min-height: 80px;
+    opacity: .6;
+    width: 150px;
+    height: 200px;
+
 }
