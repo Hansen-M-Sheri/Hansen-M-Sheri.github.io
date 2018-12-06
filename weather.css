@@ -4,7 +4,7 @@ body{
 }
 .mainWrapper{
 	width: 100vw;
-	height: 100vw;
+	height: 90vw;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(8, 1fr);
@@ -82,7 +82,7 @@ body{
 		padding-right: 20px;
 	}
 
-	.theFront p, .theBack p {
+	.theFront h5, .theBack h5 {
 		padding-top: 5%;
 		padding-left: 20px;
 		padding-right: 20px;
