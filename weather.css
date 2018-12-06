@@ -1,5 +1,10 @@
-
-.mainDisplay{
+body{
+	margin: 0;
+	padding: 0;
+}
+.mainWrapper{
+	width: 100vw;
+	height: 100vw;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(8, 1fr);
