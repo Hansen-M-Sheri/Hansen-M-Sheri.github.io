@@ -17,6 +17,7 @@ function callWeatherApi(city, country) {
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 &&  this.status == 200) {
 			var jObj = JSON.parse(this.responseText);
+			console.log(jObj);
 			populateWeatherConditions(jObj);
 
 		}
@@ -26,6 +27,10 @@ function callWeatherApi(city, country) {
 }
 window.onload = callWeatherApi("Boise", "us");
 
+/* Populate Weather Conditions
+ *  set and store condition ID to determine
+ *  background image
+ */
 function populateWeatherConditions(jObj){
 	//loop thru weather id to determine background image
 	var length = jObj.weather.length;
