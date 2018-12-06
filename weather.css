@@ -1,0 +1,10 @@
+.fiveDayFlex{
+	display: flex;
+
+}
+.theCard{
+	background: #333;
+}
+.day{
+	background: #333;
+}
