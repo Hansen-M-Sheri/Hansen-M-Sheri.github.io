@@ -1,13 +1,11 @@
 body{
 	margin: 0;
 	padding: 0;
+	font-family: 'Catamaran', sans-serif;
 }
 .mainWrapper{
 	width: 100vw;
 	height: 90vw;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(8, 1fr);
 }
 .mainContainer {
 	perspective: 1000px;
@@ -23,14 +21,16 @@ body{
 .changeLocation {
 	float: right;
     height: 40px;
+    margin: 10px;
 }
 #inputLocation{
-	height: 2em;
+	height: 3em;
     width: 200px;
     border-radius: 10px;
 }
 #newLocation{
 	height: 100%;
+	width: 150px;
     border-radius: 10px;
 }
 
@@ -85,11 +85,17 @@ body{
 		font-size: 18px;
 		font-weight: bold;
 	}
-
-	.theFront h1, .theBack h1 {
-		padding-top: 20%;
-		padding-left: 20px;
-		padding-right: 20px;
+	#location{
+		font-size: 2.3em;
+    	margin-bottom: 0;
+	}
+	#timeAndDate{
+		margin: 0;
+    	padding: 2px;
+	}
+	#currentTemp{
+		margin-top: 10px;
+    	font-size: 6em;
 	}
 
 	.theFront h5, .theBack h5 {
