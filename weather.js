@@ -23,7 +23,17 @@ function callWeatherApi(city, country) {
 		}
 	};
 	xmlhttp.open("GET", url, true);
-	xmlhttp.send()
+	xmlhttp.send();
+
+	//get the 5 day forecast
+	var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=";
+	forecastURL += city + "," + country + appID;
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var jObj = JSON.parse(this.responseText);
+			console.log(jObj);
+		}
+	}
 }
 window.onload = callWeatherApi("Boise", "us");
 
