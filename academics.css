@@ -1,0 +1,112 @@
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+#section_a {
+	min-height: 450px;
+	color: #fff;
+	text-align: center;
+}
+#section_a .bg-image {
+	position: absolute;
+	background: #333 url('bookcase-books-bookshelves-256541.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 450px;	
+}
+#section-b ul {
+	list-style: none;
+}
+#section-b li {
+	display:inline-block;
+}
+.card-title {
+	text-align: center;
+	padding: 0 1em;
+	background-color: #333;
+	color: #E18A07;
+	
+}
+.card-title h3 {
+	margin-bottom: 0;
+}
+.card-title h5 {
+	margin-top: 0;
+}
+ 
+.card-content {
+	
+	padding:0 20px;
+}
+td .date{
+	padding-right: 10px; 
+}
+
+@media(min-width: 700px) {
+	.grid{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		margin: 0 2em;
+		
+	}
+	#section-b {
+		grid-column: 2/4;
+		
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+	#card1 {
+		grid-column: 1/2;
+		grid-row:1/2;
+	}
+	#card2 {
+		grid-column: 2/3;
+		grid-row:1/2;
+	}
+	#card3 {
+		grid-column: 1/2;
+		grid-row:2/3;
+	}
+	#card4 {
+		grid-column: 2/3;
+		grid-row:2/3;
+	}
+	.card {
+		padding: 1em;
+
+	}
+	/*#section-b {
+		display: flex;
+		align-content: space-around;
+	}
+	.content-wrap, 
+	#section-b ul {
+		grid-column: 2/4;
+	}
+
+	#section-b {
+		padding: 2em 1em 1em;
+	}
+	#section-b ul {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	#section-b li {
+		width: 31%;
+
+	} */
+	.sidebar {
+		grid-column: 1/2;
+		grid-row: 1/3;
+		padding: 2em;
+	}
+	.sidebar a {
+		padding: .5em;
+	}
+}

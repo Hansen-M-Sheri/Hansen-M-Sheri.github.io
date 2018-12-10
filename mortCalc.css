@@ -1,0 +1,78 @@
+body {
+	font-family: sans-serif;
+	background-color: #F3F4F4;
+	text-transform: uppercase;
+}
+#wrapper {
+	margin: 10% 25% 25% 25%;
+}
+
+.buttonDiv {
+	text-align: center;
+}
+span {
+	visibility: hidden;
+	padding: 1em;
+}
+/*input {
+	background-color: transparent;
+	border: 0px solid;
+	height: 20px;
+	width: 160px;
+}*/
+#calculate {
+	cursor: pointer;
+	background-color: #67B2E4;
+}
+#calculate:hover {
+	background-color: #1ABC9C  ;
+} 
+#apr, #term, #amt  {
+	display:block;
+	width: 100%;
+	border: 2px solid #1AB4BC;
+	border-radius: 5px;
+	padding:.5rem;
+	font-size: 1.5rem;
+}
+#payment {
+	width: 100%;
+	padding: .5rem;
+	font-size: 1.5rem;
+}
+.paymentDiv {
+	margin-top: 1rem;
+	background-color: #1ABC9C;
+	display:block;
+	width: 100%;
+	border: 2px solid #1AB4BC;
+	border-radius: 5px;
+	padding:.5rem;
+	font-size: 1.5rem;
+	text-align: center; 
+}
+.paymentDiv p {
+	font-size: 2rem;
+}
+#clear, #calculate {
+	margin: .5rem;
+	border-radius: 5px;
+	padding: .5rem;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	
+
+}
+#clear {
+	background-color: #DCDCDC;
+}
+#clear:hover {
+	background-color: #ffffff;
+}
+header {
+	text-align: center;
+	font-size: 2.5rem;
+	line-height: 1;
+
+}
+

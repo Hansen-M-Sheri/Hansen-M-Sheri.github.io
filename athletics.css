@@ -1,0 +1,134 @@
+body {
+	background-color: #000;
+}
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+#section_a {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	min-height: 300px;
+	color: #fff;
+	text-align: center;
+}
+#section_a .bg-image {
+	grid-column: 1/5;
+	position: absolute;
+	background: #333;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	width: 100%;
+	height: 300px;	
+	z-index: -1;
+}
+#section_a .content-text {
+	grid-column: 1/4;
+	background-color: transparent;
+	float: left;
+	color: #fff;
+	height: 300px;
+	
+}
+
+.content-text .quote {
+	grid-row: 2/6;
+}
+.logoBar {
+	background-color: #000;
+}
+.topNav {
+	background-color: #E18A07;
+}
+.active {
+	background-color: #000;
+}
+.headerTitle {
+	background-color: #000;
+	color: #E18A07;
+}
+.topNav a:hover {
+	background-color: #c0c0c0;
+	color: black;
+}
+
+#box-1e {
+	background-color: #fff;
+	text-align: center;
+	color: #333;
+	margin: 0;
+	padding: 2em;
+}
+#box-2e {
+	background-color:#E18A07 ;
+	text-align: center;
+	color: #333;
+	margin: 0;
+	padding: 2em;
+}
+
+#box-3e {
+	background-color: #c0c0c0;
+	text-align: center;
+	color: #333;
+	margin: 0;
+	padding: 2em;
+}
+#box-1e:hover,
+#box-2e:hover,
+#box-3e:hover {
+	background-color: #000;
+	color: #E18A07;
+}
+.sidebar a {
+	background-color: #000;
+	color: #E18A07;
+}
+
+@media(min-width: 500px){
+	#quote {
+		font-size: 1.5em;
+		margin-bottom: 2em;
+	}
+}
+@media(min-width: 700px) {
+		#quote {
+			font-size: 3em;
+		}
+		.gridContainer {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+		}
+		#section-e {
+			grid-column: 2/5;
+			margin-right: 20px;
+		}
+		.sidebar{
+			grid-column: 1/2;
+			grid-row: 1/2;
+			padding: 2em;
+		}
+		.sidebar a {
+			padding: .5em;
+		}
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+		}
+		#box-1e {
+			grid-column: 2/3;
+		}
+		#box-2e {
+			grid-column: 3/4;
+		}
+		#box-3e {
+			grid-column: 4/5;
+		}
+		#section_a .content-text {
+			height: 700px;
+		}
+	}

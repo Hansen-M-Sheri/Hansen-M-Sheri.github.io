@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Mortgage Calculator</title>
+	<script src="assign04.js"></script>
+	<link rel="stylesheet" type="text/css" href="mortCalc.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<p>Mortgage Calculator</p>
+			
+		</header>
+		<form class="myForm" action=" ">
+	
+			<div class="formDiv">
+				<label for="apr">APR (%)</label><br>
+				 <input id="apr" oninput="validateApr(this.value);" type="text" required minlength="1">
+				<span class="apr" style="color:red">Invalid APR</span>
+			</div>
+			<div class="formDiv">
+				<label for="term">Loan Term (years):</label> <br>
+				<input id="term" oninput="validateTerm(this.value);"type="text"  required minlength="1"> 
+				<span class="term" style="color:red">Invalid Loan Term</span>
+			</div>
+			<div class="formDiv">
+				<label for="amt">Loan Amount (in dollars):</label> <br>
+				<input id="amt" oninput="validateAmt(this.value);" type="text" required minlength="1">
+				<span class="amount" style="color:red">Invalid Amount</span>
+			</div>
+			<div class="buttonDiv">
+
+				<input id="clear" type="reset" value="Reset" onclick="resetAll()">
+				<input id="calculate" type="button" onclick="processInput()" value="Calculate Payment">
+			</div>
+			<div class="paymentDiv">
+				<label for="payment">Monthly Payment</label> <br>
+				<p id="payment"></p>
+
+			</div>
+			
+
+		</form>
+
+	</div>
+
+		
+
+</body>
+</html>
