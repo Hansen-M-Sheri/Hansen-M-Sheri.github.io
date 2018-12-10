@@ -77,6 +77,7 @@ function populateWeatherConditions(){
 	document.getElementById("backCardCity").innerHTML = jObj.name;
 	document.getElementById("description").innerHTML = jObj.weather[0].description;
 	document.getElementById("tableTemp").innerHTML = fTemp;
+	console.log(jObj.main);
 	document.getElementById("tableHumidity").innerHTML = convertToFahrenheit(jObj.main.humidity);
 	document.getElementById("tableMinTemp").innerHTML = convertToFahrenheit(jObj.main.minTemp);
 	document.getElementById("tableMaxTemp").innerHTML = convertToFahrenheit(jObj.main.maxTemp);
