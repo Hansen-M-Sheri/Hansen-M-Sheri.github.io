@@ -25,16 +25,16 @@ function callWeatherApi(city, country) {
 	xmlhttp.send();
 
 	//get the 5 day forecast
-	var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=";
-	forecastUrl += city + "," + country + appID;
-	xmlhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			localStorage.setItem("5dayWeatherObj", this.responseText);
+	// var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=";
+	// forecastUrl += city + "," + country + appID;
+	// xmlhttp.onreadystatechange = function() {
+	// 	if (this.readyState == 4 && this.status == 200) {
+	// 		localStorage.setItem("5dayWeatherObj", this.responseText);
 
-		}
-	};
-	xmlhttp.open("GET", forecastUrl, true);
-	xmlhttp.send();
+	// 	}
+	// };
+	// xmlhttp.open("GET", forecastUrl, true);
+	// xmlhttp.send();
 }
 window.onload = callWeatherApi("Boise", "us");
 
@@ -45,6 +45,7 @@ window.onload = callWeatherApi("Boise", "us");
 function populateWeatherConditions(){
 	//loop thru weather id to determine background image
 	var jObj = JSON.parse(localStorage.getItem("weatherObject"));
+	console.log(jObj);
 	var length = jObj.weather.length;
 	var id = 0;
 	console.log(id);
