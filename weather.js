@@ -63,8 +63,6 @@ function populateWeatherConditions(){
 			}
 		}
 	}
-	console.log(id);
-	console.log(jObj.weather);
 	var temp = jObj.main.temp;
 	var fTemp = convertToFahrenheit(temp);
 	
@@ -75,8 +73,18 @@ function populateWeatherConditions(){
 	document.getElementById("location").innerHTML = jObj.name;
 	formatTime();
 
+	//populate back of card info
+	document.getElementById("backCardCity").innerHTML = jObj.name;
+	document.getElementById("description").innerHTML = jObj.weather[0].description;
+	document.getElementById("tableTemp").innerHTML = fTemp;
+	document.getElementById("tableHumidity").innerHTML = convertToFahrenheit(jObj.main.humidity);
+	document.getElementById("tableMinTemp").innerHTML = convertToFahrenheit(jObj.main.minTemp);
+	document.getElementById("tableMaxTemp").innerHTML = convertToFahrenheit(jObj.main.maxTemp);
+	document.getElementById("tablePressure").innerHTML = jObj.main.pressure;
+	document.getElementById("tableWind").innerHTML = convertToFahrenheit(jObj.main.minTemp);
+	document.getElementById("tableSunrise").innerHTML = formatSeconds(jObj.sys.sunrise);
+	document.getElementById("tableSunset").innerHTML = formatSeconds(jObj.sys.sunset);
 }
-
 function formatTime() {
     var date = new Date();
     var hours = date.getHours();
@@ -88,6 +96,13 @@ function formatTime() {
   	var strTime = hours + ':' + minutes + ' ' + ampm;
   	document.getElementById("timeAndDate").innerHTML =  strTime;
     
+}
+
+function formatSeconds(seconds)
+{
+    var date = new Date(1970,0,1);
+    date.setSeconds(seconds);
+    return date.toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
 }
 
 function convertToFahrenheit(temp){
