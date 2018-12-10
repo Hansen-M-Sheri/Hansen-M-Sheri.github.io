@@ -192,7 +192,7 @@ header .header-projects {
 	background-color: #f3f3f3;
 }
 
-.index-boxes div h3{
+.index-boxes div h3, a{
 	font-family: 'Catamaran', sans-serif;
 	font-size: 28px;
 	font-weight: 600;
