@@ -20,7 +20,7 @@ function callWeatherApi(city, country) {
 			console.log(jObj);
 			//populateWeatherConditions(jObj);
 			//store weather condition id's and current location in local storage
-			storeWeatherData(jObj, id);
+			storeWeatherData("weatherObject", this.responseText);
 
 		}
 	};
@@ -32,9 +32,9 @@ function callWeatherApi(city, country) {
 	forecastUrl += city + "," + country + appID;
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-			var jObj = JSON.parse(this.responseText);
-			console.log(jObj);
-			store5DayData(jObj);
+			//var jObj = JSON.parse(this.responseText);
+			//console.log(jObj);
+			storeWeatherData("5dayWeatherObj", this.responseText);
 		}
 	};
 	xmlhttp.open("GET", forecastUrl, true);
@@ -79,18 +79,10 @@ function populateWeatherConditions(jObj){
 
 }
 
-function storeWeatherData(jObj, id){
+function storeWeatherData(key, jsonObj){
+	var jObj = JSON.parse(this.responseText);
 	if(typeof(Storage) !== "undefined"){
-		localStorage.setItem("weatherObject", jObj);
-		localStorage.setItem("conditionID", id);
-		localStorage.setItem("temp", jObj.main.temp);
-	}
-}
-
-function store5DayData(jObj){
-	if(typeof(Storage) !== "undefined"){
-		localStorage.setItem("5dayWeatherObj", jObj);
-
+		localStorage.setItem(key, jObj);
 	}
 }
 
