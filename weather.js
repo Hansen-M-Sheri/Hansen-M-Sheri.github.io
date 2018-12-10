@@ -18,7 +18,9 @@ function callWeatherApi(city, country) {
 		if (this.readyState == 4 &&  this.status == 200) {
 			var jObj = JSON.parse(this.responseText);
 			console.log(jObj);
-			populateWeatherConditions(jObj);
+			//populateWeatherConditions(jObj);
+			//store weather condition id's and current location in local storage
+			storeWeatherData(jObj, id);
 
 		}
 	};
@@ -32,6 +34,7 @@ function callWeatherApi(city, country) {
 		if (this.readyState == 4 && this.status == 200) {
 			var jObj = JSON.parse(this.responseText);
 			console.log(jObj);
+			store5DayData(jObj);
 		}
 	}
 }
@@ -64,8 +67,7 @@ function populateWeatherConditions(jObj){
 	console.log(jObj.weather);
 	var temp = jObj.main.temp;
 	var fTemp = convertToFahrenheit(temp);
-	//store weather condition id's and current location in local storage
-	storeWeatherData(jObj, id);
+	
 	//grab associated background image and display it (with backup image color)
 	//display temp
 	document.getElementById("currentTemp").innerHTML = Math.round(fTemp) + "&#176";
@@ -86,7 +88,7 @@ function storeWeatherData(jObj, id){
 function store5DayData(jObj){
 	if(typeof(Storage) !== "undefined"){
 		localStorage.setItem("5dayWeatherObj", jObj);
-		
+
 	}
 }
 
