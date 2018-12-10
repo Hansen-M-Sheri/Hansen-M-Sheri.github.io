@@ -27,7 +27,7 @@ function callWeatherApi(city, country) {
 
 	//get the 5 day forecast
 	var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=";
-	forecastURL += city + "," + country + appID;
+	forecastUrl += city + "," + country + appID;
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			var jObj = JSON.parse(this.responseText);
@@ -82,6 +82,8 @@ function storeWeatherData(jObj, id){
 		localStorage.setItem("temp", jObj.main.temp);
 	}
 }
+
+function store5DayData(jObj)
 
 function formatTime() {
     var date = new Date();
