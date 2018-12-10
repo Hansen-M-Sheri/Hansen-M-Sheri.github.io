@@ -82,7 +82,7 @@ function populateWeatherConditions(){
 	document.getElementById("tableMinTemp").innerHTML = convertToFahrenheit(jObj.main.minTemp);
 	document.getElementById("tableMaxTemp").innerHTML = convertToFahrenheit(jObj.main.maxTemp);
 	document.getElementById("tablePressure").innerHTML = jObj.main.pressure;
-	document.getElementById("tableWind").innerHTML = convertToFahrenheit(jObj.main.minTemp);
+	document.getElementById("tableWind").innerHTML = jObj.wind;
 	document.getElementById("tableSunrise").innerHTML = formatSeconds(jObj.sys.sunrise);
 	document.getElementById("tableSunset").innerHTML = formatSeconds(jObj.sys.sunset);
 }
