@@ -79,8 +79,8 @@ function populateWeatherConditions(jObj){
 
 }
 
-function storeWeatherData(key, jsonObj){
-	var jObj = JSON.parse(this.responseText);
+function storeWeatherData(key, responseText){
+	var jObj = JSON.parse(responseText);
 	if(typeof(Storage) !== "undefined"){
 		localStorage.setItem(key, jObj);
 	}
