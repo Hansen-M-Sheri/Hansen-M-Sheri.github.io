@@ -16,11 +16,8 @@ function callWeatherApi(city, country) {
 	console.log(url);
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 &&  this.status == 200) {
-			var jObj = JSON.parse(this.responseText);
-			console.log(jObj);
-			//populateWeatherConditions(jObj);
-			//store weather condition id's and current location in local storage
-			storeWeatherData("weatherObject", this.responseText);
+			localStorage.setItem("weatherObject", this.responseText);
+			populateWeatherConditions();
 
 		}
 	};
@@ -32,9 +29,8 @@ function callWeatherApi(city, country) {
 	forecastUrl += city + "," + country + appID;
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-			//var jObj = JSON.parse(this.responseText);
-			//console.log(jObj);
-			storeWeatherData("5dayWeatherObj", this.responseText);
+			localStorage.setItem("5dayWeatherObj", this.responseText);
+
 		}
 	};
 	xmlhttp.open("GET", forecastUrl, true);
@@ -46,8 +42,9 @@ window.onload = callWeatherApi("Boise", "us");
  *  set and store condition ID to determine
  *  background image
  */
-function populateWeatherConditions(jObj){
+function populateWeatherConditions(){
 	//loop thru weather id to determine background image
+	var jObj = JSON.parse(localStorage.getItem("weatherObject"));
 	var length = jObj.weather.length;
 	var id = 0;
 	console.log(id);
@@ -77,13 +74,6 @@ function populateWeatherConditions(jObj){
 	document.getElementById("location").innerHTML = jObj.name;
 	formatTime();
 
-}
-
-function storeWeatherData(key, responseText){
-	var jObj = JSON.parse(responseText);
-	if(typeof(Storage) !== "undefined"){
-		localStorage.setItem(key, jObj);
-	}
 }
 
 function formatTime() {
