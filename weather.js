@@ -36,7 +36,9 @@ function callWeatherApi(city, country) {
 			console.log(jObj);
 			store5DayData(jObj);
 		}
-	}
+	};
+	xmlhttp.open("GET", forecastUrl, true);
+	xmlhttp.send();
 }
 window.onload = callWeatherApi("Boise", "us");
 
