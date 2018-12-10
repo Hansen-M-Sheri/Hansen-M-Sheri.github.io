@@ -83,7 +83,12 @@ function storeWeatherData(jObj, id){
 	}
 }
 
-function store5DayData(jObj)
+function store5DayData(jObj){
+	if(typeof(Storage) !== "undefined"){
+		localStorage.setItem("5dayWeatherObj", jObj);
+		
+	}
+}
 
 function formatTime() {
     var date = new Date();
