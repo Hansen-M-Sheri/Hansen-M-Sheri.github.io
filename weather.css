@@ -89,11 +89,14 @@ body{
 	outline:none;
 	float: left;
 	padding: 0;
-	padding-left: 30px;
+	padding-left: 20px;
 	color: white;
 	font-size: 1.3em;
 	transition: 0.4s;
 	width: 100%;
+}
+#searchIcon{
+	text-decoration: none;
 }
 
 @keyframes slideDown{
