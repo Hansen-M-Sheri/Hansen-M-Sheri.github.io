@@ -12,21 +12,21 @@ function loadWeatherAjax(city, country){
 * use ajax to get the weather for the current zip code
 */
 function callWeatherApi(city, country) {
-	var xmlhttp = new XMLHttpRequest();
-	var api_key = "94c477428543f4d7a37d952a58632aab";
-	var appID = "&APPID=" + api_key;
-	var url = "https://api.openweathermap.org/data/2.5/weather?q=";
-	url += city + "," + country + appID;
-	console.log(url);
-	xmlhttp.onreadystatechange = function() {
-		if (this.readyState == 4 &&  this.status == 200) {
-			localStorage.setItem("weatherObject", this.responseText);
-			populateWeatherConditions();
+	// var xmlhttp = new XMLHttpRequest();
+	// var api_key = "94c477428543f4d7a37d952a58632aab";
+	// var appID = "&APPID=" + api_key;
+	// var url = "https://api.openweathermap.org/data/2.5/weather?q=";
+	// url += city + "," + country + appID;
+	// console.log(url);
+	// xmlhttp.onreadystatechange = function() {
+	// 	if (this.readyState == 4 &&  this.status == 200) {
+	// 		localStorage.setItem("weatherObject", this.responseText);
+	// 		populateWeatherConditions();
 
-		}
-	};
-	xmlhttp.open("GET", url, true);
-	xmlhttp.send();
+	// 	}
+	// };
+	// xmlhttp.open("GET", url, true);
+	// xmlhttp.send();
 }
 
 function callFiveDayApi(city, country){
@@ -129,5 +129,5 @@ function convertToFahrenheit(temp){
 */
 function populateFiveDay(){
 	var jObj = JSON.parse(localStorage.getItem("5dayWeatherObj"));
-
+	
 }
