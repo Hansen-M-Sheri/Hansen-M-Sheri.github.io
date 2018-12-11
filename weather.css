@@ -64,16 +64,12 @@ body{
 	border-radius: 40px;
 	padding: 10px;
 	width: 200px;
-	animation: slideDown ease 3s 1 forward;
+	animation: slideDown ease 3s 1 forwards;
 	opacity: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-top: 20px;
-
-	
-
-
 }
 .searchBtn{
 	
