@@ -111,7 +111,7 @@ body{
 	}
 }
 /**** MAIN WEATHER PAGE ******/
-.mainWrapper{
+#main{
 	width: 100vw;
 	height: 90vw;
 	display: none;
