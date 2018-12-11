@@ -141,7 +141,7 @@ function populateFiveDay(){
 	var id;
 	var wind;
 
-	for(var i = 0; i < length; i++){
+	for(var i = 0; i < length || i < 5; i++){
 		//get variables
 		date = jObj.list[i].dt_txt;
 		temp = convertToFahrenheit(jObj.list[i].main.temp);
