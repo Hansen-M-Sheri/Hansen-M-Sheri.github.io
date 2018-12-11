@@ -141,7 +141,7 @@ function populateFiveDay(){
 	var id;
 	var wind;
 
-	for(var i = 0; i < length || i < 5; i++){
+	for(var i = 0; i < length ; i + 9){
 		//get variables
 		date = jObj.list[i].dt_txt;
 		temp = convertToFahrenheit(jObj.list[i].main.temp);
@@ -149,7 +149,7 @@ function populateFiveDay(){
 		temp_max = convertToFahrenheit(jObj.list[i].main.temp_max);
 		pressure = jObj.list[i].main.pressure;
 		humidity = jObj.list[i].main.humidity;
-		id = jObj.list[i].weather.id;
+		id = jObj.list[i].weather[0].id;
 		
 		//populate front of card
 
