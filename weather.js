@@ -80,8 +80,8 @@ function populateWeatherConditions(){
 	console.log(jObj.main);
 	console.log(jObj.main.humidity);
 	document.getElementById("tableHumidity").innerHTML = jObj.main.humidity;
-	document.getElementById("tableMinTemp").innerHTML = jObj.main.minTemp;
-	document.getElementById("tableMaxTemp").innerHTML = jObj.main.maxTemp;
+	document.getElementById("tableMinTemp").innerHTML = jObj.main.temp_min;
+	document.getElementById("tableMaxTemp").innerHTML = jObj.main.temp_max;
 	document.getElementById("tablePressure").innerHTML = jObj.main.pressure;
 	document.getElementById("tableWind").innerHTML = jObj.wind;
 	document.getElementById("tableSunrise").innerHTML = jObj.sys.sunrise;
