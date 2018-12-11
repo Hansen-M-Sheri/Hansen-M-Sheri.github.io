@@ -3,9 +3,11 @@ function Weather(id, image){
 	this.image = image;
 }
 
-function loadWeatherAjax(city, country){
-	callWeatherApi(city, country);
-	callFiveDayApi(city, country);
+function loadWeatherAjax(){
+	var zip = document.getElementById("searchText").value;
+	localStorage.setItem("userZip", zip);
+	callWeatherApi(zip, country);
+	callFiveDayApi(zip, country);
 }
 /*
 * Call Weather API
@@ -46,7 +48,7 @@ function callFiveDayApi(zip, country){
 	xmlhttp.open("GET", forecastUrl, true);
 	xmlhttp.send();
 }
-window.onload = loadWeatherAjax(83709, "us");
+window.onload = checkNewUser();
 
 /* Populate Weather Conditions
  *  set and store condition ID to determine
@@ -123,6 +125,13 @@ function formatSeconds(seconds)
 function convertToFahrenheit(temp){
 	var f = 1.8 * (temp - 273) + 32;
 	return f;
+}
+
+function checkNewUser(){
+	if(localStorage.getItem("userZip") === null){
+		document.getElementById("welcome").style.opacity = "1";
+	}
+
 }
 /**
 * Populate the values for the 5 day forecast
