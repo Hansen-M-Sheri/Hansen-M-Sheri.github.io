@@ -76,7 +76,7 @@ function populateWeatherConditions(){
 	//populate back of card info
 	document.getElementById("backCardCity").innerHTML = jObj.name;
 	document.getElementById("description").innerHTML = jObj.weather[0].description;
-	document.getElementById("tableTemp").innerHTML = fTemp;
+	document.getElementById("tableTemp").innerHTML = Math.round(fTemp) + "&#176";
 	console.log(jObj.main);
 	console.log(jObj.main.humidity);
 	document.getElementById("tableHumidity").innerHTML = jObj.main.humidity;
