@@ -80,12 +80,18 @@ function populateWeatherConditions(){
 	console.log(jObj.main);
 	console.log(jObj.main.humidity);
 	document.getElementById("tableHumidity").innerHTML = jObj.main.humidity;
-	document.getElementById("tableMinTemp").innerHTML = convertToFahrenheit(jObj.main.minTemp);
-	document.getElementById("tableMaxTemp").innerHTML = convertToFahrenheit(jObj.main.maxTemp);
+	document.getElementById("tableMinTemp").innerHTML = jObj.main.minTemp;
+	document.getElementById("tableMaxTemp").innerHTML = jObj.main.maxTemp;
 	document.getElementById("tablePressure").innerHTML = jObj.main.pressure;
 	document.getElementById("tableWind").innerHTML = jObj.wind;
-	document.getElementById("tableSunrise").innerHTML = formatSeconds(jObj.sys.sunrise);
-	document.getElementById("tableSunset").innerHTML = formatSeconds(jObj.sys.sunset);
+	document.getElementById("tableSunrise").innerHTML = jObj.sys.sunrise;
+	document.getElementById("tableSunset").innerHTML = jObj.sys.sunset;
+	// document.getElementById("tableMinTemp").innerHTML = convertToFahrenheit(jObj.main.minTemp);
+	// document.getElementById("tableMaxTemp").innerHTML = convertToFahrenheit(jObj.main.maxTemp);
+	// document.getElementById("tablePressure").innerHTML = jObj.main.pressure;
+	// document.getElementById("tableWind").innerHTML = jObj.wind;
+	// document.getElementById("tableSunrise").innerHTML = formatSeconds(jObj.sys.sunrise);
+	// document.getElementById("tableSunset").innerHTML = formatSeconds(jObj.sys.sunset);
 }
 function formatTime() {
     var date = new Date();
