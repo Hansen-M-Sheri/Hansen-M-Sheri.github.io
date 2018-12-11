@@ -73,15 +73,18 @@ function populateWeatherConditions(){
 	document.getElementById("location").innerHTML = jObj.name;
 	formatTime();
 
+
 	//populate back of card info
+	var temp_min = convertToFahrenheit(jObj.main.temp_min);
+	var temp_max = convertToFahrenheit(jObj.main.temp_max);
 	document.getElementById("backCardCity").innerHTML = jObj.name;
 	document.getElementById("description").innerHTML = jObj.weather[0].description;
 	document.getElementById("tableTemp").innerHTML = Math.round(fTemp) + "&#176";
 	console.log(jObj.main);
 	console.log(jObj.main.humidity);
 	document.getElementById("tableHumidity").innerHTML = jObj.main.humidity;
-	document.getElementById("tableMinTemp").innerHTML = convertToFahrenheit(jObj.main.temp_min);
-	document.getElementById("tableMaxTemp").innerHTML = convertToFahrenheit(jObj.main.temp_max);
+	document.getElementById("tableMinTemp").innerHTML = Math.round(temp_min) + "&#176";
+	document.getElementById("tableMaxTemp").innerHTML = Math.round(temp_max) + "&#176";
 	document.getElementById("tablePressure").innerHTML = jObj.main.pressure;
 	document.getElementById("tableWind").innerHTML = jObj.wind;
 	document.getElementById("tableSunrise").innerHTML = formatSeconds(jObj.sys.sunrise);
