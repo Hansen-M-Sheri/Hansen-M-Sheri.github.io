@@ -35,7 +35,7 @@ body{
 .text2{
 	font-size: 30px;
 	color: #41BBC1;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	background: black;
 }
 
@@ -65,8 +65,8 @@ body{
 	padding: 10px;
 	width: 150px;
 	animation: search 3s 1;
-	animation-delay: 2.7s;
-	visibility: hidden;
+	animation-delay: 3s;
+	
 
 
 }
@@ -95,16 +95,15 @@ body{
 }
 
 @keyframes search{
-	0%{
-		opacity: 0;
-		margin-top: -40px;
-	}
-	40%{
-		visibility: visible;
-		margin-top: 0px;
-		transform: translateY(80px, -20px );
+	0% {
+    visibility: hidden;
+    margin-top: -40px;
 	}
 
+	40% {
+    
+    margin-top: 10px;
+	}
 	
 
 }
