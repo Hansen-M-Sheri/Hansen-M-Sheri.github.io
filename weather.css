@@ -58,15 +58,20 @@ body{
 	z-index: -1;
 	position: absolute;
 	top: 80%;
-	left: 45%;
+	left: 42%;
 	background:#41BBC1;
 	height: 40px;
 	border-radius: 40px;
 	padding: 10px;
-	width: 150px;
+	width: 200px;
 	animation: slide-down ease 3s forward;
 	animation-delay: 3s;
 	opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+
 	
 
 
