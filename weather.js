@@ -38,8 +38,8 @@ function callFiveDayApi(city, country){
 	forecastUrl += city + "," + country + appID;
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-			console.log(this.repsonse);
-			localStorage.setItem("5dayWeatherObj", this.response);
+			console.log(this.repsonseText);
+			localStorage.setItem("5dayWeatherObj", this.responseText);
 			populateFiveDay();
 		}
 	};
@@ -129,5 +129,5 @@ function convertToFahrenheit(temp){
 */
 function populateFiveDay(){
 	var jObj = JSON.parse(localStorage.getItem("5dayWeatherObj"));
-	
+
 }
