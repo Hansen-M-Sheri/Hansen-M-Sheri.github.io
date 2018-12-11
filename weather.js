@@ -52,7 +52,7 @@ window.onload = loadWeatherAjax("Boise", "us");
  *  set and store condition ID to determine
  *  background image
  */
-function populateWeatherConditions(){
+function populateWeatherConditions(){ 
 	//loop thru weather id to determine background image
 	var jObj = JSON.parse(localStorage.getItem("weatherObject"));
 	console.log(jObj);
@@ -129,5 +129,30 @@ function convertToFahrenheit(temp){
 */
 function populateFiveDay(){
 	var jObj = JSON.parse(localStorage.getItem("5dayWeatherObj"));
+	//array of list
+	var length = jObj.list.length;
+	//object with dt = date, main.temp, etc
+	var date;
+	var temp;
+	var temp_min;
+	var temp_max;
+	var pressure;
+	var humidity;
+	var id;
+	var wind;
 
+	for(var i = 0; i < length; i++){
+		//get variables
+		date = jObj.list[i].dt_txt;
+		temp = convertToFahrenheit(jObj.list[i].main.temp);
+		temp_min = convertToFahrenheit(jObj.list[i].main.temp_min);
+		temp_max = convertToFahrenheit(jObj.list[i].main.temp_max);
+		pressure = jObj.list[i].main.pressure;
+		humidity = jObj.list[i].main.humidity;
+		id = jObj.list[i].weather.id;
+		//store each day in localStorage
+
+
+		//set temp and icon
+		tempDay[]
 }
