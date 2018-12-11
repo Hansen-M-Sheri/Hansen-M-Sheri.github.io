@@ -38,7 +38,7 @@ function callFiveDayApi(city, country){
 	forecastUrl += city + "," + country + appID;
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-			console.log(this.repsonseText);
+			console.log(this.responseText);
 			localStorage.setItem("5dayWeatherObj", this.responseText);
 			populateFiveDay();
 		}
