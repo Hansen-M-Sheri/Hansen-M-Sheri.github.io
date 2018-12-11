@@ -72,7 +72,7 @@ body{
 	margin-top: 20px;
 }
 .searchBtn{
-	
+	text-decoration: none;
 	color: white;
 	float: right;
 	width: 40px;
@@ -95,9 +95,8 @@ body{
 	transition: 0.4s;
 	width: 100%;
 }
-#searchIcon{
-	text-decoration: none;
-}
+
+
 
 @keyframes slideDown{
 	from{
