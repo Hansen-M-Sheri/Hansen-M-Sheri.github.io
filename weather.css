@@ -8,7 +8,7 @@ body{
 	
 }
 /**** INTRO PAGE ******/
-.intro {
+#welcome {
 	transition: opacity 1s;
 	opacity: 0;
 	text-align: center;
