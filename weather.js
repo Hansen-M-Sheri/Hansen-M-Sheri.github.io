@@ -149,7 +149,7 @@ function populateFiveDay(){
 		temp_max = convertToFahrenheit(jObj.list[i].main.temp_max);
 		pressure = jObj.list[i].main.pressure;
 		humidity = jObj.list[i].main.humidity;
-		id = jObj.list[i].weather[0].id;
+		id = jObj.list[i].weather.id;
 		
 		//populate front of card
 
