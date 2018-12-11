@@ -166,9 +166,9 @@ function populateFiveDay(){
 		var humidityDay = "humidityDay" + int;
 		document.getElementById(humidityDay).innerHTML = humidity;
 		var minTempDay = "minTempDay" + int;
-		document.getElementById(minTempDay).innerHTML = temp_min;
+		document.getElementById(minTempDay).innerHTML = Math.round(temp_min) + "&#176";
 		var maxTempDay = "maxTempDay" + int;
-		document.getElementById(maxTempDay).innerHTML = temp_max;
+		document.getElementById(maxTempDay).innerHTML = Math.round(temp_max) + "&#176";
 
 		}
 }
