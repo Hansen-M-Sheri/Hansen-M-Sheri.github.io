@@ -152,7 +152,7 @@ function populateFiveDay(){
 		id = jObj.list[i].weather.id;
 		
 		//populate front of card
-		var int = (Number)[i] + (Number)1;
+		var int = (Number)i + 1;
 		var dateId = "dateDay"+ int ;
 		console.log(dateId)
 		document.getElementById(dateId).innerHTML = date;
