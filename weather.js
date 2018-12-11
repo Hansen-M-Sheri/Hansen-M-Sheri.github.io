@@ -31,6 +31,9 @@ function callWeatherApi(city, country) {
 
 function callFiveDayApi(city, country){
 	//get the 5 day forecast
+	var xmlhttp = new XMLHttpRequest();
+	var api_key = "94c477428543f4d7a37d952a58632aab";
+	var appID = "&APPID=" + api_key;
 	var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=";
 	forecastUrl += city + "," + country + appID;
 	xmlhttp.onreadystatechange = function() {
