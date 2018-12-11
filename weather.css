@@ -96,15 +96,42 @@ body{
 }
 
 @keyframes slideDown{
-	from {
+	0% {
 	    opacity: 0;
-	    margin-top: -40px;
+	    margin-top: -80px;
 	}
-	to{
+	12%{
 		opacity: 1;
-		transform: translateY(50px);
+		margin-top: -40px;
 	}
-	
+	24%{
+		opacity: 1;
+		margin-top: -20px;
+	}
+	36%{
+		opacity: 1;
+		margin-top: 0px;
+	}
+	48%{
+		opacity: 1;
+		margin-top: 20px;
+	}
+	60%{
+		opacity: 1;
+		margin-top: 40px;
+	}
+	72%{
+		opacity: 1;
+		margin-top: 20px;
+	}
+	84%{
+		opacity: 1;
+		margin-top: 10px;
+	}
+	100%{
+		opacity: 1;
+		margin-top: 0px;
+	}
 
 }
 /**** MAIN WEATHER PAGE ******/
