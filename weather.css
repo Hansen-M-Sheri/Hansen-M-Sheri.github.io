@@ -55,7 +55,7 @@ body{
 }
 /***** SEARCH BAR *************/
 .searchbar{
-	z-index: -1;
+	/*z-index: -1;*/
 	position: absolute;
 	top: 83%;
 	left: 42%;
