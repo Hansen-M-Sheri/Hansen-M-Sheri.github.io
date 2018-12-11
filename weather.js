@@ -11,12 +11,12 @@ function loadWeatherAjax(city, country){
 * Call Weather API
 * use ajax to get the weather for the current zip code
 */
-function callWeatherApi(city, country) {
+function callWeatherApi(zip, country) {
 	// var xmlhttp = new XMLHttpRequest();
 	// var api_key = "94c477428543f4d7a37d952a58632aab";
 	// var appID = "&APPID=" + api_key;
-	// var url = "https://api.openweathermap.org/data/2.5/weather?q=";
-	// url += city + "," + country + appID;
+	// var url = "https://api.openweathermap.org/data/2.5/weather?zip=";
+	// url += zip + "," + country + appID;
 	// console.log(url);
 	// xmlhttp.onreadystatechange = function() {
 	// 	if (this.readyState == 4 &&  this.status == 200) {
@@ -29,13 +29,13 @@ function callWeatherApi(city, country) {
 	// xmlhttp.send();
 }
 
-function callFiveDayApi(city, country){
+function callFiveDayApi(zip, country){
 	//get the 5 day forecast
 	var xmlhttp = new XMLHttpRequest();
 	var api_key = "94c477428543f4d7a37d952a58632aab";
 	var appID = "&APPID=" + api_key;
-	var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=";
-	forecastUrl += city + "," + country + appID;
+	var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?zip=";
+	forecastUrl += zip + "," + country + appID;
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			console.log(this.responseText);
@@ -46,7 +46,7 @@ function callFiveDayApi(city, country){
 	xmlhttp.open("GET", forecastUrl, true);
 	xmlhttp.send();
 }
-window.onload = loadWeatherAjax("Boise", "us");
+window.onload = loadWeatherAjax(83709, "us");
 
 /* Populate Weather Conditions
  *  set and store condition ID to determine
