@@ -36,7 +36,7 @@ body{
 	font-size: 30px;
 	color: #41BBC1;
 	margin-bottom: 50px;
-	background: black;
+	/*background: black;*/
 }
 
 @keyframes text {
