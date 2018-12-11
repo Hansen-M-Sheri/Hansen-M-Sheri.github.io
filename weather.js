@@ -150,9 +150,24 @@ function populateFiveDay(){
 		pressure = jObj.list[i].main.pressure;
 		humidity = jObj.list[i].main.humidity;
 		id = jObj.list[i].weather.id;
-		//store each day in localStorage
+		
+		//populate front of card
+		var int = [i] + 1
+		var dayId = "dateDay"+ int ;
+		document.getElementById(dateId).innerHTML = date;
+		var iconDay = "iconDay"+ int;
+		document.getElementById(iconDay).innerHTML = id;
+		var tempDay = "tempDay" + int;
+		//populate back of card
+		document.getElementById(tempDay).innerHTML = Math.round(temp) + "&#176";
+		var backTempDay = "backTempDay" + int;
+		document.getElementById(backTempDay).innerHTML = Math.round(temp) + "&#176";
+		var humidityDay = "humidityDay" + int;
+		document.getElementById(humidityDay).innerHTML = humidity;
+		var minTempDay = "minTempDay" + int;
+		document.getElementById(minTempDay).innerHTML = temp_min;
+		var maxTempDay = "maxTempDay" + int;
+		document.getElementById(maxTempDay).innerHTML = temp_max;
 
-
-		//set temp and icon
-		tempDay[]
+		}
 }
