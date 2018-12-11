@@ -129,8 +129,8 @@ function convertToFahrenheit(temp){
 
 function checkNewUser(){
 	if(localStorage.getItem("userZip") === null){
+		//document.getElementById("welcome").style.opacity = "1";
 		document.getElementById("welcome").style.opacity = "1";
-
 	}
 	else{
 		//hide welcome page and reveal weather page
