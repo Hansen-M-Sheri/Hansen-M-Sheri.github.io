@@ -10,7 +10,7 @@ body{
 /**** INTRO PAGE ******/
 #welcome {
 	transition: opacity 1s;
-	opacity: 0;
+	/*opacity: 0;*/
 	text-align: center;
 	position: absolute;
 	top: 50%;
