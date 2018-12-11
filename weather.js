@@ -128,15 +128,14 @@ function convertToFahrenheit(temp){
 }
 
 function checkNewUser(){
-	if(localStorage.getItem("userZip") === null){
-		//document.getElementById("welcome").style.opacity = "1";
-		document.getElementById("welcome").style.opacity = "1";
-	}
-	else{
+	if(localStorage.getItem("userZip") !== null){
+		
+		document.getElementById("welcome").style.display = "none";
 		//hide welcome page and reveal weather page
 		document.getElementById("main").style.display = "block";
 		loadWeatherAjax();
 	}
+	
 
 }
 /**
