@@ -154,6 +154,7 @@ function populateFiveDay(){
 		//populate front of card
 		var int = [i] + 1
 		var dateId = "dateDay"+ int ;
+		console.log(dateId);
 		document.getElementById(dateId).innerHTML = date;
 		var iconDay = "iconDay"+ int;
 		document.getElementById(iconDay).innerHTML = id;
