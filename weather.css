@@ -48,10 +48,12 @@ body{
 	border-radius: 40px;
 	padding: 10px;
 	width: 150px;
+	animation: search 3s 1;
 
 
 }
 .searchBtn{
+	z-index: -1;
 	color: #fff;
 	float: right;
 	width: 40px;
@@ -61,7 +63,7 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	animation: search 3s 1;
+	
 }
 @keyframes search{
 	0%{
