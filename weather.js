@@ -162,7 +162,7 @@ function populateFiveDay(){
 		//populate back of card
 		document.getElementById(tempDay).innerHTML = Math.round(temp) + "&#176";
 		var backTempDay = "backTempDay" + int;
-		document.getElementById(backTempDay).innerHTML = Math.round(temp) + "&#176";
+		//document.getElementById(backTempDay).innerHTML = Math.round(temp) + "&#176";
 		var humidityDay = "humidityDay" + int;
 		document.getElementById(humidityDay).innerHTML = humidity;
 		var minTempDay = "minTempDay" + int;
