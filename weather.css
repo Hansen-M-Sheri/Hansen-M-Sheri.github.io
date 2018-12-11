@@ -35,7 +35,10 @@ body{
 .text2{
 	font-size: 30px;
 	color: #41BBC1;
-	margin-bottom: 50px;
+	margin-bottom: -40px;
+	background: black;
+	position: relative;
+
 }
 .searchbar{
 	position: absolute;
