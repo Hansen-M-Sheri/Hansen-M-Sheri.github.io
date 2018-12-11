@@ -3,6 +3,10 @@ function Weather(id, image){
 	this.image = image;
 }
 
+function loadWeatherAjax(city, country){
+	callWeatherApi(city, country);
+	callFiveDayApi(city, country);
+}
 /*
 * Call Weather API
 * use ajax to get the weather for the current zip code
@@ -23,7 +27,9 @@ function callWeatherApi(city, country) {
 	};
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
+}
 
+function callFiveDayApi(city, country){
 	//get the 5 day forecast
 	var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=";
 	forecastUrl += city + "," + country + appID;
@@ -37,7 +43,7 @@ function callWeatherApi(city, country) {
 	xmlhttp.open("GET", forecastUrl, true);
 	xmlhttp.send();
 }
-window.onload = callWeatherApi("Boise", "us");
+window.onload = loadWeatherAjax("Boise", "us");
 
 /* Populate Weather Conditions
  *  set and store condition ID to determine
