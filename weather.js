@@ -129,7 +129,7 @@ function convertToFahrenheit(temp){
 }
 
 function checkNewUser(){
-	if(localStorage.getItem("userZip") == null){ //new visitor
+	if(localStorage.getItem("userZip") === null){ //new visitor
 		console.log("zip not in localStorage");
 		var zip = document.getElementById("searchText").value;
 		localStorage.setItem("userZip", zip);
