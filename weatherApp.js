@@ -8,7 +8,7 @@ function checkNewUser(){
 		document.getElementById("welcome").style.display = "none";
 	}
 	else{ //load ajax request
-		loadWeatherAjax(localStorage.getItem("userZip"), "us");
+		callWeatherApi(localStorage.getItem("userZip"), "us");
 	}
 	
 
