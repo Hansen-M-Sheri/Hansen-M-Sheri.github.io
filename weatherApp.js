@@ -13,11 +13,21 @@ function checkNewUser(){
 	else{ //load ajax request
 		document.getElementById("welcome").style.display = "none";
 		document.getElementById("main").style.display = "block";
-		callWeatherApi(localStorage.getItem("userZip"), "us");
+		loadWeatherAjax(localStorage.getItem("userZip"), "us");
 	}
 	
 
 } 
+/**
+* Load Weather Ajax
+*   call the methods to grab weather
+*/
+function loadWeatherAjax(zip){
+	
+	callWeatherApi(zip, "us");
+	callFiveDayApi(zip, "us");
+}
+
 /*
 * Call Weather API
 * use ajax to get the weather for the current zip code
@@ -39,3 +49,4 @@ function callWeatherApi(zip, country) {
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
 }
+
