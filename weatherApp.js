@@ -48,7 +48,7 @@ function callWeatherApi(zip, country) {
 		if (this.readyState == 4 &&  this.status == 200) {
 			localStorage.setItem("weatherObject", this.responseText);
 			console.log("weatherObject set in storage & is " + this.responseText);
-			//populateWeatherConditions();
+			populateWeatherConditions();
 
 		}
 	};
