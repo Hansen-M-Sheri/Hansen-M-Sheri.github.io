@@ -195,7 +195,8 @@ body{
 		transform: rotateY(180deg);
 	}
 
-	.theFront {
+	.theFront, .theFrontFive {
+		margin-top: 20px;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -212,7 +213,7 @@ body{
 		font-weight: bold;
 	}
 
-	.theBack {
+	.theBack, .theBackFive {
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -273,3 +274,4 @@ body{
     height: 200px;
 
 }
+
