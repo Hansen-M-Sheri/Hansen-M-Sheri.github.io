@@ -106,6 +106,8 @@ function populateWeatherConditions(){
 			}
 		}
 	}
+
+	displayBackgroundImage(id);
 	var temp = jObj.main.temp;
 	var fTemp = convertToFahrenheit(temp);
 	
@@ -215,4 +217,25 @@ function formatSeconds(seconds)
     var date = new Date(1970,0,1);
     date.setSeconds(seconds);
     return date.toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
+}
+
+function displayBackgroundImage(id){
+	if(id >= 200 && id < 300){ //Thunderstorms
+		document.body.style.backgroundImage = "url('weatherBackgroundImages/dark-lightning-night-56614.jpg')";
+	}
+	else if(id >= 300 && id < 600){ //rain
+		document.body.style.backgroundImage = "url('weatherBackgroundImages/rain-raindrops-rainy-110874.jpg')";
+	}
+	else if (id >= 600 && id < 700){ //snow
+		document.body.style.backgroundImage = "url('weatherBackgroundImages/blizzard-cold-exploration-326152.jpg')";
+	}
+	else if (id >= 700 && id < 800){ //fog
+		document.body.style.backgroundImage = "url('weatherBackgroundImages/foggy.jpg')";
+	}
+	else if (id == 800){ //clear sky
+		document.body.style.backgroundImage = "url('weatherBackgroundImages/alpine-clouds-daylight-462149.jpg')";
+	}
+	else { //clouds
+		document.body.style.backgroundImage = "url('weatherBackgroundImages/atmosphere-bright-cloud-724864.jpg')";
+	}
 }
