@@ -154,10 +154,10 @@ function populateFiveDay(){
 		//get variables
 		date = jObj.list[i].dt_txt;
 		temp = convertToFahrenheit(jObj.list[i].main.temp);
-		temp_min = convertToFahrenheit(jObj.list[i].main.temp_min);
-		temp_max = convertToFahrenheit(jObj.list[i].main.temp_max);
-		pressure = jObj.list[i].main.pressure;
-		humidity = jObj.list[i].main.humidity;
+		// temp_min = convertToFahrenheit(jObj.list[i].main.temp_min);
+		// temp_max = convertToFahrenheit(jObj.list[i].main.temp_max);
+		// pressure = jObj.list[i].main.pressure;
+		// humidity = jObj.list[i].main.humidity;
 		id = jObj.list[i].weather.id;
 		
 		//populate front of card
@@ -171,15 +171,15 @@ function populateFiveDay(){
 		document.getElementById(iconDay).innerHTML = id;
 		var tempDay = "tempDay" + int;
 		//populate back of card
-		document.getElementById(tempDay).innerHTML = Math.round(temp) + "&#176";
-		var backTempDay = "backTempDay" + int;
-		//document.getElementById(backTempDay).innerHTML = Math.round(temp) + "&#176";
-		var humidityDay = "humidityDay" + int;
-		document.getElementById(humidityDay).innerHTML = humidity;
-		var minTempDay = "minTempDay" + int;
-		document.getElementById(minTempDay).innerHTML = Math.round(temp_min) + "&#176";
-		var maxTempDay = "maxTempDay" + int;
-		document.getElementById(maxTempDay).innerHTML = Math.round(temp_max) + "&#176";
+		// document.getElementById(tempDay).innerHTML = Math.round(temp) + "&#176";
+		// var backTempDay = "backTempDay" + int;
+		// //document.getElementById(backTempDay).innerHTML = Math.round(temp) + "&#176";
+		// var humidityDay = "humidityDay" + int;
+		// document.getElementById(humidityDay).innerHTML = humidity;
+		// var minTempDay = "minTempDay" + int;
+		// document.getElementById(minTempDay).innerHTML = Math.round(temp_min) + "&#176";
+		// var maxTempDay = "maxTempDay" + int;
+		// document.getElementById(maxTempDay).innerHTML = Math.round(temp_max) + "&#176";
 		}
 	}
 }
