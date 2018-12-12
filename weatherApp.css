@@ -204,7 +204,7 @@ body{
 		backface-visibility: hidden;
 		overflow: hidden;
 		/*background: #ffc728;*/
-		background-color: rgba(1,1,1,.2);
+		background-color: rgba(107, 100, 100, 0.3);
     	color: rgba(255, 255, 255, 1);
 		text-align: center;
 		border-radius: 20px;
@@ -218,7 +218,7 @@ body{
 		height: 100%;
 		backface-visibility: hidden;
 		/*background: #fafafa;*/
-		background-color: rgba(1,1,1,.2);
+		background-color: rgba(107, 100, 100, 0.3);
 		color: rgba(255, 255, 255, 1);
 		transform: rotateY(180deg);
 		text-align: center;
@@ -262,7 +262,7 @@ body{
     align-items: center;
 }
 .fiveDayCard{
-	background-color: rgba(51, 51, 51, 1);/*#333 but needed to not have opacity affect children*/
+	background-color: rgba(107, 100, 100, 0.3);/*using rgba so opacity doesn't affect children*/
 	border-radius: 10px;
     margin: 10px;
     min-width: 50px;
