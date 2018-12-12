@@ -272,11 +272,21 @@ body{
     /*opacity: .3;*/
     width: 150px;
     height: 200px;
+    position: relative;
 
 }
-.theFrontFive{
-
+.date{
+	position: absolute;
+	top: 10%;
+	left: 50%;
+}
+.temp{
+	position: absolute;
+	top:30%; 
+	left: 50%;
 }
 .theBackFive{
-	
+	position: absolute;
+	top: 70%;
+	left: 50%;
 }
