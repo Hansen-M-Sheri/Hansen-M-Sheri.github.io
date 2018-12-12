@@ -22,6 +22,10 @@ function checkNewUser(){
 *   hide welcome screen and display main
 */
 function loadWeatherAjax(zip){
+	var zip = localStorage.getItem("userZip");
+	if( zip == null){ 
+		localStorage.setItem("userZip");
+	}
 	document.getElementById("welcome").style.display = "none";
 		document.getElementById("main").style.display = "block";
 	callWeatherApi(zip, "us");
