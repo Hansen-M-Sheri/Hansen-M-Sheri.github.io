@@ -86,7 +86,7 @@ body{
 	justify-content: center;
 	align-items: center;
 }
-.searchText{
+#searchText{
 	border: none;
 	background: none;
 	outline:none;
