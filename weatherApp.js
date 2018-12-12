@@ -24,7 +24,7 @@ function checkNewUser(){
 function loadWeatherAjax(zip){
 	var zip = localStorage.getItem("userZip");
 	if( zip == null){ 
-		localStorage.setItem("userZip");
+		localStorage.setItem("userZip", zip);
 	}
 	document.getElementById("welcome").style.display = "none";
 		document.getElementById("main").style.display = "block";
