@@ -6,8 +6,8 @@ function Weather(id, image){
 function loadWeatherAjax(){
 	var zip = document.getElementById("searchText").value;
 	localStorage.setItem("userZip", zip);
-	callWeatherApi(zip, country);
-	callFiveDayApi(zip, country);
+	callWeatherApi(zip, "us");
+	callFiveDayApi(zip, "us");
 }
 /*
 * Call Weather API
