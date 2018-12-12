@@ -103,8 +103,13 @@ body{
 	transition: 0.4s;
 	width: 80%;
 }
-
-
+/********* SEARCH BAR ON MAIN PAGE *****/
+.main_searchbar{
+	position: absolute;
+	top: 20px;
+	left: 85%;
+	transform: translate(-50%, -50%);
+}
 
 @keyframes slideDown{
 	from{
