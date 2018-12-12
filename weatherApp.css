@@ -109,6 +109,28 @@ body{
 	top: 20px;
 	left: 85%;
 	transform: translate(-50%, -50%);
+	background: #41BBC1;
+	height: 40px;
+	border-radius: 40px;
+	padding: 10px;
+
+}
+.main_searchbar:hover > #main_searchText{
+	width: 200px;
+	padding: 0 6px;
+
+}
+#main_searchText{
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: white;
+	font-size: 1em;
+	transition: 0.4s;
+	line-height: 40px;
+	width: 0px;
 }
 
 @keyframes slideDown{
