@@ -5,9 +5,8 @@ function Weather(id, image){
 	this.image = image;
 }
 
-function loadWeatherAjax(){
-	var zip = document.getElementById("searchText").value;
-	localStorage.setItem("userZip", zip);
+function loadWeatherAjax(zip){
+	
 	callWeatherApi(zip, "us");
 	callFiveDayApi(zip, "us");
 }
@@ -132,15 +131,21 @@ function convertToFahrenheit(temp){
 function checkNewUser(){
 	if(localStorage.getItem("userZip") == null){ //new visitor
 		console.log("zip not in localStorage");
-		
-		
-	}
-	else{
+		var zip = document.getElementById("searchText").value;
+		localStorage.setItem("userZip", zip);
+		//hide welcome page and reveal weather page
 		var welcome = document.getElementById("welcome");
 		welcome.style.display = "none";
-		//hide welcome page and reveal weather page
 		document.getElementById("main").style.display = "block";
-		loadWeatherAjax();
+		loadWeatherAjax(zip);
+
+	}
+	else{
+		//hide welcome page and reveal weather page
+		var welcome = document.getElementById("welcome");
+		welcome.style.display = "none";
+		document.getElementById("main").style.display = "block";
+		loadWeatherAjax(localStorage.getItem("userZip"));
 	}
 	
 
