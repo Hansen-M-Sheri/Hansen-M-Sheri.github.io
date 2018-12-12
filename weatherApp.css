@@ -263,11 +263,12 @@ body{
 }
 .fiveDayCard{
 	background-color: rgba(107, 100, 100, 0.3);/*using rgba so opacity doesn't affect children*/
+	color: rgba(255, 255, 255, 1);
 	border-radius: 10px;
     margin: 10px;
     min-width: 50px;
     min-height: 80px;
-    opacity: .3;
+    /*opacity: .3;*/
     width: 150px;
     height: 200px;
 
