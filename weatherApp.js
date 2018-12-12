@@ -7,9 +7,12 @@ function checkNewUser(){
 	if( zip == null){ //new visitor
 		console.log("zip not in localStorage");
 		//no zip - display welcome
+		document.getElementById("main").style.display = "none";
 		document.getElementById("welcome").style.display = "block";
 	}
 	else{ //load ajax request
+		document.getElementById("welcome").style.display = "none";
+		document.getElementById("main").style.display = "block";
 		callWeatherApi(localStorage.getItem("userZip"), "us");
 	}
 	
