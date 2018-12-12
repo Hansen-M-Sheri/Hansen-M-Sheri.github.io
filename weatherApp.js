@@ -52,6 +52,8 @@ function callWeatherApi(zip, country) {
 	xmlhttp.send();
 	console.log("callWeatherApi finished");
 }
+
+
 /**
 * Get 5 day forecast
 */
@@ -73,6 +75,60 @@ function callFiveDayApi(zip, country){
 	xmlhttp.send();
 }
 
+
+
+/* Populate Weather Conditions
+ *  set and store condition ID to determine
+ *  background image
+ */
+function populateWeatherConditions(){ 
+	//loop thru weather id to determine background image
+	var jObj = JSON.parse(localStorage.getItem("weatherObject"));
+	console.log(jObj);
+	var length = jObj.weather.length;
+	var id = 0;
+	console.log(id);
+	if(length <= 1) {
+		id = jObj.weather[0];
+	}
+	for(var i = 0; i < length; i++){
+		//keep the lowest id in the array & use for background
+		if(i == 0){
+			id = jObj.weather[0].id;
+		}
+		else {
+			if(id > jObj.weather[i].id){
+				id = jObj.weather[i].id;
+			}
+		}
+	}
+	var temp = jObj.main.temp;
+	var fTemp = convertToFahrenheit(temp);
+	
+	//grab associated background image and display it (with backup image color)
+	//display temp
+	document.getElementById("currentTemp").innerHTML = Math.round(fTemp) + "&#176";
+	//display city, and time
+	document.getElementById("location").innerHTML = jObj.name;
+	formatTime();
+
+
+	//populate back of card info
+	var temp_min = convertToFahrenheit(jObj.main.temp_min);
+	var temp_max = convertToFahrenheit(jObj.main.temp_max);
+	document.getElementById("backCardCity").innerHTML = jObj.name;
+	document.getElementById("description").innerHTML = jObj.weather[0].description;
+	document.getElementById("tableTemp").innerHTML = Math.round(fTemp) + "&#176";
+	console.log(jObj.main);
+	console.log(jObj.main.humidity);
+	document.getElementById("tableHumidity").innerHTML = jObj.main.humidity;
+	document.getElementById("tableMinTemp").innerHTML = Math.round(temp_min) + "&#176";
+	document.getElementById("tableMaxTemp").innerHTML = Math.round(temp_max) + "&#176";
+	document.getElementById("tablePress").innerHTML = jObj.main.pressure;
+	document.getElementById("tableWind").innerHTML = jObj.wind.speed + " mph";
+	document.getElementById("tableSunrise").innerHTML = formatSeconds(jObj.sys.sunrise);
+	document.getElementById("tableSunset").innerHTML = formatSeconds(jObj.sys.sunset);
+}
 /**
 * Populate the values for the 5 day forecast
 */
@@ -122,4 +178,37 @@ function populateFiveDay(){
 		document.getElementById(maxTempDay).innerHTML = Math.round(temp_max) + "&#176";
 		}
 	}
+}
+/**
+* Format Time for am/pm
+*/
+function formatTime() {
+    var date = new Date();
+    var hours = date.getHours();
+  	var minutes = date.getMinutes();
+     var ampm = hours >= 12 ? 'pm' : 'am';
+  	hours = hours % 12;
+  	hours = hours ? hours : 12; // the hour '0' should be '12'
+  	minutes = minutes < 10 ? '0'+minutes : minutes;
+  	var strTime = hours + ':' + minutes + ' ' + ampm;
+  	document.getElementById("timeAndDate").innerHTML =  strTime;
+    
+}
+
+/**
+* Convert from kelvin to fahrenheit
+*/
+function convertToFahrenheit(temp){
+	var f = 1.8 * (temp - 273) + 32;
+	return f;
+}
+
+/**
+* Format time for seconds
+*/
+function formatSeconds(seconds)
+{
+    var date = new Date(1970,0,1);
+    date.setSeconds(seconds);
+    return date.toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
 }
