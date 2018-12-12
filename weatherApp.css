@@ -84,9 +84,7 @@ body{
 	border-radius: 50%;
 	border: none;
 	background: #41BBC1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	
 }
 .searchBtn:hover{
 	color: #B8B8B8;
@@ -113,6 +111,9 @@ body{
 	height: 40px;
 	border-radius: 40px;
 	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 }
 .main_searchbar:hover > #main_searchText{
