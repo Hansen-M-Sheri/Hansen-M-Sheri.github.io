@@ -237,6 +237,6 @@ function displayBackgroundImage(id){
 	}
 	else { //clouds
 		//document.getElementById("bg").style.backgroundImage = "url('weatherBackgroundImages/atmosphere-bright-cloud-724864.jpg')";
-		document.getElementById("bg").style.backgroundImage = "url('weatherBackgroundImages/dark-lightning-night-56614.jpg')"
+		document.getElementById("bg").style.backgroundImage = "url('weatherBackgroundImages/rain-raindrops-rainy-110874.jpg')"
 	}
 }
