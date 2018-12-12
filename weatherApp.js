@@ -2,7 +2,9 @@
 window.onload = checkNewUser();
 
 function checkNewUser(){
-	if(localStorage.getItem("userZip") === null){ //new visitor
+	var zip = localStorage.getItem("userZip");
+	console.log("zip");
+	if( zip == null){ //new visitor
 		console.log("zip not in localStorage");
 		//no zip - display welcome
 		document.getElementById("welcome").style.display = "none";
