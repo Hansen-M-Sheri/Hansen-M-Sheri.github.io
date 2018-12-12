@@ -272,10 +272,10 @@ body{
     /*opacity: .3;*/
     width: 150px;
     height: 200px;
-    position: relative;
+    /*position: relative;*/
 
 }
-.date{
+/*.date{
 	position: absolute;
 	top: 10%;
 	left: 50%;
@@ -289,4 +289,4 @@ body{
 	position: absolute;
 	top: 70%;
 	left: 50%;
-}
+}*/
