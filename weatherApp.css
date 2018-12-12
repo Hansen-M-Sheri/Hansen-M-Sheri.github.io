@@ -5,6 +5,7 @@
 }
 body{
 	background: #000;
+	color: white;
 	
 }
 /**** INTRO PAGE ******/
@@ -234,7 +235,7 @@ body{
     height: 200px;
     align-items: center;
 }
-.day{
+.fiveDayCard{
 	background-color: rgba(51, 51, 51, 1);/*#333 but needed to not have opacity affect children*/
 	border-radius: 10px;
     margin: 10px;
