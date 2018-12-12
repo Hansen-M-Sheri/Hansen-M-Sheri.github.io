@@ -1,3 +1,5 @@
+window.onload = checkNewUser();
+
 function Weather(id, image){
 	this.id = id;
 	this.image = image;
@@ -48,7 +50,7 @@ function callFiveDayApi(zip, country){
 	xmlhttp.open("GET", forecastUrl, true);
 	xmlhttp.send();
 }
-window.onload = checkNewUser();
+
 
 /* Populate Weather Conditions
  *  set and store condition ID to determine
@@ -128,9 +130,14 @@ function convertToFahrenheit(temp){
 }
 
 function checkNewUser(){
-	if(localStorage.getItem("userZip") !== null){
+	if(localStorage.getItem("userZip") == null){ //new visitor
+		console.log("zip not in localStorage");
 		
-		document.getElementById("welcome").style.display = "none";
+		
+	}
+	else{
+		var welcome = document.getElementById("welcome");
+		welcome.style.display = "none";
 		//hide welcome page and reveal weather page
 		document.getElementById("main").style.display = "block";
 		loadWeatherAjax();
