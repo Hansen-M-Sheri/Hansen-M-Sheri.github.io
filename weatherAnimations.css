@@ -72,28 +72,26 @@
   position: absolute;
   /*z-index: -1;*/
   transform: rotate(-30deg);
-  padding-left: 30%;
+  /*padding-left: 30%;*/
 }
 #bolt{
   /*top: 8%;
   left: 30px;*/
-  margin-top: 30px;
-  padding-left: 20px;
-  animation: strike2 3s ease .6s infinite backwards;
+  margin-top: 35px;
+  /*margin-top: 30px;*/
+  /*padding-left: 20px;*/
+  animation: strike 3s ease .6s infinite backwards;
 }
-#bolt2{
+/*#bolt2{
   /*top: 10%;
   left: 65px;*/
-  margin-top: 30px;
+ /* margin-top: 35px;
  animation: strike 3s ease  infinite backwards;
-}
+}*/
 
 @keyframes strike{
-  from {
-    top: 10%;
-  }
-  to{
-    top: 40%;
+  100%{
+    margin-top: 65px;
   }
 }
 @keyframes strike2{
