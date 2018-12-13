@@ -157,20 +157,20 @@ money to use
 		timestamp = jObj.list[i].dt;
 		temp = convertToFahrenheit(jObj.list[i].main.temp);
 		id = jObj.list[i].weather.id;
-		
+		console.log("id:"+id);
 		//display date as day of week
 		var myDate = new Date(timestamp * 1000);
 		var day = getDayOfWeek(myDate.getDay());
-		//populate  card
+
+		//populate  date
 		var int = i / 8; //only pull one per day
 		if(int <= 6 && int > 0){ //only populate 5 days
 		var dateId = "dateDay"+ int ;
-		console.log(dateId);
 		document.getElementById(dateId).innerHTML = day;
 		//populate weatherIcon
 		var str = "iconDay" + int; 
-		console.log("str:"+ str + "id: "+ id);
 		selectWeatherAnimation(id, str);
+		//populate the temperature
 		var tempDay = "tempDay" + int;
 		document.getElementById(tempDay).innerHTML = Math.round(temp) + "&#176";
 		}
@@ -204,6 +204,7 @@ function getDayOfWeek(day){
 *	Pick the weather icon based on weather id
 */
 function selectWeatherAnimation(weatherID, str){
+	console.log("weatherID:" + weatherID);
 	if(weatherID >= 200 && weatherID < 300){ //Thunderstorms
 		console.log("thunder created");
 		createThunder(str);
