@@ -258,6 +258,7 @@ function convertToFahrenheit(temp){
 	var f = 1.8 * (temp - 273) + 32;
 	return f;
 }
+
 function formatTimeFromEpoch(timestamp){
 	var date = new Date(timestamp * 1000);
 	var hours = date.getHours();
@@ -267,7 +268,7 @@ function formatTimeFromEpoch(timestamp){
   	hours = hours ? hours : 12; // the hour '0' should be '12'
   	minutes = minutes < 10 ? '0'+minutes : minutes;
   	var strTime = hours + ':' + minutes + ' ' + ampm;
-  	document.getElementById("timeAndDate").innerHTML =  strTime;
+  	return strTime;
 }
 
 /**
