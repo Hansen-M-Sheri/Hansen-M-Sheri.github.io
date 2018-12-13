@@ -301,10 +301,11 @@ body{
 }
 .icon{
 	top:70px; 
-	margin-top: 45px;
-    font-size: 2em;
+
 }
 
 .temp{
 	text-align: center;
+	margin-top: 45px;
+    font-size: 2em;
 }

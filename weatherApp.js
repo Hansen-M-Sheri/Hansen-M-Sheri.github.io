@@ -376,7 +376,7 @@ function createSnowHTML(str){
 
 	//CREATE CLOUD
 	var cloudIcon = document.createElement("i");
-	cloudIcon.className = "fas fa-cloud fa-3x";
+	cloudIcon.className = "fas fa-cloud fa-4x";
 	var snowCloud = document.createElement("div");
 	snowCloud.className = "snowCloud1";
 	snowCloud.appendChild(cloudIcon);
@@ -449,7 +449,7 @@ function createRainCloud(str){
 
 	//CREATE CLOUD
 	var cloudIcon = document.createElement("i");
-	     cloudIcon.className = "fas fa-cloud fa-3x";
+	     cloudIcon.className = "fas fa-cloud fa-4x";
 	     var rainCloud = document.createElement("div");
 	     rainCloud.className = "rainCloud1";
 	    rainCloud.appendChild(cloudIcon);
@@ -494,7 +494,7 @@ lightening2.appendChild(icon2);
 
 //CREATE CLOUD
 var cloudIcon = document.createElement("i");
-     cloudIcon.className = "fas fa-cloud fa-3x";
+     cloudIcon.className = "fas fa-cloud fa-4x";
      var lighteningCloud = document.createElement("div");
      lighteningCloud.className = "lighteningCloud1";
     lighteningCloud.appendChild(cloudIcon);
@@ -518,7 +518,7 @@ function createSunHTML(str){
 	// var str = "iconDay" + int;
 	/***** Create sun *****/
 	var sunIcon = document.createElement("i");
-	sunIcon.className = "fas fa-sun fa-3x";
+	sunIcon.className = "fas fa-sun fa-4x";
 	sunIcon.id ="sun";
 	var sun = document.createElement("div");
 	sun.className = "sun";
@@ -537,13 +537,13 @@ function createCloudyHTML(str){
 // var str = "iconDay" + int;
 /***** Create cloudy *****/
 var cloudIcon = document.createElement("i");
-cloudIcon.className = "fas fa-cloud fa-3x";
+cloudIcon.className = "fas fa-cloud fa-4x";
 var cloud1 = document.createElement("div");
  cloud1.className = "cloud1";
  cloud1.appendChild(cloudIcon);
 /******* 2nd cloud *******/
 var cloudIcon2 = document.createElement("i");
-cloudIcon2.className = "fas fa-cloud fa-3x";
+cloudIcon2.className = "fas fa-cloud fa-4x";
 var cloud2 = document.createElement("div");
  cloud2.className = "cloud2";
  cloud2.appendChild(cloudIcon2);
