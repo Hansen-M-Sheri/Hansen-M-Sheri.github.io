@@ -4,7 +4,8 @@
 	font-family: 'Catamaran', sans-serif;
 }
 body{
-	background: #000;
+	background-color: #000;
+
 	
 }
 /**** INTRO PAGE ******/
@@ -243,4 +244,8 @@ body{
     width: 150px;
     height: 200px;
 
+}
+.temp{
+	margin-top: 45px;
+    font-size: 2em;
 }
