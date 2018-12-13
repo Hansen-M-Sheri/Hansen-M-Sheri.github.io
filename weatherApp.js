@@ -145,25 +145,17 @@ function populateFiveDay(){
 	//object with dt = date, main.temp, etc
 	var date;
 	var temp;
-	var temp_min;
-	var temp_max;
-	var pressure;
-	var humidity;
 	var id;
-	var wind;
+
 
 	for(var i = 0; i < length ; i++){
 		//get variables
 		date = jObj.list[i].dt_txt;
 		temp = convertToFahrenheit(jObj.list[i].main.temp);
-		// temp_min = convertToFahrenheit(jObj.list[i].main.temp_min);
-		// temp_max = convertToFahrenheit(jObj.list[i].main.temp_max);
-		// pressure = jObj.list[i].main.pressure;
-		// humidity = jObj.list[i].main.humidity;
+
 		id = jObj.list[i].weather.id;
 		
-		//populate front of card
-
+		//populate  card
 		var int = i + 1;
 		if(int <= 5){
 		var dateId = "dateDay"+ int ;
@@ -172,16 +164,6 @@ function populateFiveDay(){
 		var iconDay = "iconDay"+ int;
 		document.getElementById(iconDay).innerHTML = id;
 		var tempDay = "tempDay" + int;
-		//populate back of card
-		// document.getElementById(tempDay).innerHTML = Math.round(temp) + "&#176";
-		// var backTempDay = "backTempDay" + int;
-		// //document.getElementById(backTempDay).innerHTML = Math.round(temp) + "&#176";
-		// var humidityDay = "humidityDay" + int;
-		// document.getElementById(humidityDay).innerHTML = humidity;
-		// var minTempDay = "minTempDay" + int;
-		// document.getElementById(minTempDay).innerHTML = Math.round(temp_min) + "&#176";
-		// var maxTempDay = "maxTempDay" + int;
-		// document.getElementById(maxTempDay).innerHTML = Math.round(temp_max) + "&#176";
 		}
 	}
 }
@@ -219,6 +201,11 @@ function formatSeconds(seconds)
     return date.toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
 }
 
+/** 
+* DISPLAY BACKGROUND IMAGE
+*   Based on ID from API for daily weather
+*   Select appropriate weather picture to display
+*/
 function displayBackgroundImage(id){
 	if(id >= 200 && id < 300){ //Thunderstorms
 		document.getElementById("bg").style.backgroundImage = "url('weatherBackgroundImages/dark-lightning-night-56614.jpg')";
@@ -236,7 +223,249 @@ function displayBackgroundImage(id){
 		document.getElementById("bg").style.backgroundImage = "url('weatherBackgroundImages/alpine-clouds-daylight-462149.jpg')";
 	}
 	else { //clouds
-		//document.getElementById("bg").style.backgroundImage = "url('weatherBackgroundImages/atmosphere-bright-cloud-724864.jpg')";
-		document.getElementById("bg").style.backgroundImage = "url('weatherBackgroundImages/foggy.jpg')"
+		document.getElementById("bg").style.backgroundImage = "url('weatherBackgroundImages/atmosphere-bright-cloud-724864.jpg')";
+		
 	}
+}
+
+/**
+* CREATE WIND HTML
+*  Create and insert the HTML elements
+*  for the wind icon
+*/
+function createWindHTML(int){
+	var str = "iconDay" + int;
+	var icon = document.createElement("i");
+     icon.className = "fas fa-wind fa-2x";
+     var windDiv = document.createElement("div");
+     windDiv.appendChild(icon);
+     var divContainer = document.getElementById(str);
+     divContainer.appendChild(windDiv);
+}
+
+/**
+* CREATE SNOW HTML
+*   Create and insert the HTML elements 
+*    for the snowing icon
+*/
+function createSnowHTML(int){
+	// var int = 1;
+	var str = "iconDay" + int;
+	/***** Create snowflakes *****/
+	//SNOWFLAKE 1  
+	var snowIcon = document.createElement("i");
+	snowIcon.className ="fas fa-snowflake";
+	//create span for "drop2" snow 
+	var snowflake = document.createElement("span");
+	snowflake.className = "snow";
+	snowflake.id = "drop2";
+	//append icon to snowflake
+	snowflake.appendChild(snowIcon);
+	//SNOWFLAKE 2  
+	var snowIcon2 = document.createElement("i");
+	snowIcon2.className ="fas fa-snowflake";
+	//create span for "drop2" snow 
+	var snowflake2 = document.createElement("span");
+	snowflake2.className = "snow";
+	snowflake2.id = "drop3";
+	//append icon to snowflake
+	snowflake2.appendChild(snowIcon2);
+	//SNOWFLAKE 3 
+	var snowIcon3 = document.createElement("i");
+	snowIcon3.className ="fas fa-snowflake";
+	//create span for "drop2" snow 
+	var snowflake3 = document.createElement("span");
+	snowflake3.className = "snow";
+	snowflake3.id = "drop4";
+	//append icon to snowflake
+	snowflake3.appendChild(snowIcon3);
+	//SNOWFLAKE 4 
+	var snowIcon4 = document.createElement("i");
+	snowIcon4.className ="fas fa-snowflake";
+	//create span for "drop2" snow 
+	var snowflake4 = document.createElement("span");
+	snowflake4.className = "snow";
+	snowflake4.id = "drop5";
+	//append icon to snowflake
+	snowflake4.appendChild(snowIcon4);
+
+	//CREATE CLOUD
+	var cloudIcon = document.createElement("i");
+	cloudIcon.className = "fas fa-cloud fa-5x";
+	var snowCloud = document.createElement("div");
+	snowCloud.className = "snowCloud1";
+	snowCloud.appendChild(cloudIcon);
+	snowCloud.appendChild(snowflake);
+	snowCloud.appendChild(snowflake2);
+	snowCloud.appendChild(snowflake3);
+	snowCloud.appendChild(snowflake4);
+	//append to main div
+	var divContainer = document.getElementById(str);
+	divContainer.appendChild(snowCloud);
+}
+/**
+*   CREATE RAIN CLOUD
+*   Create and insert the HTML elements 
+*    for the rain icon
+*/
+function createRainCloud(int){
+	// var int = 1;
+	var str = "iconDay" + int;
+	/***** Create raindrops *****/
+	//RAINDROP 1  
+	var rainIcon = document.createElement("i");
+	rainIcon.className ="fas fa-raindrops";
+	var rainIconTint = document.createElement("i");
+	rainIconTint.className = "fas fa-tint";
+	//create span for "drop2" snow 
+	var raindrop = document.createElement("span");
+	raindrop.className = "rain";
+	raindrop.id = "drop2";
+	//append icon 
+	raindrop.appendChild(rainIcon);
+	raindrop.appendChild(rainIconTint);
+	//RAINDROP 2 
+	var rainIcon2 = document.createElement("i");
+	rainIcon2.className ="fas fa-raindrops";
+	var rainIconTint2 = document.createElement("i");
+	rainIconTint2.className = "fas fa-tint";
+	//create span 
+	var raindrop2 = document.createElement("span");
+	raindrop2.className = "rain";
+	raindrop2.id = "drop3";
+	//append icon 
+	raindrop2.appendChild(rainIcon2);
+	raindrop2.appendChild(rainIconTint2);
+	//RAINDROP 3 
+	var rainIcon3 = document.createElement("i");
+	rainIcon3.className ="fas fa-raindrops";
+	var rainIconTint3 = document.createElement("i");
+	rainIconTint3.className = "fas fa-tint";
+	//create span 
+	var raindrop3 = document.createElement("span");
+	raindrop3.className = "rain";
+	raindrop3.id = "drop4";
+	//append icon
+	raindrop3.appendChild(rainIcon3);
+	raindrop3.appendChild(rainIconTint3);
+	//RAINDROP 4  
+	var rainIcon4 = document.createElement("i");
+	rainIcon4.className ="fas fa-raindrops";
+	var rainIconTint4 = document.createElement("i");
+	rainIconTint4.className = "fas fa-tint";
+	//create span   
+	var raindrop4 = document.createElement("span");
+	raindrop4.className = "rain";
+	raindrop4.id = "drop5";
+	//append icon 
+	raindrop4.appendChild(rainIcon4);
+	raindrop4.appendChild(rainIconTint4);
+
+
+	//CREATE CLOUD
+	var cloudIcon = document.createElement("i");
+	     cloudIcon.className = "fas fa-cloud fa-5x";
+	     var rainCloud = document.createElement("div");
+	     rainCloud.className = "rainCloud1";
+	    rainCloud.appendChild(cloudIcon);
+	     rainCloud.appendChild(rainIcon);
+	// rainCloud.appendChild(raindrop);
+	rainCloud.appendChild(raindrop2);
+	rainCloud.appendChild(raindrop3);
+	rainCloud.appendChild(raindrop4);
+
+	var divContainer = document.getElementById(str);
+	divContainer.appendChild(rainCloud);
+
+}
+/**
+*   CREATE THUNDER
+*   Create and insert the HTML elements 
+*    for the lightening icon
+*/
+function createThunder(int){
+	//var int = 1;
+var str = "iconDay" + int;
+/***** Create raindrops *****/
+//lightening 1  
+var icon1 = document.createElement("i");
+icon1.className ="fas fa-bolt fa-3x";
+//create span 
+var lightening1 = document.createElement("span");
+lightening1.className = "lightening";
+lightening1.id = "bolt";
+//append icon 
+lightening1.appendChild(icon1);
+
+//lightening 2  
+var icon2 = document.createElement("i");
+icon2.className ="fas fa-bolt fa-3x";
+//create span 
+var lightening2 = document.createElement("span");
+lightening2.className = "lightening";
+lightening2.id = "bolt2";
+//append icon 
+lightening2.appendChild(icon2);
+
+//CREATE CLOUD
+var cloudIcon = document.createElement("i");
+     cloudIcon.className = "fas fa-cloud fa-5x";
+     var lighteningCloud = document.createElement("div");
+     lighteningCloud.className = "lighteningCloud1";
+    lighteningCloud.appendChild(cloudIcon);
+    
+// rainCloud.appendChild(raindrop);
+lighteningCloud.appendChild(lightening1);
+lighteningCloud.appendChild(lightening2);
+
+
+var divContainer = document.getElementById(str);
+divContainer.appendChild(lighteningCloud);
+}
+
+/**
+*   CREATE SUN
+*   Create and insert the HTML elements 
+*    for the sun icon
+*/
+function createSunHTML(int){
+	var int = 1;
+	var str = "iconDay" + int;
+	/***** Create sun *****/
+	var sunIcon = document.createElement("i");
+	sunIcon.className = "fas fa-sun fa-5x";
+	sunIcon.id ="sun";
+	var sun = document.createElement("div");
+	sun.className = "sun";
+	sun.appendChild(sunIcon);
+	var divContainer = document.getElementById(str);
+	divContainer.appendChild(sun);
+}
+
+/**
+*   CREATE CLOUDY HTML
+*   Create and insert the HTML elements 
+*    for the clouds icon
+*/
+function createCloudyHTML(int){
+	var int = 1;
+var str = "iconDay" + int;
+/***** Create cloudy *****/
+var cloudIcon = document.createElement("i");
+cloudIcon.className = "fas fa-cloud fa-5x";
+var cloud1 = document.createElement("div");
+ cloud1.className = "cloud1";
+ cloud1.appendChild(cloudIcon);
+/******* 2nd cloud *******/
+var cloudIcon2 = document.createElement("i");
+cloudIcon2.className = "fas fa-cloud fa-5x";
+var cloud2 = document.createElement("div");
+ cloud2.className = "cloud2";
+ cloud2.appendChild(cloudIcon2);
+
+var divContainer = document.getElementById(str);
+divContainer.appendChild(cloud1);
+divContainer.appendChild(cloud2);
+
+
 }
