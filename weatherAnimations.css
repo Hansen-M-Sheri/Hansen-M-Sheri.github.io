@@ -75,13 +75,16 @@
   padding-left: 30%;
 }
 #bolt{
-  top: 8%;
-  left: 30px;
+  /*top: 8%;
+  left: 30px;*/
+  margin-top: 30px;
+  padding-left: 20px;
   animation: strike2 3s ease .6s infinite backwards;
 }
 #bolt2{
-  top: 10%;
-  left: 65px;
+  /*top: 10%;
+  left: 65px;*/
+  margin-top: 30px;
  animation: strike 3s ease  infinite backwards;
 }
 
