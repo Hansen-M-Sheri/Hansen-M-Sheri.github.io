@@ -173,7 +173,7 @@ function populateFiveDay(){
 * SELECT WEATHER ANIMATION
 *	Pick the weather icon based on weather id
 */
-function selectWeatherAnimation(weatherID, int){
+function selectWeatherAnimation(weatherID, str){
 	if(weatherID >= 200 && weatherID < 300){ //Thunderstorms
 		createThunder(str);
 	}
