@@ -176,21 +176,27 @@ function populateFiveDay(){
 */
 function selectWeatherAnimation(weatherID, str){
 	if(weatherID >= 200 && weatherID < 300){ //Thunderstorms
+		console.log("thunder created");
 		createThunder(str);
 	}
 	else if(weatherID >= 300 && weatherID < 600){ //rain
+		console.log("rain created");
 		createRainCloud(str);
 	}
 	else if (weatherID >= 600 && weatherID < 700){ //snow
+		console.log("snow created");
 		createSnowHTML(str);
 	}
 	else if (weatherID >= 700 && weatherID < 800){ //fog
+		console.log("fog created");
 		createWindHTML(str);
 	}
 	else if (weatherID == 800){ //clear sky
+		console.log("clearSky created");
 		createSunHTML(str);
 	}
 	else { //clouds
+		console.log("clouds created");
 		createCloudyHTML(str);
 		
 	}
