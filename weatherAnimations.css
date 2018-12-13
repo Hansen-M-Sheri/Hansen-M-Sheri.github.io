@@ -47,15 +47,11 @@
   animation-duration: 8s;
   animation-iteration-count: infinite;
   /*animation:spin 4s linear infinite;*/
-  padding-left: 30%;
+  /*padding-left: 30%;*/
     /*padding-top: 10px;*/
   
 }
 @keyframes spin{
-  0%{ transform: rotate(0deg); }
-  25% { transform: rotate(90deg); }
-  50% { transform: rotate(180deg); }
-  75% { transform: rotate(270deg); }
   100% { transform: rotate(360deg);}
 }
 
