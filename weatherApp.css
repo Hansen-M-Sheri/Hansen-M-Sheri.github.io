@@ -243,10 +243,18 @@ body{
 		flex-direction: row;
 		justify-content: space-around;
 		align-items: center;
+		flex-wrap: wrap;
 	}
 	#location, #backCardCity{
 		font-size: 2.3em;
     	margin-bottom: 5px;
+	}
+	#backCardCity{
+		flex-basis: 100%;
+	}
+	#description{
+		flex-basis: 100%;
+		font-size: 1.4em;
 	}
 	#timeAndDate, #description{
 		margin: 0;
@@ -280,26 +288,21 @@ body{
 	color: rgba(255, 255, 255, 1);
 	border-radius: 10px;
     margin: 10px;
-    min-width: 50px;
     min-height: 80px;
     /*opacity: .3;*/
-    width: 150px;
+    width: 200px;
     height: 200px;
     /*position: relative;*/
 
 }
-/*.date{
-	position: absolute;
-	top: 10%;
-	left: 50%;
+.date{
+	text-align: center;
+    font-size: 1.3em;
 }
 .icon{
-	position: absolute;
-	top:30%; 
-	left: 50%;
+	top:70px; 
 }
+
 .temp{
-	position: absolute;
-	top: 70%;
-	left: 50%;
-}*/
+	text-align: center;
+}
