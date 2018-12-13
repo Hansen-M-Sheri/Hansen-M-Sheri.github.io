@@ -86,6 +86,7 @@ function populateWeatherConditions(){
 	document.getElementById("location").innerHTML = jObj.name;
 	formatTime();
 
+	
 
 	//populate back of card info
 	var temp_min = convertToFahrenheit(jObj.main.temp_min);
@@ -100,8 +101,19 @@ function populateWeatherConditions(){
 	document.getElementById("tableMaxTemp").innerHTML = Math.round(temp_max) + "&#176";
 	document.getElementById("tablePress").innerHTML = jObj.main.pressure;
 	document.getElementById("tableWind").innerHTML = jObj.wind.speed + " mph";
-	document.getElementById("tableSunrise").innerHTML = formatSeconds(jObj.sys.sunrise);
-	document.getElementById("tableSunset").innerHTML = formatSeconds(jObj.sys.sunset);
+	document.getElementById("tableSunrise").innerHTML = formatTimeFromEpoch(jObj.sys.sunrise);
+	document.getElementById("tableSunset").innerHTML = formatTimeFromEpoch(jObj.sys.sunset);
+}
+function formatTimeFromEpoch(timestamp){
+	var date = new Date(timestamp * 1000);
+	var hours = date.getHours();
+  	var minutes = date.getMinutes();
+     var ampm = hours >= 12 ? 'pm' : 'am';
+  	hours = hours % 12;
+  	hours = hours ? hours : 12; // the hour '0' should be '12'
+  	minutes = minutes < 10 ? '0'+minutes : minutes;
+  	var strTime = hours + ':' + minutes + ' ' + ampm;
+  	document.getElementById("timeAndDate").innerHTML =  strTime;
 }
 function formatTime() {
     var date = new Date();
