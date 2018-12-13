@@ -147,9 +147,12 @@ function populateFiveDay(){
 	var temp;
 	var id;
 
-	for(var i = 2; i < length; i + 9){
-		console.log(i);
+	var str = "";
+	for(var i = 0; i < 50; i += 9){
+	  str = jObj.list[i].dt_txt;
+	  console.log(str);
 	}
+	
 
 
 	for(var i = 0; i < length ; i++){
