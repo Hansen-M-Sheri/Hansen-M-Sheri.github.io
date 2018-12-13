@@ -157,6 +157,7 @@ money to use
 		timestamp = jObj.list[i].dt;
 		temp = convertToFahrenheit(jObj.list[i].main.temp);
 		id = jObj.list[i].weather.id;
+		console.log("i:"+ i);
 		console.log("id:"+id);
 		//display date as day of week
 		var myDate = new Date(timestamp * 1000);
