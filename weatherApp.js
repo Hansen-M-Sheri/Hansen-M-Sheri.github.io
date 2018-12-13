@@ -93,7 +93,7 @@ function populateWeatherConditions(){
 	var id = 0;
 	console.log(id);
 	if(length <= 1) {
-		id = jObj.weather[0];
+		id = jObj.weather[0].id;
 	}
 	for(var i = 0; i < length; i++){
 		//keep the lowest id in the array & use for background
@@ -204,7 +204,7 @@ function getDayOfWeek(day){
 *	Pick the weather icon based on weather id
 */
 function selectWeatherAnimation(weatherID, str){
-	console.log("weatherID:" + weatherID);
+	console.log("weatherID:" +weatherID);
 	if(weatherID >= 200 && weatherID < 300){ //Thunderstorms
 		console.log("thunder created");
 		createThunder(str);
