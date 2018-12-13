@@ -223,12 +223,12 @@ function selectWeatherAnimation(weatherID, str){
 	}
 	else if (weatherID >= 700 && weatherID < 800){ //fog
 		console.log("fog created");
-		createWindHTML(str);
+		createCloudyHTML(str);
 	}
 	else if (weatherID == 800){ //clear sky
 		console.log("clearSky created");
-		//createSunHTML(str);
-		createWindHTML(str);
+		createSunHTML(str);
+		
 	}
 	else { //clouds
 		console.log("clouds created");
