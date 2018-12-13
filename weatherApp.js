@@ -163,7 +163,7 @@ function populateFiveDay(){
 		document.getElementById(dateId).innerHTML = date;
 		//populate weatherIcon
 		var str = "iconDay" + int; 
-		console.log("str"+ str);
+		console.log("str:"+ str);
 		selectWeatherAnimation(id, str);
 		var tempDay = "tempDay" + int;
 		}
@@ -268,7 +268,7 @@ function displayBackgroundImage(id){
 *  for the wind icon
 */
 function createWindHTML(str){
-	var str = "iconDay" + int;
+	// var str = "iconDay" + int;
 	var icon = document.createElement("i");
      icon.className = "fas fa-wind fa-2x";
      var windDiv = document.createElement("div");
@@ -284,7 +284,7 @@ function createWindHTML(str){
 */
 function createSnowHTML(str){
 	// var int = 1;
-	var str = "iconDay" + int;
+	// var str = "iconDay" + int;
 	/***** Create snowflakes *****/
 	//SNOWFLAKE 1  
 	var snowIcon = document.createElement("i");
@@ -344,7 +344,7 @@ function createSnowHTML(str){
 */
 function createRainCloud(str){
 	// var int = 1;
-	var str = "iconDay" + int;
+	// var str = "iconDay" + int;
 	/***** Create raindrops *****/
 	//RAINDROP 1  
 	var rainIcon = document.createElement("i");
@@ -419,7 +419,7 @@ function createRainCloud(str){
 */
 function createThunder(str){
 	//var int = 1;
-var str = "iconDay" + int;
+// var str = "iconDay" + int;
 /***** Create raindrops *****/
 //lightening 1  
 var icon1 = document.createElement("i");
@@ -463,8 +463,8 @@ divContainer.appendChild(lighteningCloud);
 *    for the sun icon
 */
 function createSunHTML(str){
-	var int = 1;
-	var str = "iconDay" + int;
+	// var int = 1;
+	// var str = "iconDay" + int;
 	/***** Create sun *****/
 	var sunIcon = document.createElement("i");
 	sunIcon.className = "fas fa-sun fa-5x";
@@ -482,8 +482,8 @@ function createSunHTML(str){
 *    for the clouds icon
 */
 function createCloudyHTML(str){
-	var int = 1;
-var str = "iconDay" + int;
+// 	var int = 1;
+// var str = "iconDay" + int;
 /***** Create cloudy *****/
 var cloudIcon = document.createElement("i");
 cloudIcon.className = "fas fa-cloud fa-5x";
