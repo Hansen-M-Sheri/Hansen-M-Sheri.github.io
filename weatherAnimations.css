@@ -48,7 +48,7 @@
   animation-iteration-count: infinite;
   /*animation:spin 4s linear infinite;*/
   padding-left: 30%;
-    padding-top: 10px;
+    /*padding-top: 10px;*/
   
 }
 @keyframes spin{
