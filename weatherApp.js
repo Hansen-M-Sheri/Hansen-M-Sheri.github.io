@@ -163,7 +163,7 @@ money to use
 		var day = getDayOfWeek(myDate.getDay());
 		//populate  card
 		var int = i / 8; //only pull one per day
-		if(int <= 5 && int > 0){ //only populate 5 days
+		if(int <= 6 && int > 0){ //only populate 5 days
 		var dateId = "dateDay"+ int ;
 		console.log(dateId);
 		document.getElementById(dateId).innerHTML = day;
