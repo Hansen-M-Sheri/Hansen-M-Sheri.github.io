@@ -5,11 +5,14 @@
 .rainCloud1{
   color: #E7E9E8;
   position: relative;
+   padding-left: 30%;
+  padding-top: 10px;
 }
 .rain{
   color: skyblue;
   position: absolute;
  /*z-index: -1;*/
+ padding-left: 30%;
 } */
 
 #drop2{
@@ -58,12 +61,15 @@
 /********** Cloud WITH LIGHTENING *********/
 .lighteningCloud1{
   color: #6C7073;
+  padding-left: 30%;
+  padding-top: 10px;
 }
 .lightening{
   color: #FDEB00;
   position: absolute;
   /*z-index: -1;*/
   transform: rotate(-30deg);
+  padding-left: 30%;
 }
 #bolt{
   top: 8%;
