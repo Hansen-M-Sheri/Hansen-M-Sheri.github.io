@@ -156,7 +156,7 @@ money to use
 		//get variables
 		timestamp = jObj.list[i].dt;
 		temp = convertToFahrenheit(jObj.list[i].main.temp);
-		id = jObj.list[i].weather.id;
+		id = jObj.list[i].weather[0].id;
 		console.log("i:"+ i);
 		console.log("id:"+id);
 		//display date as day of week
