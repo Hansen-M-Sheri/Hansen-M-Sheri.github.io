@@ -163,6 +163,7 @@ function populateFiveDay(){
 		document.getElementById(dateId).innerHTML = date;
 		//populate weatherIcon
 		var str = "iconDay" + int; 
+		console.log("str"+ str);
 		selectWeatherAnimation(id, str);
 		var tempDay = "tempDay" + int;
 		}
