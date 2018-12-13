@@ -488,7 +488,7 @@ var lightening2 = document.createElement("span");
 lightening2.className = "lightening";
 lightening2.id = "bolt2";
 //append icon 
-lightening2.appendChild(icon2);
+// lightening2.appendChild(icon2);
 
 //CREATE CLOUD
 var cloudIcon = document.createElement("i");
