@@ -147,26 +147,21 @@ function populateFiveDay(){
 	var temp;
 	var id;
 
-	var str = "";
-	for(var i = 0; i < length; i += 8){
-	  str = jObj.list[i].dt;
-	  console.log(str);
-	}
-	
-
-
+/* 5 day forecast returns items every three hours (8 per day)
+find every 8th value and use it for the day.
+@note: I would prefer to use the API 16 day daily forecast, but it cost
+money to use
+*/
 	for(var i = 0; i < length; i += 8){
 		//get variables
-		date = jObj.list[i].dt_txt;
+		date = jObj.list[i].dt;
 		temp = convertToFahrenheit(jObj.list[i].main.temp);
-
 		id = jObj.list[i].weather.id;
 		
 		//populate  card
-		var int = i;
-		if(number % 8 == 0){ //get the 
+		var int = i / 8;
 
-		}
+		
 		if(int <= 5){
 		var dateId = "dateDay"+ int ;
 		console.log(dateId);
