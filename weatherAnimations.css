@@ -47,6 +47,8 @@
   animation-duration: 8s;
   animation-iteration-count: infinite;
   /*animation:spin 4s linear infinite;*/
+  padding-left: 30%;
+    padding-top: 10px;
   
 }
 @keyframes spin{
@@ -118,11 +120,14 @@
 .snowCloud1{
   color: #E7E9E8;
   position: relative;
+  padding-left: 30%;
+  padding-top: 10px;
 }
 .snow{
   color: skyblue;
   position: absolute;
   /*z-index: -1;*/
+  padding-left: 30%;
 }
 
 #drop2{
