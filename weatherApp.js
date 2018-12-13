@@ -154,18 +154,19 @@ money to use
 */
 	for(var i = 0; i < length; i += 8){
 		//get variables
-		date = jObj.list[i].dt;
+		timestamp = jObj.list[i].dt;
 		temp = convertToFahrenheit(jObj.list[i].main.temp);
 		id = jObj.list[i].weather.id;
 		
+		//display date as day of week
+		var myDate = new Date(timestamp * 1000);
+		var day = getDayOfWeek(myDate.getDay());
 		//populate  card
-		var int = i / 8;
-
-		
-		if(int <= 5){
+		var int = i / 8; //only pull one per day
+		if(int <= 5 && int > 0){ //only populate 5 days
 		var dateId = "dateDay"+ int ;
 		console.log(dateId);
-		document.getElementById(dateId).innerHTML = date;
+		document.getElementById(dateId).innerHTML = ;
 		//populate weatherIcon
 		var str = "iconDay" + int; 
 		console.log("str:"+ str);
@@ -174,7 +175,29 @@ money to use
 		}
 	}
 }
-
+function getDayOfWeek(day){
+	if(day == 0){
+		return "Sunday";
+	}
+	else if(day == 1){
+		return "Monday";
+	}
+	else if(day == 2){
+		return "Tuesday";
+	}
+	else if(day == 3){
+		return "Wednesday";
+	}
+	else if(day == 4){
+		return "Thursday";
+	}
+	else if(day == 5){
+		return "Friday";
+	}
+	else if(day == 6){
+		return "Saturday";
+	}
+}
 /**
 * SELECT WEATHER ANIMATION
 *	Pick the weather icon based on weather id
