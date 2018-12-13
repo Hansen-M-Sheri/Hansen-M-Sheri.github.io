@@ -135,7 +135,7 @@ function populateWeatherConditions(){
 	document.getElementById("tableSunrise").innerHTML = formatTimeFromEpoch(jObj.sys.sunrise);
 	document.getElementById("tableSunset").innerHTML = formatTimeFromEpoch(jObj.sys.sunset);
 
-	console.log("sunrise: "+ sunrise);
+	console.log("sunrise: "+ jObj.sys.sunrise);
 	
 }
 /**
