@@ -43,6 +43,10 @@
 }
 
 /********** SUN *************/
+.sun{
+   margin-top: 10px;
+    text-align: center;
+}
 #sun {
 
   color: #f7ff00;
@@ -50,8 +54,7 @@
   animation-duration: 8s;
   animation-iteration-count: infinite;
   /*animation:spin 4s linear infinite;*/
-  margin-top: 10px;
-    text-align: center;
+ 
   
 }
 @keyframes spin{
@@ -175,6 +178,7 @@
   /*z-index: -1;*/
   top: 20px;
   left: 20px;
+  padding-left: 30%;
 }
 .cloud2 {
   color: #fff;
