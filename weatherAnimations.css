@@ -47,8 +47,8 @@
   animation-duration: 8s;
   animation-iteration-count: infinite;
   /*animation:spin 4s linear infinite;*/
-  /*padding-left: 30%;*/
-    /*padding-top: 10px;*/
+  margin-top: 10px;
+    text-align: center;
   
 }
 @keyframes spin{
