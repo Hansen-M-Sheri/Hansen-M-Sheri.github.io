@@ -136,7 +136,7 @@ function populateWeatherConditions(){
 	document.getElementById("tableSunset").innerHTML = formatTimeFromEpoch(jObj.sys.sunset);
 
 	console.log("sunrise: "+ jObj.sys.sunrise);
-	
+
 }
 /**
 * Populate the values for the 5 day forecast
@@ -269,18 +269,7 @@ function formatTimeFromEpoch(timestamp){
   	var strTime = hours + ':' + minutes + ' ' + ampm;
   	document.getElementById("timeAndDate").innerHTML =  strTime;
 }
-function formatTime() {
-    var date = new Date();
-    var hours = date.getHours();
-  	var minutes = date.getMinutes();
-     var ampm = hours >= 12 ? 'pm' : 'am';
-  	hours = hours % 12;
-  	hours = hours ? hours : 12; // the hour '0' should be '12'
-  	minutes = minutes < 10 ? '0'+minutes : minutes;
-  	var strTime = hours + ':' + minutes + ' ' + ampm;
-  	document.getElementById("timeAndDate").innerHTML =  strTime;
-    
-}
+
 /**
 * Format time for seconds
 */
