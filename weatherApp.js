@@ -148,14 +148,14 @@ function populateFiveDay(){
 	var id;
 
 	var str = "";
-	for(var i = 0; i < 50; i += 9){
-	  str = jObj.list[i].dt_txt;
+	for(var i = 0; i < length; i += 8){
+	  str = jObj.list[i].dt;
 	  console.log(str);
 	}
 	
 
 
-	for(var i = 0; i < length ; i++){
+	for(var i = 0; i < length; i += 8){
 		//get variables
 		date = jObj.list[i].dt_txt;
 		temp = convertToFahrenheit(jObj.list[i].main.temp);
@@ -163,7 +163,10 @@ function populateFiveDay(){
 		id = jObj.list[i].weather.id;
 		
 		//populate  card
-		var int = i + 1;
+		var int = i;
+		if(number % 8 == 0){ //get the 
+
+		}
 		if(int <= 5){
 		var dateId = "dateDay"+ int ;
 		console.log(dateId);
