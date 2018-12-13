@@ -166,7 +166,7 @@ money to use
 		if(int <= 5 && int > 0){ //only populate 5 days
 		var dateId = "dateDay"+ int ;
 		console.log(dateId);
-		document.getElementById(dateId).innerHTML = ;
+		document.getElementById(dateId).innerHTML = day;
 		//populate weatherIcon
 		var str = "iconDay" + int; 
 		console.log("str:"+ str);
