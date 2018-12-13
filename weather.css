@@ -234,9 +234,34 @@ body{
     height: 200px;
     align-items: center;
 }
-.day{
-	background-color: rgba(51, 51, 51, 1);/*#333 but needed to not have opacity affect children*/
+.fiveDayCard{
+	background-color: rgba(107, 100, 100, 0.3);/*using rgba so opacity doesn't affect children*/
+	color: rgba(255, 255, 255, 1);
 	border-radius: 10px;
+    margin: 10px;
+    min-height: 80px;
+    /*opacity: .3;*/
+    width: 200px;
+    height: 200px;
+    /*position: relative;*/
+
+}
+.date{
+	text-align: center;
+    font-size: 1.3em;
+}
+.icon{
+	top:70px; 
+}
+
+.temp{
+	text-align: center;
+	margin-top: 45px;
+    font-size: 2em;
+}
+/*.day{
+	background-color: rgba(51, 51, 51, 1);/*#333 but needed to not have opacity affect children*/
+	/*border-radius: 10px;
     margin: 10px;
     min-width: 50px;
     min-height: 80px;
@@ -244,8 +269,4 @@ body{
     width: 150px;
     height: 200px;
 
-}
-.temp{
-	margin-top: 45px;
-    font-size: 2em;
-}
+}*/
