@@ -161,10 +161,36 @@ function populateFiveDay(){
 		var dateId = "dateDay"+ int ;
 		console.log(dateId);
 		document.getElementById(dateId).innerHTML = date;
-		var iconDay = "iconDay"+ int;
-		document.getElementById(iconDay).innerHTML = id;
+		//populate weatherIcon
+		selectWeatherAnimation(id, int);
 		var tempDay = "tempDay" + int;
 		}
+	}
+}
+
+/**
+* SELECT WEATHER ANIMATION
+*	Pick the weather icon based on weather id
+*/
+function selectWeatherAnimation(weatherID, int){
+	if(weatherID >= 200 && weatherID < 300){ //Thunderstorms
+		createThunder(int);
+	}
+	else if(weatherID >= 300 && weatherID < 600){ //rain
+		createRainCloud(int);
+	}
+	else if (weatherID >= 600 && weatherID < 700){ //snow
+		createSnowHTML(int);
+	}
+	else if (weatherID >= 700 && weatherID < 800){ //fog
+		createWindHTML(int);
+	}
+	else if (weatherID == 800){ //clear sky
+		createSunHTML(int);
+	}
+	else { //clouds
+		createCloudyHTML(int);
+		
 	}
 }
 /**

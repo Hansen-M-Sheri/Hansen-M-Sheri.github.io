@@ -1,0 +1,182 @@
+
+
+/**********  CLOUDS WITH RAIN **********/
+
+.rainCloud1{
+  color: #E7E9E8;
+  position: relative;
+}
+.rain{
+  color: skyblue;
+  position: absolute;
+ z-index: -1;
+} */
+
+#drop2{
+  left: 15px;
+  animation: falling 1s ease .5s infinite backwards;
+}
+#drop3{
+  left: 30px;
+  animation: falling 1s ease .2s infinite backwards;
+}
+#drop4{
+  left: 45px;
+  animation: falling 1s ease .6s infinite backwards;
+}
+#drop5{
+  left: 55px;
+  animation: falling 1s ease  infinite backwards;
+}
+
+
+@keyframes falling{
+  0%{
+    top: 50px;
+  }
+  100%{
+    top: 120px;
+  }
+}
+
+/********** SUN *************/
+#sun {
+
+  color: #f7ff00;
+  animation-name: spin;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  /*animation:spin 4s linear infinite;*/
+  
+}
+@keyframes spin{
+  0%{ transform: rotate(0deg); }
+  25% { transform: rotate(90deg); }
+  50% { transform: rotate(180deg); }
+  75% { transform: rotate(270deg); }
+  100% { transform: rotate(360deg);}
+}
+
+/********** Cloud WITH LIGHTENING *********/
+.lighteningCloud1{
+  color: #6C7073;
+}
+.lightening{
+  color: #FDEB00;
+  position: absolute;
+  z-index: -1;
+  transform: rotate(-30deg);
+}
+#bolt{
+  top: 8%;
+  left: 30px;
+  animation: strike2 3s ease .6s infinite backwards;
+}
+#bolt2{
+  top: 10%;
+  left: 65px;
+ animation: strike 3s ease  infinite backwards;
+}
+
+@keyframes strike{
+  from {
+    top: 10%;
+  }
+  to{
+    top: 40%;
+  }
+}
+@keyframes strike2{
+  from {
+    top: 10%;
+  }
+  to{
+    top: 35%;
+  }
+}
+
+/*********** WINDY ****************/
+
+.windy{
+  color: skyblue;
+  position: absolute;
+  
+}
+#wind1{
+  animation: blow 4s  ease infinite backwards;
+}
+@keyframes blow{
+  0%{
+    transform: translate(0px, 10px);
+  }
+  100%{
+    transform: translate(30px,0);
+  }
+}
+
+/************* SNOWING ******************/
+.snowCloud1{
+  color: #E7E9E8;
+  position: relative;
+}
+.snow{
+  color: skyblue;
+  position: absolute;
+  z-index: -1;
+}
+
+#drop2{
+  left: 15px;
+  animation: falling 1s ease .5s infinite backwards;
+}
+#drop3{
+  left: 30px;
+  animation: falling 1s ease .2s infinite backwards;
+}
+#drop4{
+  left: 45px;
+  animation: falling 1s ease .6s infinite backwards;
+}
+#drop5{
+  left: 55px;
+  animation: falling 1s ease  infinite backwards;
+}
+#drop6{
+  left: 65px;
+  animation: falling 1s ease .3s infinite backwards;
+}
+#drop8{
+  left: 85px;
+  animation: falling 1s ease .4s infinite backwards;
+}
+@keyframes falling{
+  0%{
+    top: 50px;
+  }
+  100%{
+    top: 120px;
+  }
+}
+
+/******* CLOUDS **********/
+.cloud1 {
+  color: #C6C6C4;
+  position: relative;
+  animation-name: slide;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  z-index: -1;
+  top: 20px;
+  left: 20px;
+}
+.cloud2 {
+  color: #fff;
+  position: absolute;
+  top: 30px;
+}
+@keyframes slide {
+  0% {left: 20px; top: 20px}
+  50% {left: 80px; top: 20px}
+  100% {left: 20px; top: 20px}
+  
+}
