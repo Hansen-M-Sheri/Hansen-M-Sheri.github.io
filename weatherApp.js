@@ -321,6 +321,7 @@ function createWindHTML(str){
      icon.className = "fas fa-wind fa-2x";
      var windDiv = document.createElement("div");
      windDiv.appendChild(icon);
+     windDiv.className="windy";
      var divContainer = document.getElementById(str);
      divContainer.appendChild(windDiv);
 }
