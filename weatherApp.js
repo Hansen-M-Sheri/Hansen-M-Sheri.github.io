@@ -227,11 +227,13 @@ function selectWeatherAnimation(weatherID, str){
 	}
 	else if (weatherID == 800){ //clear sky
 		console.log("clearSky created");
-		createSunHTML(str);
+		//createSunHTML(str);
+		createWindHTML(str);
 	}
 	else { //clouds
 		console.log("clouds created");
-		createCloudyHTML(str);
+		//createCloudyHTML(str);
+		createThunder(str);
 		
 	}
 }
