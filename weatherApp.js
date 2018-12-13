@@ -172,7 +172,7 @@ money to use
 		console.log("str:"+ str + "id: "+ id);
 		selectWeatherAnimation(id, str);
 		var tempDay = "tempDay" + int;
-		document.getElementById(tempDay).innerHTML = temp;
+		document.getElementById(tempDay).innerHTML = Math.round(temp) + "&#176";
 		}
 	}
 }
