@@ -162,7 +162,7 @@ function populateFiveDay(){
 		console.log(dateId);
 		document.getElementById(dateId).innerHTML = date;
 		//populate weatherIcon
-		selectWeatherAnimation(id, int);
+		selectWeatherAnimation(id, i);
 		var tempDay = "tempDay" + int;
 		}
 	}
