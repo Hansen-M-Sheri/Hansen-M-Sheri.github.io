@@ -147,6 +147,10 @@ function populateFiveDay(){
 	var temp;
 	var id;
 
+	for(var i = 2; i < length; i + 9){
+		console.log(i);
+	}
+
 
 	for(var i = 0; i < length ; i++){
 		//get variables
