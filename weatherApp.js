@@ -325,7 +325,7 @@ function createSnowHTML(str){
 
 	//CREATE CLOUD
 	var cloudIcon = document.createElement("i");
-	cloudIcon.className = "fas fa-cloud fa-5x";
+	cloudIcon.className = "fas fa-cloud fa-4x";
 	var snowCloud = document.createElement("div");
 	snowCloud.className = "snowCloud1";
 	snowCloud.appendChild(cloudIcon);
@@ -398,7 +398,7 @@ function createRainCloud(str){
 
 	//CREATE CLOUD
 	var cloudIcon = document.createElement("i");
-	     cloudIcon.className = "fas fa-cloud fa-5x";
+	     cloudIcon.className = "fas fa-cloud fa-4x";
 	     var rainCloud = document.createElement("div");
 	     rainCloud.className = "rainCloud1";
 	    rainCloud.appendChild(cloudIcon);
@@ -423,7 +423,7 @@ function createThunder(str){
 /***** Create raindrops *****/
 //lightening 1  
 var icon1 = document.createElement("i");
-icon1.className ="fas fa-bolt fa-3x";
+icon1.className ="fas fa-bolt fa-2x";
 //create span 
 var lightening1 = document.createElement("span");
 lightening1.className = "lightening";
@@ -433,7 +433,7 @@ lightening1.appendChild(icon1);
 
 //lightening 2  
 var icon2 = document.createElement("i");
-icon2.className ="fas fa-bolt fa-3x";
+icon2.className ="fas fa-bolt fa-2x";
 //create span 
 var lightening2 = document.createElement("span");
 lightening2.className = "lightening";
@@ -443,7 +443,7 @@ lightening2.appendChild(icon2);
 
 //CREATE CLOUD
 var cloudIcon = document.createElement("i");
-     cloudIcon.className = "fas fa-cloud fa-5x";
+     cloudIcon.className = "fas fa-cloud fa-4x";
      var lighteningCloud = document.createElement("div");
      lighteningCloud.className = "lighteningCloud1";
     lighteningCloud.appendChild(cloudIcon);
@@ -467,7 +467,7 @@ function createSunHTML(str){
 	// var str = "iconDay" + int;
 	/***** Create sun *****/
 	var sunIcon = document.createElement("i");
-	sunIcon.className = "fas fa-sun fa-5x";
+	sunIcon.className = "fas fa-sun fa-4x";
 	sunIcon.id ="sun";
 	var sun = document.createElement("div");
 	sun.className = "sun";
@@ -486,13 +486,13 @@ function createCloudyHTML(str){
 // var str = "iconDay" + int;
 /***** Create cloudy *****/
 var cloudIcon = document.createElement("i");
-cloudIcon.className = "fas fa-cloud fa-5x";
+cloudIcon.className = "fas fa-cloud fa-4x";
 var cloud1 = document.createElement("div");
  cloud1.className = "cloud1";
  cloud1.appendChild(cloudIcon);
 /******* 2nd cloud *******/
 var cloudIcon2 = document.createElement("i");
-cloudIcon2.className = "fas fa-cloud fa-5x";
+cloudIcon2.className = "fas fa-cloud fa-4x";
 var cloud2 = document.createElement("div");
  cloud2.className = "cloud2";
  cloud2.appendChild(cloudIcon2);
