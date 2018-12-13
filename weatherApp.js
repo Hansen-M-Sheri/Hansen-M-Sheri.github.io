@@ -162,7 +162,8 @@ function populateFiveDay(){
 		console.log(dateId);
 		document.getElementById(dateId).innerHTML = date;
 		//populate weatherIcon
-		selectWeatherAnimation(id, i);
+		var str = "iconDay" + int; 
+		selectWeatherAnimation(id, str);
 		var tempDay = "tempDay" + int;
 		}
 	}
@@ -174,22 +175,22 @@ function populateFiveDay(){
 */
 function selectWeatherAnimation(weatherID, int){
 	if(weatherID >= 200 && weatherID < 300){ //Thunderstorms
-		createThunder(int);
+		createThunder(str);
 	}
 	else if(weatherID >= 300 && weatherID < 600){ //rain
-		createRainCloud(int);
+		createRainCloud(str);
 	}
 	else if (weatherID >= 600 && weatherID < 700){ //snow
-		createSnowHTML(int);
+		createSnowHTML(str);
 	}
 	else if (weatherID >= 700 && weatherID < 800){ //fog
-		createWindHTML(int);
+		createWindHTML(str);
 	}
 	else if (weatherID == 800){ //clear sky
-		createSunHTML(int);
+		createSunHTML(str);
 	}
 	else { //clouds
-		createCloudyHTML(int);
+		createCloudyHTML(str);
 		
 	}
 }
@@ -259,7 +260,7 @@ function displayBackgroundImage(id){
 *  Create and insert the HTML elements
 *  for the wind icon
 */
-function createWindHTML(int){
+function createWindHTML(str){
 	var str = "iconDay" + int;
 	var icon = document.createElement("i");
      icon.className = "fas fa-wind fa-2x";
@@ -274,7 +275,7 @@ function createWindHTML(int){
 *   Create and insert the HTML elements 
 *    for the snowing icon
 */
-function createSnowHTML(int){
+function createSnowHTML(str){
 	// var int = 1;
 	var str = "iconDay" + int;
 	/***** Create snowflakes *****/
@@ -334,7 +335,7 @@ function createSnowHTML(int){
 *   Create and insert the HTML elements 
 *    for the rain icon
 */
-function createRainCloud(int){
+function createRainCloud(str){
 	// var int = 1;
 	var str = "iconDay" + int;
 	/***** Create raindrops *****/
@@ -409,7 +410,7 @@ function createRainCloud(int){
 *   Create and insert the HTML elements 
 *    for the lightening icon
 */
-function createThunder(int){
+function createThunder(str){
 	//var int = 1;
 var str = "iconDay" + int;
 /***** Create raindrops *****/
@@ -454,7 +455,7 @@ divContainer.appendChild(lighteningCloud);
 *   Create and insert the HTML elements 
 *    for the sun icon
 */
-function createSunHTML(int){
+function createSunHTML(str){
 	var int = 1;
 	var str = "iconDay" + int;
 	/***** Create sun *****/
@@ -473,7 +474,7 @@ function createSunHTML(int){
 *   Create and insert the HTML elements 
 *    for the clouds icon
 */
-function createCloudyHTML(int){
+function createCloudyHTML(str){
 	var int = 1;
 var str = "iconDay" + int;
 /***** Create cloudy *****/
