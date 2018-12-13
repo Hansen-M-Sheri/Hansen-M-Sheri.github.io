@@ -134,6 +134,9 @@ function populateWeatherConditions(){
 	document.getElementById("tableWind").innerHTML = jObj.wind.speed + " mph";
 	document.getElementById("tableSunrise").innerHTML = formatTimeFromEpoch(jObj.sys.sunrise);
 	document.getElementById("tableSunset").innerHTML = formatTimeFromEpoch(jObj.sys.sunset);
+
+	console.log("sunrise: "+ sunrise);
+	
 }
 /**
 * Populate the values for the 5 day forecast
