@@ -169,7 +169,7 @@ money to use
 		document.getElementById(dateId).innerHTML = day;
 		//populate weatherIcon
 		var str = "iconDay" + int; 
-		console.log("str:"+ str);
+		console.log("str:"+ str + "id: "+ id);
 		selectWeatherAnimation(id, str);
 		var tempDay = "tempDay" + int;
 		}
