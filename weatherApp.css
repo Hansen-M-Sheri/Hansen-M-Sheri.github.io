@@ -293,7 +293,11 @@ body{
     width: 200px;
     height: 200px;
     /*position: relative;*/
+    transition: .3s all ease;
 
+}
+.fiveDayCard:hover{
+	transform: scale(1.1);
 }
 .date{
 	text-align: center;
@@ -301,7 +305,7 @@ body{
 }
 .icon{
 	top:70px; 
-	
+
 
 }
 
