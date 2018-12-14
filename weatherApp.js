@@ -312,7 +312,7 @@ function displayBackgroundImage(id){
 		document.getElementById("bg").style.backgroundImage = "url('weatherBackgroundImages/foggy.jpg')";
 	}
 	else if (id == 800){ //clear sky
-		document.getElementById("bg").style.backgroundImage = "url('weatherBackgroundImages/alpine-clouds-daylight-462149.jpg')";
+		document.getElementById("bg").style.backgroundImage = "url('weatherBackgroundImages/snowClearSky.jpg')";
 	}
 	else { //clouds
 		document.getElementById("bg").style.backgroundImage = "url('weatherBackgroundImages/atmosphere-bright-cloud-724864.jpg')";
