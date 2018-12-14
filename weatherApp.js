@@ -181,10 +181,9 @@ money to use
 	}
 }
 
-function clearIconHTML(){
+function clearIconHTML(str){
 	for(var i= 1; i < 5; i++){
-var idName = "iconDay"+ i;
-var parent = document.getElementById("idName");
+var parent = document.getElementById(str);
   while(parent.hasChildNodes()){
     parent.removeChild(parent.firstChild);
   }
@@ -221,28 +220,28 @@ function getDayOfWeek(day){
 function selectWeatherAnimation(weatherID, str){
 	console.log("weatherID:" +weatherID);
 	if(weatherID >= 200 && weatherID < 300){ //Thunderstorms
-		clearIconHTML();
+		clearIconHTML(str);
 		createThunder(str);
 	}
 	else if(weatherID >= 300 && weatherID < 600){ //rain
-		clearIconHTML();
+		clearIconHTML(str)
 		createRainCloud(str);
 	}
 	else if (weatherID >= 600 && weatherID < 700){ //snow
-		clearIconHTML();
+		clearIconHTML(str);
 		createSnowHTML(str);
 	}
 	else if (weatherID >= 700 && weatherID < 800){ //fog
-		clearIconHTML();
+		clearIconHTML(str);
 		createCloudyHTML(str);
 	}
 	else if (weatherID == 800){ //clear sky
-		clearIconHTML();
+		clearIconHTML(str);
 		createSunHTML(str);
 		
 	}
 	else { //clouds
-		clearIconHTML();
+		clearIconHTML(str);
 		//createCloudyHTML(str);
 		createThunder(str);
 		
