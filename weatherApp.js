@@ -180,6 +180,17 @@ money to use
 		}
 	}
 }
+
+function clearIconHTML(){
+	for(var i= 1; i < 5; i++){
+var idName = "iconDay"+ i;
+var parent = document.getElementById("idName");
+  while(parent.hasChildNodes()){
+    parent.removeChild(parent.firstChild);
+  }
+}
+
+}
 function getDayOfWeek(day){
 	if(day == 0){
 		return "Sunday";
@@ -210,28 +221,28 @@ function getDayOfWeek(day){
 function selectWeatherAnimation(weatherID, str){
 	console.log("weatherID:" +weatherID);
 	if(weatherID >= 200 && weatherID < 300){ //Thunderstorms
-		console.log("thunder created");
+		clearIconHTML();
 		createThunder(str);
 	}
 	else if(weatherID >= 300 && weatherID < 600){ //rain
-		console.log("rain created");
+		clearIconHTML();
 		createRainCloud(str);
 	}
 	else if (weatherID >= 600 && weatherID < 700){ //snow
-		console.log("snow created");
+		clearIconHTML();
 		createSnowHTML(str);
 	}
 	else if (weatherID >= 700 && weatherID < 800){ //fog
-		console.log("fog created");
+		clearIconHTML();
 		createCloudyHTML(str);
 	}
 	else if (weatherID == 800){ //clear sky
-		console.log("clearSky created");
+		clearIconHTML();
 		createSunHTML(str);
 		
 	}
 	else { //clouds
-		console.log("clouds created");
+		clearIconHTML();
 		//createCloudyHTML(str);
 		createThunder(str);
 		
