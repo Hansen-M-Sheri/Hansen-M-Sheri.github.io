@@ -70,17 +70,12 @@
 .lightening{
   color: #FDEB00;
   position: absolute;
-  z-index: initial;
+  /*z-index: initial;*/
   transform: rotate(-30deg);
   /*padding-left: 30%;*/
 }
 #bolt{
-  /*top: 8%;
-  left: 30px;*/
   margin-top: 35px;
-  /*margin-top: 30px;*/
-  /*padding-left: 20px;*/
-  z-index: -1;
   animation: strike 3s ease .6s infinite backwards;
 }
 /*#bolt2{
