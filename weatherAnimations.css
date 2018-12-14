@@ -64,6 +64,20 @@
 /********** Cloud WITH LIGHTENING *********/
 .lighteningCloud1{
   color: #6C7073;
+  padding-left: 3%;
+  padding-top: 10px;
+}
+.lightening{
+  color: #FDEB00;
+  position: absolute;
+  /*z-index: initial;*/
+  transform: rotate(40deg);
+  /*padding-left: 30%;*/
+  left: 80px;
+  top: 50px;
+}
+/*.lighteningCloud1{
+  color: #6C7073;
   padding-left: 30%;
   padding-top: 10px;
 }
@@ -71,7 +85,7 @@
   color: #FDEB00;
   position: absolute;
   /*z-index: initial;*/
-  transform: rotate(-90deg);
+  /*transform: rotate(-90deg);
   /*padding-left: 30%;*/
 }
 #bolt{
