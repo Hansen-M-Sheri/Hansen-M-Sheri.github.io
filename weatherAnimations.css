@@ -76,6 +76,7 @@
 }
 #bolt{
   margin-top: 35px;
+    opacity: 0;
   animation: strike 3s ease .6s infinite backwards;
 }
 /*#bolt2{
@@ -87,7 +88,7 @@
 
 @keyframes strike{
   100%{
-    left: 36%;
+    opacity: 1;
   }
 }
 @keyframes strike2{
