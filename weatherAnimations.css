@@ -71,7 +71,7 @@
   color: #FDEB00;
   position: absolute;
   /*z-index: initial;*/
-  transform: rotate(-30deg);
+  transform: rotate(-90deg);
   /*padding-left: 30%;*/
 }
 #bolt{
@@ -87,7 +87,7 @@
 
 @keyframes strike{
   100%{
-    transform:translate(10px, 5px); 
+    left: 36%;
   }
 }
 @keyframes strike2{
