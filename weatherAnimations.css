@@ -87,7 +87,7 @@
 
 @keyframes strike{
   100%{
-    margin-top: 65px;
+    transform:translate(5px, 10px); 
   }
 }
 @keyframes strike2{
