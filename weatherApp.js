@@ -23,9 +23,9 @@ function checkNewUser(){
 */
 function loadWeatherAjax(zip){
 	var zipCode = localStorage.getItem("userZip");
-	if( zipCode == null){ 
+	// if( zipCode == null){ 
 		localStorage.setItem("userZip", zip);
-	}
+	// }
 	document.getElementById("welcome").style.display = "none";
 		document.getElementById("main").style.display = "block";
 	callWeatherApi(zip, "us");
